@@ -1,0 +1,4 @@
+.curved-bg {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    clip-path: polygon(0 25%, 100% 0, 100% 85%, 0 100%);
+}
