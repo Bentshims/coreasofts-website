@@ -19,6 +19,8 @@ document.querySelectorAll("[data-faq]").forEach(item => {
       }
     });
 
+    // la section temoignages
+
     function animateCarousel(id, direction = "left", speed = 0.5) {
       const carousel = document.getElementById(id);
       let scrollAmount = 0;

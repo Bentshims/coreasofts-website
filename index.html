@@ -1,440 +1,836 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Coreasofts</title>
 
-        <meta name="description" content="Coreasofts accompagne les entreprises et entrepreneurs africains dans leur transformation digitale à travers des solutions innovantes, durables et locales.">
-        <meta name="keywords" content="Coreasofts, digital, Afrique, développement web, mobile, stratégie, transformation numérique, innovation">
-        <meta name="author" content="Coreasofts" />
-        <meta http-equiv="Content-Language" content="fr" />
-        <meta name="theme-color" content="#E30613" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coreasofts</title>
 
-        <!-- Open Graph pour le partage réseaux sociaux -->
-        <meta property="og:title" content="Coreasofts - Transformez vos idées en solutions" />
-        <meta property="og:description" content="Solutions digitales adaptées à l'Afrique : développement web, mobile, stratégie et accompagnement sur mesure." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://coreasofts.com/" />
-        <meta property="og:image" content="https://coreasofts.com/assets/corea-white-laptop-logo.JPG" />
+  <meta name="description"
+    content="Coreasofts accompagne les entreprises et entrepreneurs africains dans leur transformation digitale à travers des solutions innovantes, durables et locales.">
+  <meta name="keywords"
+    content="Coreasofts, digital, Afrique, développement web, mobile, stratégie, transformation numérique, innovation">
+  <meta name="author" content="Coreasofts" />
+  <meta http-equiv="Content-Language" content="fr" />
+  <meta name="theme-color" content="#E30613" />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Coreasofts - Solutions digitales en Afrique" />
-        <meta name="twitter:description" content="Découvrez nos services pour booster votre transformation digitale." />
-        <meta name="twitter:image" content="https://coreasofts.com/assets/corea-white-laptop-logo.JPG" />
+  <!-- Open Graph pour le partage réseaux sociaux -->
+  <meta property="og:title" content="Coreasofts - Transformez vos idées en solutions" />
+  <meta property="og:description"
+    content="Solutions digitales adaptées à l'Afrique : développement web, mobile, stratégie et accompagnement sur mesure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coreasofts.com/" />
+  <meta property="og:image" content="https://coreasofts.com/assets/corea-white-laptop-logo.JPG" />
 
-        <link rel="icon" href="./assets/corea-mobile-logo.png" type="image/x-icon" />
-        <link rel="canonical" href="https://coreasofts.com/" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coreasofts - Solutions digitales en Afrique" />
+  <meta name="twitter:description" content="Découvrez nos services pour booster votre transformation digitale." />
+  <meta name="twitter:image" content="https://coreasofts.com/assets/corea-white-laptop-logo.JPG" />
+
+  <link rel="icon" href="./assets/corea-mobile-logo.png" type="image/x-icon" />
+  <link rel="canonical" href="https://coreasofts.com/" />
 
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-          tailwind.config = {
-            theme: {
-              extend: {
-                colors: {
-                  primary: "#E30613",
-                  dark: "#333333",
-                  light: "#F5F5F5"
-                },
-                fontFamily: {
-                  sans: ["Open Sans", "sans-serif"],
-                  title: ["Montserrat", "sans-serif"]
-                }
-              }
-            }
-          };
-        </script>
-    
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-        <script src="./script.js" defer></script>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body class="bg-white px-4 md:px-80 space-y-8 relative">
-        <header class="sticky top-0 z-50 bg-white">
-            <div class="md:py-8">
-                <div class="flex items-center justify-between h-16">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#E30613",
+            dark: "#333333",
+            light: "#F5F5F5"
+          },
+          fontFamily: {
+            sans: ["Open Sans", "sans-serif"],
+            title: ["Montserrat", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
 
-                    <!-- Logo laptop coreasofts -->
-                   <img src="./assets/corea-white-laptop-logo.JPG" alt="logo Coreasofts" class="hidden md:block w-32 h-auto">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-                   <!-- logo mobile -->
-                    <img src="./assets/corea-mobile-logo.png" alt="logo coreasofts" class="w-16 h-auto md:hidden">
+<body class="bg-white px-4 md:px-80 space-y-8 relative">
+  <header class="sticky top-0 z-50 bg-white">
+    <div class="md:py-8">
+      <div class="flex items-center justify-between h-16">
 
-                    <!-- Navigation -->
-                    <nav class="hidden md:flex items-center space-x-10">
-                        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium border-b-2 border-red-600 pb-1">Accueil</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">À propos</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Témoignages</a>
-                    </nav>
-    
-                    <div class="hidden md:flex items-center">
-                        <button class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
-                            Nous contacter
-                        </button>
-                    </div>
-    
-                    <!-- Menu mobile -->
-                    <div class="md:hidden">
-                        <button class="text-gray-600 hover:text-gray-900">
-                            <i class="bi bi-list text-4xl font-bold"></i>
-                        </button>
-                    </div>
-                </div>
+        <!-- Logo laptop coreasofts -->
+        <img src="./assets/corea-white-laptop-logo.JPG" alt="logo Coreasofts" class="hidden md:block w-32 h-auto">
+
+        <!-- logo mobile -->
+        <img src="./assets/corea-mobile-logo.png" alt="logo coreasofts" class="w-16 h-auto md:hidden">
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex items-center space-x-10">
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium border-b-2 border-red-600 pb-1">Accueil</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">À propos</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Témoignages</a>
+        </nav>
+
+        <div class="hidden md:flex items-center">
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+            Nous contacter
+          </button>
+        </div>
+
+        <!-- Menu mobile -->
+        <div class="md:hidden">
+          <button class="text-gray-600 hover:text-gray-900">
+            <i class="bi bi-list text-4xl font-bold"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="space-y-24">
+    <!-- la Hero section -->
+    <section
+      class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet overflow-hidden rounded-2xl">
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Contenu -->
+      <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
+        <div class="max-w-2xl">
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8">
+            Transformez vos idées en solutions. </br>
+            Innovez avec <span class="text-red-600">Coreasofts</span>.
+          </h1>
+
+          <p class="text-gray-300 mb-12 leading-relaxed">
+            Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre
+            activité ou lancer votre start-up. <span class="text-red-500 font-medium">Coreasofts</span> vous accompagne
+            avec des solutions
+            sur mesure.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-md transition-colors duration-200">
+              Nos services
+            </button>
+            <button class="bg-red-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+              Nous contacter
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicateur de scroll -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+        <div class="animate-bounce">
+          <i class="bi bi-arrow-down-circle text-white text-4xl"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- la Section À propos de Nous -->
+    <section class="bg-red-50 rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden">
+      <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full"></div>
+      <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full"></div>
+      <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full"></div>
+
+      <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -left-20 -bottom-24 rounded-full"></div>
+      <div class="w-96 h-96 border  border-red-200 absolute -left-12 -bottom-12 rounded-full"></div>
+      <div class="w-64 h-64 border  border-red-200 absolute left-4 bottom-4 rounded-full"></div>
+
+
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="h-full">
+        <h2 class="text-sm text-red-600 font-medium px-2 absolute top-14">À propos de Nous</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm translate-y-0">
+            <h3 class="text-xl font-semibold mb-4">Notre Vision</h3>
+            <p class="mb-2 font-medium">Devenir le leader de l'innovation digitale en Afrique.</p>
+            <p class="text-md text-zinc-600">
+              Coreasofts aspire à
+              <span class="text-red-600 font-medium">transformer</span> durablement les
+              <span class="text-red-600 font-medium">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le
+              quotidien des citoyens africains grâce à des
+              <span class="text-red-600 font-medium">technologies intelligentes</span>, accessibles et impactantes.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm translate-y-16">
+            <h3 class="text-xl font-semibold mb-4">Notre Mission</h3>
+            <p class="mb-2 font-medium">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
+            <p class="text-md text-zinc-600">
+              Nous offrons des services innovants en stratégie,
+              <span class="text-red-600 font-medium">accompagnement numérique</span>, développement d'applications,
+              organisation d'événements et ingénierie mécanique.
+              <span class="text-red-600 font-medium">Notre engagement</span> : transformer vos idées en
+              <span class="text-red-600 font-medium">solutions concrètes</span>.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm translate-y-32">
+            <h3 class="text-xl font-semibold mb-4">Nos Valeurs</h3>
+            <p class="mb-4 font-medium">Ce qui guide chacune de nos actions.</p>
+            <ul class="space-y-2 text-md text-zinc-600">
+              <li>
+                <span class="text-red-600 font-medium">Innovation</span> : repousser les limites pour créer des
+                solutions modernes et pertinentes
+              </li>
+              <li>
+                <span class="text-red-600 font-medium">Engagement</span> : avancer aux côtés de nos clients jusqu'à la
+                réussite
+              </li>
+              <li>
+                <span class="text-red-600 font-medium">Collaboration</span> : bâtir ensemble avec confiance et
+                transparence
+              </li>
+              <li>
+                <span class="text-red-600 font-medium">Excellence</span> : viser la qualité maximale dans chaque projet
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- la section services -->
+
+    <section class="py-12 px-4 md:px-8 space-y-32 h-auto">
+
+      <h2 class="text-sm text-red-600 font-medium mb-8">Nos services</h2>
+
+      <div class="md:flex gap-x-12 md:h-96">
+        <div class="md:w-1/2 flex flex-col justify-between">
+          <h2 class="font-semibold text-xl text-center mt-16">
+            Ce que nous faisons
+          </h2>
+          <p class="text-zinc-600 leading-relaxed mb-6">
+            Chez Coreasofts, nous allions innovation, expertise et engagement pour répondre aux défis numériques de nos
+            clients.
+            Nos services couvrent chaque étape de la transformation digitale, de la stratégie à la mise en œuvre
+            concrète.
+            Nous vous accompagnons avec des solutions adaptées, durables et pensées pour l'Afrique d'aujourd'hui et de
+            demain.
+          </p>
+          <div>
+            <button
+              class="bg-red-600 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+              En savoir plus
+            </button>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 h-auto relative">
+          <img src="./assets/services-image.png" alt="Développeur"
+            class="rounded-lg w-full h-full absolute z-10 inset-0">
+          <div class="w-full h-full bg-red-100 absolute -bottom-6 -right-6 rounded-lg"></div>
+        </div>
+      </div>
+      <div class="space-y-16">
+
+        <div class="grid md:grid-cols-2 gap-x-32 gap-y-16 relative">
+
+          <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <div class="w-96 h-96 border border-red-500 rounded-full opacity-20"></div>
+          </div>
+          <div class="absolute inset-2 flex justify-center items-center pointer-events-none">
+            <div class="w-64 h-64 border border-red-500 rounded-full opacity-20"></div>
+          </div>
+          <div class="absolute inset-4 flex justify-center items-center pointer-events-none">
+            <div class="w-40 h-40 border border-red-500 rounded-full opacity-20"></div>
+          </div>
+
+          <div class="bg-red-600 text-white p-10 rounded-lg relative z-10 border border-red-600">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+              Strabus - Stratégie Business
+              <i class="bi bi-arrow-up-right-circle-fill text-4xl"></i>
+            </h3>
+            <p class="text-sm leading-relaxed">
+              Nous vous aidons à structurer, repositionner ou lancer votre activité avec une stratégie claire, réaliste
+              et alignée sur vos objectifs.
+              Strabus vous accompagne dans vos décisions clés pour assurer croissance et durabilité.
+            </p>
+          </div>
+
+          <div class="bg-white text-black p-10  rounded-lg relative z-10 border border-red-600">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+              Acconum - Accompagnement Numérique
+              <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              De la planification à l'exécution, Acconum guide votre transition vers le numérique.
+              Nous digitalisons vos outils, process et canaux pour améliorer l'efficacité et renforcer votre impact dans
+              un monde connecté.
+            </p>
+          </div>
+
+          <div class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+              Devapp - Développement d'applications
+              <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Que ce soit pour le web ou le mobile, nous développons des applications robustes, ergonomiques et
+              évolutives,
+              parfaitement adaptées à vos besoins métiers et à votre public cible.
+            </p>
+          </div>
+
+          <div class="bg-white text-black p-10  rounded-lg relative z-10 border border-red-600">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+              Corea-Event - Organisation d'événements
+              <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Nous concevons et organisons des événements professionnels (ateliers, forums, salons) qui valorisent
+              l’innovation,
+              renforcent les synergies et stimulent les talents de demain.
+            </p>
+          </div>
+
+
+
+        </div>
+        <div class="flex items-center justify-center px-80">
+          <div class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+              Corea-Meca - Solutions Mécaniques
+              <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              De l'ingénierie à la fabrication, Corea-Meca conçoit des solutions techniques et mécaniques adaptées aux
+              réalités africaines,
+              pour répondre aux besoins des secteurs industriels et productifs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- la Section FAQ -->
+    <section class="bg-red-500 text-white py-20 relative overflow-hidden">
+
+
+      <div class="container mx-auto px-6 lg:px-20 relative z-10">
+        <h2 class="text-center text-2xl font-semibold mb-2">FAQs</h2>
+        <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12">
+          Voici les réponses aux questions les plus fréquentes sur nos services, notre fonctionnement et notre
+          accompagnement.
+        </p>
+
+        <div class="space-y-4 md:max-w-3xl mx-auto">
+
+          <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-xl text-red-600">Quels types de clients accompagnez-vous ?</h3>
+              <span
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+                <i class="bi bi-arrow-down"></i>
+              </span>
             </div>
-        </header>
-        <main class="space-y-24">
-            <!-- la Hero section -->
-            <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet overflow-hidden rounded-2xl">
-                <div class="absolute inset-0 bg-black/60"></div>
+            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+              Nous travaillons avec des entreprises de toutes tailles, des start-ups aux grandes institutions, ainsi
+              qu'avec des entrepreneurs individuels.
+              Chaque projet est adapté à vos objectifs et à votre secteur.
+            </div>
+          </div>
 
-                <!-- Contenu -->
-                <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
-                    <div class="max-w-2xl">
-                        <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8">
-                            Transformez vos idées en solutions. </br>
-                             Innovez avec <span class="text-red-600">Coreasofts</span>.
-                        </h1>
+          <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-xl text-red-600">Proposez-vous des services personnalisés</h3>
+              <span
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </div>
+            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+              Oui, nous proposons des solutions sur mesure en fonction de vos besoins spécifiques et de vos contraintes.
+            </div>
+          </div>
 
-                        <p class="text-gray-300 mb-12 leading-relaxed">
-                            Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre 
-                            activité ou lancer votre start-up. <span class="text-red-500 font-medium">Coreasofts</span> vous accompagne avec des solutions 
-                            sur mesure.
-                        </p>
+          <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-xl text-red-600">Faut-il déjà avoir un cahier des charges pour vous
+                contacter ?</h3>
+              <span
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </div>
+            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+              Non, nous pouvons vous aider à le formaliser ensemble dès le début du projet.
+            </div>
+          </div>
 
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-md transition-colors duration-200">
-                                Nos services
-                            </button>
-                            <button class="bg-red-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
-                                Nous contacter
-                            </button>
-                        </div>
-                    </div>
-                </div>
+          <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-xl text-red-600">Quels sont vos délais de réalisation ?</h3>
+              <span
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </div>
+            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+              Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser
+              les temps de livraison.
+            </div>
+          </div>
 
-                <!-- Indicateur de scroll -->
-                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-                    <div class="animate-bounce">
-                       <i class="bi bi-arrow-down-circle text-white text-4xl"></i>
-                    </div>
-                </div>
-            </section>
+          <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-xl text-red-600">Travaillez-vous uniquement en RDC ?</h3>
+              <span
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </div>
+            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+              Non, nous travaillons avec des clients partout dans le monde.
+            </div>
+          </div>
 
-            <!-- la Section À propos de Nous -->
-            <section class="bg-red-50 rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden"> 
-                <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full"></div>
-                <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full"></div>
-                <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full"></div>
+          <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-xl text-red-600">Comment démarrer un projet avec vous ?</h3>
+              <span
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+                <i class="bi bi-arrow-up-right"></i>
+              </span>
+            </div>
+            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+              Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous
+              répondrons rapidement.
+            </div>
+          </div>
 
-                <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -left-20 -bottom-24 rounded-full"></div>
-                <div class="w-96 h-96 border  border-red-200 absolute -left-12 -bottom-12 rounded-full"></div>
-                <div class="w-64 h-64 border  border-red-200 absolute left-4 bottom-4 rounded-full"></div>
+        </div>
+      </div>
 
+    </section>
 
+    <section class="relative w-full py-10 overflow-hidden">
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white/90 via-white/80 via-white/70 via-white/60 via-white/50 via-white/40 to-transparent z-10">
+      </div>
+      <div
+        class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white/90 via-white/80 via-white/70 via-white/60 to-transparent z-10">
+      </div>
 
-                <div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="h-full">
-                  <h2 class="text-sm text-red-600 font-medium px-2 absolute top-14">À propos de Nous</h2>
-                  
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white rounded-lg p-6 shadow-sm translate-y-0">
-                            <h3 class="text-xl font-semibold mb-4">Notre Vision</h3>
-                            <p class="mb-2 font-medium">Devenir le leader de l'innovation digitale en Afrique.</p>
-                            <p class="text-md text-zinc-600">
-                                Coreasofts aspire à 
-                                <span class="text-red-600 font-medium">transformer</span> durablement les 
-                                <span class="text-red-600 font-medium">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le quotidien des citoyens africains grâce à des 
-                                <span class="text-red-600 font-medium">technologies intelligentes</span>, accessibles et impactantes.
-                            </p>
-                        </div>
-                
-                        <div class="bg-white rounded-lg p-6 shadow-sm translate-y-16">
-                            <h3 class="text-xl font-semibold mb-4">Notre Mission</h3>
-                            <p class="mb-2 font-medium">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
-                            <p class="text-md text-zinc-600">
-                                Nous offrons des services innovants en stratégie, 
-                                <span class="text-red-600 font-medium">accompagnement numérique</span>, développement d'applications, organisation d'événements et ingénierie mécanique.
-                                <span class="text-red-600 font-medium">Notre engagement</span> : transformer vos idées en 
-                                <span class="text-red-600 font-medium">solutions concrètes</span>.
-                            </p>
-                        </div>
-                
-                        <div class="bg-white rounded-lg p-6 shadow-sm translate-y-32">
-                        <h3 class="text-xl font-semibold mb-4">Nos Valeurs</h3>
-                        <p class="mb-4 font-medium">Ce qui guide chacune de nos actions.</p>
-                        <ul class="space-y-2 text-md text-zinc-600">
-                            <li>
-                            <span class="text-red-600 font-medium">Innovation</span> : repousser les limites pour créer des solutions modernes et pertinentes
-                            </li>
-                            <li>
-                            <span class="text-red-600 font-medium">Engagement</span> : avancer aux côtés de nos clients jusqu'à la réussite
-                            </li>
-                            <li>
-                            <span class="text-red-600 font-medium">Collaboration</span> : bâtir ensemble avec confiance et transparence
-                            </li>
-                            <li>
-                            <span class="text-red-600 font-medium">Excellence</span> : viser la qualité maximale dans chaque projet
-                            </li>
-                        </ul>
-                        </div>
-              
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- la section services -->
-
-            <section class="py-12 px-4 md:px-8 space-y-32 h-auto">
-    
-                <h2 class="text-sm text-red-600 font-medium mb-8">Nos services</h2>
-            
-                <div class="md:flex gap-x-12 md:h-96">
-                    <div class="md:w-1/2 flex flex-col justify-between">
-                        <h2 class="font-semibold text-xl text-center mt-16">
-                            Ce que nous faisons
-                        </h2>
-                        <p class="text-zinc-600 leading-relaxed mb-6">
-                            Chez Coreasofts, nous allions innovation, expertise et engagement pour répondre aux défis numériques de nos clients. 
-                            Nos services couvrent chaque étape de la transformation digitale, de la stratégie à la mise en œuvre concrète. 
-                            Nous vous accompagnons avec des solutions adaptées, durables et pensées pour l'Afrique d'aujourd'hui et de demain.
-                        </p>
-                        <div>
-                            <button class="bg-red-600 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
-                                En savoir plus
-                            </button>
-                        </div>
-                    </div>
-            
-                    <div class="md:w-1/2 h-auto relative">
-                        <img src="./assets/services-image.png" alt="Développeur"class="rounded-lg w-full h-full absolute z-10 inset-0">
-                        <div class="w-full h-full bg-red-100 absolute -bottom-6 -right-6 rounded-lg"></div>
-                    </div>
-                </div>
-                <div class="space-y-16">
-
-                  <div class="grid md:grid-cols-2 gap-x-32 gap-y-16 relative">
-            
-                    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-                      <div class="w-96 h-96 border border-red-500 rounded-full opacity-20"></div>
-                    </div>
-                    <div class="absolute inset-2 flex justify-center items-center pointer-events-none">
-                      <div class="w-64 h-64 border border-red-500 rounded-full opacity-20"></div>
-                    </div>
-                    <div class="absolute inset-4 flex justify-center items-center pointer-events-none">
-                      <div class="w-40 h-40 border border-red-500 rounded-full opacity-20"></div>
-                    </div>
-              
-                    <div class="bg-red-600 text-white p-10 rounded-lg relative z-10 border border-red-600">
-                      <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
-                        Strabus - Stratégie Business
-                        <i class="bi bi-arrow-up-right-circle-fill text-4xl"></i>
-                      </h3>
-                      <p class="text-sm leading-relaxed">
-                        Nous vous aidons à structurer, repositionner ou lancer votre activité avec une stratégie claire, réaliste et alignée sur vos objectifs. 
-                        Strabus vous accompagne dans vos décisions clés pour assurer croissance et durabilité.
-                      </p>
-                    </div>
-              
-                    <div class="bg-white text-black p-10  rounded-lg relative z-10 border border-red-600">
-                      <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
-                        Acconum - Accompagnement Numérique
-                        <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
-                      </h3>
-                      <p class="text-sm text-gray-700 leading-relaxed">
-                        De la planification à l'exécution, Acconum guide votre transition vers le numérique. 
-                        Nous digitalisons vos outils, process et canaux pour améliorer l'efficacité et renforcer votre impact dans un monde connecté.
-                      </p>
-                    </div>
-              
-                    <div class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600">
-                      <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
-                        Devapp - Développement d'applications
-                        <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
-                      </h3>
-                      <p class="text-sm text-gray-700 leading-relaxed">
-                        Que ce soit pour le web ou le mobile, nous développons des applications robustes, ergonomiques et évolutives, 
-                        parfaitement adaptées à vos besoins métiers et à votre public cible.
-                      </p>
-                    </div>
-              
-                    <div class="bg-white text-black p-10  rounded-lg relative z-10 border border-red-600">
-                      <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
-                        Corea-Event - Organisation d'événements
-                        <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
-                      </h3>
-                      <p class="text-sm text-gray-700 leading-relaxed">
-                        Nous concevons et organisons des événements professionnels (ateliers, forums, salons) qui valorisent l’innovation, 
-                        renforcent les synergies et stimulent les talents de demain.
-                      </p>
-                    </div>
-              
-                   
-              
-                  </div>
-                  <div class="flex items-center justify-center px-80">
-                      <div class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600">
-                          <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
-                            Corea-Meca - Solutions Mécaniques
-                            <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
-                          </h3>
-                          <p class="text-sm text-gray-700 leading-relaxed">
-                            De l'ingénierie à la fabrication, Corea-Meca conçoit des solutions techniques et mécaniques adaptées aux réalités africaines, 
-                            pour répondre aux besoins des secteurs industriels et productifs.
-                          </p>
-                      </div>
-                  </div>
-                </div>
-            
-            </section>
-
-            <!-- la Section FAQ -->
-            <section class="bg-red-500 text-white py-20 relative overflow-hidden">
-
-
-              <div class="container mx-auto px-6 lg:px-20 relative z-10">
-                <h2 class="text-center text-2xl font-semibold mb-2">FAQs</h2>
-                <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12">
-                  Voici les réponses aux questions les plus fréquentes sur nos services, notre fonctionnement et notre accompagnement.
-                </p>
-
-                <div class="space-y-4 md:max-w-3xl mx-auto">
-
-                  <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
-                    <div class="flex justify-between items-center">
-                      <h3 class="font-semibold text-xl text-red-600">Quels types de clients accompagnez-vous ?</h3>
-                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                        <i class="bi bi-arrow-down"></i>
-                      </span>
-                    </div>
-                    <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-                      Nous travaillons avec des entreprises de toutes tailles, des start-ups aux grandes institutions, ainsi qu'avec des entrepreneurs individuels.
-                      Chaque projet est adapté à vos objectifs et à votre secteur.
-                    </div>
-                  </div>
-
-                  <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
-                    <div class="flex justify-between items-center">
-                      <h3 class="font-semibold text-xl text-red-600">Proposez-vous des services personnalisés</h3>
-                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                        <i class="bi bi-arrow-up-right"></i>
-                      </span>
-                    </div>
-                    <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-                      Oui, nous proposons des solutions sur mesure en fonction de vos besoins spécifiques et de vos contraintes.
-                    </div>
-                  </div>
-
-                  <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
-                    <div class="flex justify-between items-center">
-                      <h3 class="font-semibold text-xl text-red-600">Faut-il déjà avoir un cahier des charges pour vous contacter ?</h3>
-                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                        <i class="bi bi-arrow-up-right"></i>
-                      </span>
-                    </div>
-                    <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-                      Non, nous pouvons vous aider à le formaliser ensemble dès le début du projet.
-                    </div>
-                  </div>
-
-                  <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
-                    <div class="flex justify-between items-center">
-                      <h3 class="font-semibold text-xl text-red-600">Quels sont vos délais de réalisation ?</h3>
-                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                        <i class="bi bi-arrow-up-right"></i>
-                      </span>
-                    </div>
-                    <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-                      Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser les temps de livraison.
-                    </div>
-                  </div>
-
-                  <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
-                    <div class="flex justify-between items-center">
-                      <h3 class="font-semibold text-xl text-red-600">Travaillez-vous uniquement en RDC ?</h3>
-                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                        <i class="bi bi-arrow-up-right"></i>
-                      </span>
-                    </div>
-                    <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-                      Non, nous travaillons avec des clients partout dans le monde.
-                    </div>
-                  </div>
-
-                  <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
-                    <div class="flex justify-between items-center">
-                      <h3 class="font-semibold text-xl text-red-600">Comment démarrer un projet avec vous ?</h3>
-                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                        <i class="bi bi-arrow-up-right"></i>
-                      </span>
-                    </div>
-                    <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-                      Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous répondrons rapidement.
-                    </div>
-                  </div>
-
+      <div class="space-y-6">
+        <div class="flex gap-4 overflow-hidden" id="carousel1">
+          <div class="flex gap-4 min-w-max">
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
                 </div>
               </div>
-
-            </section>
-
-            <section class="relative w-full py-10 overflow-hidden">
-              <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white/80 via-white/50 to-transparent z-10"></div>
-              <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white/80 via-white/50 to-transparent z-10"></div>
-            
-              <div class="space-y-6">
-                <div class="flex gap-4 overflow-hidden" id="carousel1">
-                  <div class="flex gap-4 min-w-max">
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 1</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 2</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 3</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 4</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 5</div>
-                  </div>
-                  <div class="flex gap-4 min-w-max">
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 1</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 2</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 3</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 4</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card 5</div>
-                  </div>
-                </div>
-            
-                <div class="flex gap-4 overflow-hidden" id="carousel2">
-                  <div class="flex gap-4 min-w-max">
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card A</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card B</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card C</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card D</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card E</div>
-                  </div>
-                  <div class="flex gap-4 min-w-max">
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card A</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card B</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card C</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card D</div>
-                    <div class="border border-red-500 rounded-xl p-6 w-64">Card E</div>
-                  </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
                 </div>
               </div>
-            
-            </section>
-            
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4 min-w-max">
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        </main>
-        <footer>
+        <div class="flex gap-4 overflow-hidden" id="carousel2">
+          <div class="flex gap-4 min-w-max">
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4 min-w-max">
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#E6E6E6] border border-red-500 rounded-xl p-6 w-96">
+              <div>
+                <img src="./assets/quote.svg" alt="">
+              </div>
+              <p class="text-zinc-700 text-sm font-light">
+                Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec
+                professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100
+                % adapté à nos utilisateurs .
+              </p>
+              <div class="flex items-center gap-x-2">
+                <img src="./assets/testimonial-1.png" alt="" class="w-8 h-auto">
+                <div class="">
+                  <h4>Sandra K.</h4>
+                  <p>
+                    Fondatrice de AfriLearn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        </footer>
-    </body>
+    </section>
+
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
 </html>
-
-
-
-
