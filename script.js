@@ -19,4 +19,26 @@ document.querySelectorAll("[data-faq]").forEach(item => {
       }
     });
 
+    // la section temoignages
+
+    function animateCarousel(id, direction = "left", speed = 0.5) {
+      const carousel = document.getElementById(id);
+      let scrollAmount = 0;
+
+      function step() {
+        scrollAmount += speed * (direction === "left" ? 1 : -1);
+        if (direction === "left") {
+          if (scrollAmount >= carousel.scrollWidth / 2) scrollAmount = 0;
+        } else {
+          if (scrollAmount <= 0) scrollAmount = carousel.scrollWidth / 2;
+        }
+        carousel.scrollLeft = scrollAmount;
+        requestAnimationFrame(step);
+      }
+      step();
+    }
+
+    animateCarousel("carousel1", "left", 0.5);
+    animateCarousel("carousel2", "right", 0.5);
+
 })    
