@@ -94,12 +94,11 @@
     </div>
   </header>
   <main class="space-y-24">
-    <!-- la Hero section -->
-    <section
-      class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet overflow-hidden rounded-2xl">
-      <div class="absolute inset-0 bg-black/60"></div>
 
-      <!-- Contenu -->
+    <!-- la Hero section -->
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet rounded-2xl">
+      <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
         <div class="max-w-2xl">
           <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8">
@@ -126,9 +125,9 @@
       </div>
 
       <!-- Indicateur de scroll -->
-      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div class="animate-bounce">
-          <i class="bi bi-arrow-down-circle text-white text-4xl"></i>
+          <i class="bi bi-arrow-down-circle-fill text-red-600 text-5xl"></i>
         </div>
       </div>
     </section>
@@ -318,6 +317,7 @@
       </div>
 
     </section>
+
 
     <!-- la Section FAQ -->
     <section class="bg-red-500 text-white py-20 relative overflow-hidden">
@@ -826,10 +826,292 @@
 
     </section>
 
+    <!--la Section Projets -->
+    <section id="projects" class="bg-rose-50 rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden">
+      <h2 class="text-center text-2xl font-semibold mb-2">Projets</h2>
+      <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12">
+        Découvrez quelques projets récents. Faites défiler pour en voir davantage.
+      </p>
+
+      <div class="relative">
+        <div
+          class="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-rose-50 to-transparent z-10">
+        </div>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-rose-50 to-transparent z-10">
+        </div>
+
+        <button id="projectsPrev"
+          class="hidden md:flex absolute -left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-red-600 text-white items-center justify-center shadow-lg">
+          <i class="bi bi-arrow-left text-xl"></i>
+        </button>
+
+        <div id="projectsCarousel" class="flex gap-6 overflow-hidden scroll-smooth snap-x snap-mandatory">
+          <!-- Slide 1 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+              alt="Application mobile en cours de test" class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">Tshims AI</h4>
+                <p class="text-xs text-zinc-600">Solution IA pour l'analyse en temps réel. Interface simple et
+                  intuitive.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+              alt="Interface web d'administration" class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">Dashboard Analytics</h4>
+                <p class="text-xs text-zinc-600">Tableau de bord de performance et reporting automatisé.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+              class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">ERP PME</h4>
+                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+              class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">ERP PME</h4>
+                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Slide 5 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+              class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">ERP PME</h4>
+                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Slide 6 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+              class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">ERP PME</h4>
+                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+
+          <!-- Slide 7 -->
+          <article data-project-slide
+            class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
+            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+              class="w-full h-72 md:h-80 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-red-600">ERP PME</h4>
+                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+              </div>
+              <span class="text-red-600">
+                <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <button id="projectsNext"
+          class="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-red-600 text-white items-center justify-center shadow-lg">
+          <i class="bi bi-arrow-right text-xl"></i>
+        </button>
+      </div>
+
+      <div class="mt-10 flex items-center justify-center gap-3">
+        <div class="h-2 w-28 bg-red-200 rounded-full overflow-hidden">
+          <div id="projectsProgressFill" class="h-full w-1/3 bg-red-600 rounded-full transition-all duration-300"></div>
+        </div>
+        <span class="w-3 h-3 rounded-full bg-red-300"></span>
+      </div>
+    </section>
+
+
+    <!--la Section Contact -->
+    <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <h2 class="text-2xl font-semibold mb-2">Discutons de votre projet</h2>
+          <p class="text-sm text-zinc-600 mb-8 max-w-xl">
+            Une idée, un projet ou une simple question ? Parlez‑nous‑en via le formulaire ci‑dessous.
+            Notre équipe vous répond rapidement et vous accompagne avec clarté, écoute et expertise.
+          </p>
+
+          <form class="space-y-6" novalidate>
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Nom et Prenom</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom complet"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
+                required />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email</label>
+              <input id="email" name="email" type="email" placeholder="votre@email.com"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
+                required />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
+              <input id="subject" name="subject" type="text" placeholder="Sujet du message"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Votre message"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit"
+                class="w-full text-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
+                Envoyer
+                <i class="bi bi-send"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="space-y-6 border border-red-500 h-full">
+          <div class="">
+            <img src="./assets/contact-image.png" alt="Client heureux utilisant son smartphone"
+              class="w-full h-full object-cover rounded-r-xl border border-red-500">
+          </div>
+
+          <div class="space-y-3 bg-white py-5 px-2 rounded-lg">
+            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-envelope"></i>
+              </span>
+              <div>
+                <h4 class="font-medium">Email</h4>
+                <p class="text-sm text-zinc-600">contact@coreasofts.com</p>
+              </div>
+            </div>
+
+            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-telephone"></i>
+              </span>
+              <div>
+                <h4 class="font-medium">Contact</h4>
+                <p class="text-sm text-zinc-600">(+243) 828 858 300</p>
+              </div>
+            </div>
+
+            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-geo-alt"></i>
+              </span>
+              <div>
+                <h4 class="font-medium">Adresse</h4>
+                <p class="text-sm text-zinc-600">RDC, Kinshasa, Gombe no 11</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
 
   </main>
-  <footer>
+  <footer class="mt-96">
+    <div class="border-t border-zinc-200 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="flex flex-col items-center">
+          <img src="./assets/corea-white-laptop-logo.JPG" alt="Coreasofts" class="w-32 h-32 border border-red-500">
+          <div>
+            <p class="text-sm text-zinc-600">Des solutions intelligentes pour un avenir durable</p>
+          </div>
+        </div>
 
+        <!--la Navigation et lien vers les reseaux sociaux                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -->
+        <nav class="flex items-center justify-center gap-8 text-sm text-zinc-800">
+          <a href="#" class="hover:text-red-600">Accueil</a>
+          <a href="#" class="hover:text-red-600">A propos</a>
+          <a href="#" class="hover:text-red-600">Services</a>
+          <a href="#" class="hover:text-red-600">Temoignages</a>
+        </nav>
+
+        <div class="flex items-center justify-center md:justify-end gap-6 text-2xl text-zinc-800">
+          <a href="#" aria-label="X" class="hover:text-red-600"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-red-600"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn" class="hover:text-red-600"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-red-600"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-zinc-200 py-6">
+      <p class="text-center text-sm text-zinc-600">© Copyright Coreasofts</p>
+    </div>
   </footer>
 </body>
 
