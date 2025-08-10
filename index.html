@@ -319,6 +319,7 @@
 
     </section>
 
+
     <!-- la Section FAQ -->
     <section class="bg-red-500 text-white py-20 relative overflow-hidden">
 
@@ -825,7 +826,8 @@
       </div>
 
     </section>
-    <!-- Section Projets (carrousel) -->
+
+    <!--la Section Projets -->
     <section id="projects" class="bg-rose-50 rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden">
       <h2 class="text-center text-2xl font-semibold mb-2">Projets</h2>
       <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12">
@@ -833,7 +835,6 @@
       </p>
 
       <div class="relative">
-        <!-- Gradient masks on edges for a nice fade -->
         <div
           class="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-rose-50 to-transparent z-10">
         </div>
@@ -841,13 +842,11 @@
           class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-rose-50 to-transparent z-10">
         </div>
 
-        <!-- Prev -->
         <button id="projectsPrev"
           class="hidden md:flex absolute -left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-red-600 text-white items-center justify-center shadow-lg">
           <i class="bi bi-arrow-left text-xl"></i>
         </button>
 
-        <!-- Carousel track -->
         <div id="projectsCarousel" class="flex gap-6 overflow-hidden scroll-smooth snap-x snap-mandatory">
           <!-- Slide 1 -->
           <article data-project-slide
@@ -977,14 +976,12 @@
           </article>
         </div>
 
-        <!-- Next -->
         <button id="projectsNext"
           class="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-red-600 text-white items-center justify-center shadow-lg">
           <i class="bi bi-arrow-right text-xl"></i>
         </button>
       </div>
 
-      <!-- Pager / indicator -->
       <div class="mt-10 flex items-center justify-center gap-3">
         <div class="h-2 w-28 bg-red-200 rounded-full overflow-hidden">
           <div id="projectsProgressFill" class="h-full w-1/3 bg-red-600 rounded-full transition-all duration-300"></div>
@@ -992,6 +989,96 @@
         <span class="w-3 h-3 rounded-full bg-red-300"></span>
       </div>
     </section>
+
+
+    <!--la Section Contact -->
+    <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <h2 class="text-2xl font-semibold mb-2">Discutons de votre projet</h2>
+          <p class="text-sm text-zinc-600 mb-8 max-w-xl">
+            Une idée, un projet ou une simple question ? Parlez‑nous‑en via le formulaire ci‑dessous.
+            Notre équipe vous répond rapidement et vous accompagne avec clarté, écoute et expertise.
+          </p>
+
+          <form class="space-y-6" novalidate>
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Nom et Prenom</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom complet"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
+                required />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email</label>
+              <input id="email" name="email" type="email" placeholder="votre@email.com"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
+                required />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
+              <input id="subject" name="subject" type="text" placeholder="Sujet du message"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Votre message"
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit"
+                class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
+                Envoyer
+                <i class="bi bi-send"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="space-y-6">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1400&auto=format&fit=crop"
+              alt="Client heureux utilisant son smartphone" class="w-full h-80 md:h-[28rem] object-cover">
+          </div>
+
+          <div class="space-y-4">
+            <div class="bg-white rounded-2xl p-4 md:p-5 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-envelope"></i>
+              </span>
+              <div>
+                <h4 class="font-medium">Email</h4>
+                <p class="text-sm text-zinc-600">contact@coreasofts.com</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 md:p-5 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-telephone"></i>
+              </span>
+              <div>
+                <h4 class="font-medium">Contact</h4>
+                <p class="text-sm text-zinc-600">(+243) 828 858 300</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 md:p-5 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-geo-alt"></i>
+              </span>
+              <div>
+                <h4 class="font-medium">Adresse</h4>
+                <p class="text-sm text-zinc-600">RDC, Kinshasa, Gombe no 11</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
 
