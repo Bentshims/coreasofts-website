@@ -94,12 +94,11 @@
     </div>
   </header>
   <main class="space-y-24">
-    <!-- la Hero section -->
-    <section
-      class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet overflow-hidden rounded-2xl">
-      <div class="absolute inset-0 bg-black/60"></div>
 
-      <!-- Contenu -->
+    <!-- la Hero section -->
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet rounded-2xl">
+      <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
         <div class="max-w-2xl">
           <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8">
@@ -126,9 +125,9 @@
       </div>
 
       <!-- Indicateur de scroll -->
-      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div class="animate-bounce">
-          <i class="bi bi-arrow-down-circle text-white text-4xl"></i>
+          <i class="bi bi-arrow-down-circle-fill text-red-600 text-5xl"></i>
         </div>
       </div>
     </section>
@@ -1030,7 +1029,7 @@
 
             <div class="pt-2">
               <button type="submit"
-                class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
+                class="w-full text-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
                 Envoyer
                 <i class="bi bi-send"></i>
               </button>
@@ -1038,15 +1037,15 @@
           </form>
         </div>
 
-        <div class="space-y-6">
-          <div class="rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1400&auto=format&fit=crop"
-              alt="Client heureux utilisant son smartphone" class="w-full h-80 md:h-[28rem] object-cover">
+        <div class="space-y-6 border border-red-500 h-full">
+          <div class="">
+            <img src="./assets/contact-image.png" alt="Client heureux utilisant son smartphone"
+              class="w-full h-full object-cover rounded-r-xl border border-red-500">
           </div>
 
-          <div class="space-y-4">
-            <div class="bg-white rounded-2xl p-4 md:p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+          <div class="space-y-3 bg-white py-5 px-2 rounded-lg">
+            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
                 <i class="bi bi-envelope"></i>
               </span>
               <div>
@@ -1055,8 +1054,8 @@
               </div>
             </div>
 
-            <div class="bg-white rounded-2xl p-4 md:p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
                 <i class="bi bi-telephone"></i>
               </span>
               <div>
@@ -1065,8 +1064,8 @@
               </div>
             </div>
 
-            <div class="bg-white rounded-2xl p-4 md:p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
                 <i class="bi bi-geo-alt"></i>
               </span>
               <div>
@@ -1083,8 +1082,36 @@
 
 
   </main>
-  <footer>
+  <footer class="mt-96">
+    <div class="border-t border-zinc-200 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="flex flex-col items-center">
+          <img src="./assets/corea-white-laptop-logo.JPG" alt="Coreasofts" class="w-32 h-32 border border-red-500">
+          <div>
+            <p class="text-sm text-zinc-600">Des solutions intelligentes pour un avenir durable</p>
+          </div>
+        </div>
 
+        <!--la Navigation et lien vers les reseaux sociaux                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -->
+        <nav class="flex items-center justify-center gap-8 text-sm text-zinc-800">
+          <a href="#" class="hover:text-red-600">Accueil</a>
+          <a href="#" class="hover:text-red-600">A propos</a>
+          <a href="#" class="hover:text-red-600">Services</a>
+          <a href="#" class="hover:text-red-600">Temoignages</a>
+        </nav>
+
+        <div class="flex items-center justify-center md:justify-end gap-6 text-2xl text-zinc-800">
+          <a href="#" aria-label="X" class="hover:text-red-600"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-red-600"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn" class="hover:text-red-600"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-red-600"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-zinc-200 py-6">
+      <p class="text-center text-sm text-zinc-600">© Copyright Coreasofts</p>
+    </div>
   </footer>
 </body>
 

@@ -47,7 +47,8 @@ function animateCarousel(id, direction = "left", speed = 0.5) {
 animateCarousel("carousel1", "left", 0.5);
 animateCarousel("carousel2", "right", 0.5);
 
-// Projets - carrousel avec boutons et indicateur
+//section projet
+
 function initProjectsCarousel() {
   const track = document.getElementById("projectsCarousel");
   if (!track) return;
@@ -103,7 +104,6 @@ function initProjectsCarousel() {
   });
 
   track.addEventListener("scroll", updateProgress, { passive: true });
-  // init once
   updateProgress();
 
   function startAuto() {
@@ -118,7 +118,6 @@ function initProjectsCarousel() {
     }
   }
 
-  // Pause on interaction and resume on leave
   track.addEventListener("mouseenter", stopAuto);
   track.addEventListener("mouseleave", startAuto);
   track.addEventListener("touchstart", stopAuto, { passive: true });
