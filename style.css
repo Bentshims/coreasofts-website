@@ -2,3 +2,7 @@
     background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
     clip-path: polygon(0 25%, 100% 0, 100% 85%, 0 100%);
 }
+
+/*animations au Scroll  */
+[data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+[data-animate].in-view { opacity: 1; transform: translateY(0); }

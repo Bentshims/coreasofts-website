@@ -128,6 +128,115 @@ function initProjectsCarousel() {
 
 initProjectsCarousel();
 
+//Gestion des contact avec EmailJS 
+
+(function initEmailJsForm() {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  const submitBtn = document.getElementById("submitBtn");
+  const statusEl = document.getElementById("formStatus");
+
+  const metaKey = document.querySelector('meta[name="emailjs-public-key"]');
+  const PUBLIC_KEY = metaKey && metaKey.getAttribute("content") ? metaKey.getAttribute("content") : "";
+  if (window.emailjs && typeof emailjs.init === "function" && PUBLIC_KEY) {
+    emailjs.init({ publicKey: PUBLIC_KEY });
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const currentLang = document.documentElement.getAttribute("lang") || "fr";
+    const t = (key, fallback) => {
+      try {
+        const dict = window.__lastDict || {};
+        const parts = key.split(".");
+        let cur = dict;
+        for (const p of parts) cur = cur && cur[p] != null ? cur[p] : undefined;
+        return typeof cur === "string" ? cur : fallback;
+      } catch (_) {
+        return fallback;
+      }
+    };
+
+    function setStatus(message, isError) {
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      statusEl.classList.remove("hidden");
+      statusEl.classList.toggle("text-green-600", !isError);
+      statusEl.classList.toggle("text-red-600", !!isError);
+    }
+
+    try {
+      if (!window.emailjs) throw new Error("EmailJS not loaded");
+
+      submitBtn && (submitBtn.disabled = true);
+      submitBtn && submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+
+      const formData = new FormData(form);
+      const templateParams = {
+        name: formData.get("name") || "",
+        email: formData.get("email") || "",
+        subject: formData.get("subject") || "",
+        message: formData.get("message") || "",
+      };
+
+      // IDs de corea
+      const SERVICE_ID = "service_m3q0p4q";
+      const TEMPLATE_ID = "template_z7kbbpk";
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY ? { publicKey: PUBLIC_KEY } : undefined);
+
+      setStatus(
+        t(
+          "contact.form.status.success",
+          currentLang === "en"
+            ? "Your message has been sent successfully. We will get back to you soon."
+            : "Votre message a été envoyé avec succès. Nous vous reviendrons rapidement."
+        ),
+        false
+      );
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      setStatus(
+        t(
+          "contact.form.status.error",
+          (document.documentElement.getAttribute("lang") || "fr") === "en"
+            ? "An error occurred while sending your message. Please try again later."
+            : "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard."
+        ),
+        true
+      );
+    } finally {
+      submitBtn && (submitBtn.disabled = false);
+      submitBtn && submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+    }
+  }
+
+  form.addEventListener("submit", handleSubmit);
+})();
+
+//animations au Scroll 
+
+(function initScrollAnimations() {
+  const elements = document.querySelectorAll("[data-animate]");
+  if (!elements.length) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  elements.forEach((el) => observer.observe(el));
+})();
+
+
 // i18n:  tranduction automatique
 
 
@@ -186,6 +295,7 @@ initProjectsCarousel();
     try {
       const dict = await loadDictionary(lang);
       applyTextTranslations(dict);
+      window.__lastDict = dict;
       htmlEl.setAttribute("lang", lang);
       localStorage.setItem(STORAGE_KEY, lang);
       if (langCurrentLabel) langCurrentLabel.textContent = lang.toUpperCase();

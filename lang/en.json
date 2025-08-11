@@ -120,7 +120,11 @@
       "subjectPlaceholder": "Message subject",
       "messageLabel": "Message",
       "messagePlaceholder": "Your message",
-      "submit": "Send"
+      "submit": "Send",
+      "status": {
+        "success": "Your message has been sent successfully. We will get back to you soon.",
+        "error": "An error occurred while sending your message. Please try again later."
+      }
     },
     "cards": {
       "email": { "title": "Email" },
