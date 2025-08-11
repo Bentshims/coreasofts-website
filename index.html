@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coreasofts</title>
+  <title data-i18n="head.title">Coreasofts</title>
 
-  <meta name="description"
+  <meta name="description" data-i18n-attr-content="head.meta.description"
     content="Coreasofts accompagne les entreprises et entrepreneurs africains dans leur transformation digitale à travers des solutions innovantes, durables et locales.">
   <meta name="keywords"
     content="Coreasofts, digital, Afrique, développement web, mobile, stratégie, transformation numérique, innovation">
@@ -15,8 +15,8 @@
   <meta name="theme-color" content="#E30613" />
 
   <!-- Open Graph pour le partage réseaux sociaux -->
-  <meta property="og:title" content="Coreasofts - Transformez vos idées en solutions" />
-  <meta property="og:description"
+  <meta property="og:title" data-i18n-attr-content="head.og.title" content="Coreasofts - Transformez vos idées en solutions" />
+  <meta property="og:description" data-i18n-attr-content="head.og.description"
     content="Solutions digitales adaptées à l'Afrique : développement web, mobile, stratégie et accompagnement sur mesure." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://coreasofts.com/" />
@@ -24,8 +24,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Coreasofts - Solutions digitales en Afrique" />
-  <meta name="twitter:description" content="Découvrez nos services pour booster votre transformation digitale." />
+  <meta name="twitter:title" data-i18n-attr-content="head.twitter.title" content="Coreasofts - Solutions digitales en Afrique" />
+  <meta name="twitter:description" data-i18n-attr-content="head.twitter.description" content="Découvrez nos services pour booster votre transformation digitale." />
   <meta name="twitter:image" content="https://coreasofts.com/assets/corea-white-laptop-logo.JPG" />
 
   <link rel="icon" href="./assets/corea-mobile-logo.png" type="image/x-icon" />
@@ -71,15 +71,26 @@
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-10">
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium border-b-2 border-red-600 pb-1">Accueil</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">À propos</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Témoignages</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium border-b-2 border-red-600 pb-1" data-i18n="nav.home">Accueil</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium" data-i18n="nav.about">À propos</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium" data-i18n="nav.services">Services</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium" data-i18n="nav.testimonials">Témoignages</a>
         </nav>
 
-        <div class="hidden md:flex items-center">
+        <div class="hidden md:flex items-center gap-3">
+          <div class="relative">
+            <button id="langToggle" aria-haspopup="listbox" aria-expanded="false"
+              class="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 px-3 py-2 rounded-md flex items-center gap-2">
+              <span id="langCurrentLabel">FR</span>
+              <i class="bi bi-translate"></i>
+            </button>
+            <ul id="langMenu" class="hidden absolute right-0 mt-2 w-28 bg-white border border-zinc-200 rounded-md shadow-md">
+              <li><button data-lang="fr" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇫🇷</button></li>
+              <li><button data-lang="en" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇱🇷</button></li>
+            </ul>
+          </div>
           <button
-            class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+            class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
             Nous contacter
           </button>
         </div>
@@ -101,12 +112,12 @@
 
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
         <div class="max-w-2xl">
-          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8">
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
             Transformez vos idées en solutions. </br>
             Innovez avec <span class="text-red-600">Coreasofts</span>.
           </h1>
 
-          <p class="text-gray-300 mb-12 leading-relaxed">
+          <p class="text-gray-300 mb-12 leading-relaxed" data-i18n-html="hero.subtitle">
             Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre
             activité ou lancer votre start-up. <span class="text-red-500 font-medium">Coreasofts</span> vous accompagne
             avec des solutions
@@ -114,10 +125,10 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-md transition-colors duration-200">
+            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
               Nos services
             </button>
-            <button class="bg-red-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+            <button class="bg-red-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
               Nous contacter
             </button>
           </div>
@@ -149,13 +160,13 @@
         <div></div>
       </div>
       <div class="h-full">
-        <h2 class="text-sm text-red-600 font-medium px-2 absolute top-14">À propos de Nous</h2>
+        <h2 class="text-sm text-red-600 font-medium px-2 absolute top-14" data-i18n="about.sectionLabel">À propos de Nous</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white rounded-lg p-6 shadow-sm translate-y-0">
-            <h3 class="text-xl font-semibold mb-4">Notre Vision</h3>
-            <p class="mb-2 font-medium">Devenir le leader de l'innovation digitale en Afrique.</p>
-            <p class="text-md text-zinc-600">
+            <h3 class="text-xl font-semibold mb-4" data-i18n="about.vision.title">Notre Vision</h3>
+            <p class="mb-2 font-medium" data-i18n="about.vision.lead">Devenir le leader de l'innovation digitale en Afrique.</p>
+            <p class="text-md text-zinc-600" data-i18n-html="about.vision.text">
               Coreasofts aspire à
               <span class="text-red-600 font-medium">transformer</span> durablement les
               <span class="text-red-600 font-medium">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le
@@ -165,9 +176,9 @@
           </div>
 
           <div class="bg-white rounded-lg p-6 shadow-sm translate-y-16">
-            <h3 class="text-xl font-semibold mb-4">Notre Mission</h3>
-            <p class="mb-2 font-medium">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
-            <p class="text-md text-zinc-600">
+            <h3 class="text-xl font-semibold mb-4" data-i18n="about.mission.title">Notre Mission</h3>
+            <p class="mb-2 font-medium" data-i18n="about.mission.lead">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
+            <p class="text-md text-zinc-600" data-i18n-html="about.mission.text">
               Nous offrons des services innovants en stratégie,
               <span class="text-red-600 font-medium">accompagnement numérique</span>, développement d'applications,
               organisation d'événements et ingénierie mécanique.
@@ -177,22 +188,22 @@
           </div>
 
           <div class="bg-white rounded-lg p-6 shadow-sm translate-y-32">
-            <h3 class="text-xl font-semibold mb-4">Nos Valeurs</h3>
-            <p class="mb-4 font-medium">Ce qui guide chacune de nos actions.</p>
+            <h3 class="text-xl font-semibold mb-4" data-i18n="about.values.title">Nos Valeurs</h3>
+            <p class="mb-4 font-medium" data-i18n="about.values.lead">Ce qui guide chacune de nos actions.</p>
             <ul class="space-y-2 text-md text-zinc-600">
-              <li>
+              <li data-i18n-html="about.values.items.0">
                 <span class="text-red-600 font-medium">Innovation</span> : repousser les limites pour créer des
                 solutions modernes et pertinentes
               </li>
-              <li>
+              <li data-i18n-html="about.values.items.1">
                 <span class="text-red-600 font-medium">Engagement</span> : avancer aux côtés de nos clients jusqu'à la
                 réussite
               </li>
-              <li>
+              <li data-i18n-html="about.values.items.2">
                 <span class="text-red-600 font-medium">Collaboration</span> : bâtir ensemble avec confiance et
                 transparence
               </li>
-              <li>
+              <li data-i18n-html="about.values.items.3">
                 <span class="text-red-600 font-medium">Excellence</span> : viser la qualité maximale dans chaque projet
               </li>
             </ul>
@@ -207,14 +218,14 @@
 
     <section class="py-12 px-4 md:px-8 space-y-32 h-auto">
 
-      <h2 class="text-sm text-red-600 font-medium mb-8">Nos services</h2>
+      <h2 class="text-sm text-red-600 font-medium mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
       <div class="md:flex gap-x-12 md:h-96">
         <div class="md:w-1/2 flex flex-col justify-between">
-          <h2 class="font-semibold text-xl text-center mt-16">
+          <h2 class="font-semibold text-xl text-center mt-16" data-i18n="services.intro.title">
             Ce que nous faisons
           </h2>
-          <p class="text-zinc-600 leading-relaxed mb-6">
+          <p class="text-zinc-600 leading-relaxed mb-6" data-i18n="services.intro.text">
             Chez Coreasofts, nous allions innovation, expertise et engagement pour répondre aux défis numériques de nos
             clients.
             Nos services couvrent chaque étape de la transformation digitale, de la stratégie à la mise en œuvre
@@ -225,7 +236,7 @@
           <div>
             <button
               class="bg-red-600 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
-              En savoir plus
+              <span data-i18n="services.intro.cta">En savoir plus</span>
             </button>
           </div>
         </div>
@@ -251,11 +262,11 @@
           </div>
 
           <div class="bg-red-600 text-white p-10 rounded-lg relative z-10 border border-red-600">
-            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between" data-i18n="services.cards.strabus.title">
               Strabus - Stratégie Business
               <i class="bi bi-arrow-up-right-circle-fill text-4xl"></i>
             </h3>
-            <p class="text-sm leading-relaxed">
+            <p class="text-sm leading-relaxed" data-i18n="services.cards.strabus.text">
               Nous vous aidons à structurer, repositionner ou lancer votre activité avec une stratégie claire, réaliste
               et alignée sur vos objectifs.
               Strabus vous accompagne dans vos décisions clés pour assurer croissance et durabilité.
@@ -263,11 +274,11 @@
           </div>
 
           <div class="bg-white text-black p-10  rounded-lg relative z-10 border border-red-600">
-            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between" data-i18n="services.cards.acconum.title">
               Acconum - Accompagnement Numérique
               <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
             </h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
+            <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.acconum.text">
               De la planification à l'exécution, Acconum guide votre transition vers le numérique.
               Nous digitalisons vos outils, process et canaux pour améliorer l'efficacité et renforcer votre impact dans
               un monde connecté.
@@ -275,11 +286,11 @@
           </div>
 
           <div class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600">
-            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between" data-i18n="services.cards.devapp.title">
               Devapp - Développement d'applications
               <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
             </h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
+            <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.devapp.text">
               Que ce soit pour le web ou le mobile, nous développons des applications robustes, ergonomiques et
               évolutives,
               parfaitement adaptées à vos besoins métiers et à votre public cible.
@@ -287,11 +298,11 @@
           </div>
 
           <div class="bg-white text-black p-10  rounded-lg relative z-10 border border-red-600">
-            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between" data-i18n="services.cards.event.title">
               Corea-Event - Organisation d'événements
               <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
             </h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
+            <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.event.text">
               Nous concevons et organisons des événements professionnels (ateliers, forums, salons) qui valorisent
               l’innovation,
               renforcent les synergies et stimulent les talents de demain.
@@ -303,11 +314,11 @@
         </div>
         <div class="flex items-center justify-center px-80">
           <div class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600">
-            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between">
+            <h3 class="font-semibold text-lg mb-3 flex items-center justify-between" data-i18n="services.cards.meca.title">
               Corea-Meca - Solutions Mécaniques
               <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
             </h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
+            <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.meca.text">
               De l'ingénierie à la fabrication, Corea-Meca conçoit des solutions techniques et mécaniques adaptées aux
               réalités africaines,
               pour répondre aux besoins des secteurs industriels et productifs.
@@ -324,8 +335,8 @@
 
 
       <div class="container mx-auto px-6 lg:px-20 relative z-10">
-        <h2 class="text-center text-2xl font-semibold mb-2">FAQs</h2>
-        <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12">
+        <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="faq.title">FAQs</h2>
+        <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12" data-i18n="faq.subtitle">
           Voici les réponses aux questions les plus fréquentes sur nos services, notre fonctionnement et notre
           accompagnement.
         </p>
@@ -334,35 +345,37 @@
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600">Quels types de clients accompagnez-vous ?</h3>
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.0.q">Quels types de clients accompagnez-vous ?</h3>
               <span
                 class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
                 <i class="bi bi-arrow-down"></i>
               </span>
             </div>
             <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              Nous travaillons avec des entreprises de toutes tailles, des start-ups aux grandes institutions, ainsi
-              qu'avec des entrepreneurs individuels.
-              Chaque projet est adapté à vos objectifs et à votre secteur.
+              <span data-i18n="faq.items.0.a">
+                Nous travaillons avec des entreprises de toutes tailles, des start-ups aux grandes institutions, ainsi
+                qu'avec des entrepreneurs individuels.
+                Chaque projet est adapté à vos objectifs et à votre secteur.
+              </span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600">Proposez-vous des services personnalisés</h3>
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.1.q">Proposez-vous des services personnalisés</h3>
               <span
                 class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
             <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              Oui, nous proposons des solutions sur mesure en fonction de vos besoins spécifiques et de vos contraintes.
+              <span data-i18n="faq.items.1.a">Oui, nous proposons des solutions sur mesure en fonction de vos besoins spécifiques et de vos contraintes.</span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600">Faut-il déjà avoir un cahier des charges pour vous
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.2.q">Faut-il déjà avoir un cahier des charges pour vous
                 contacter ?</h3>
               <span
                 class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
@@ -370,48 +383,48 @@
               </span>
             </div>
             <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              Non, nous pouvons vous aider à le formaliser ensemble dès le début du projet.
+              <span data-i18n="faq.items.2.a">Non, nous pouvons vous aider à le formaliser ensemble dès le début du projet.</span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600">Quels sont vos délais de réalisation ?</h3>
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.3.q">Quels sont vos délais de réalisation ?</h3>
               <span
                 class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
             <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser
-              les temps de livraison.
+              <span data-i18n="faq.items.3.a">Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser
+              les temps de livraison.</span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600">Travaillez-vous uniquement en RDC ?</h3>
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.4.q">Travaillez-vous uniquement en RDC ?</h3>
               <span
                 class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
             <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              Non, nous travaillons avec des clients partout dans le monde.
+              <span data-i18n="faq.items.4.a">Non, nous travaillons avec des clients partout dans le monde.</span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600">Comment démarrer un projet avec vous ?</h3>
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.5.q">Comment démarrer un projet avec vous ?</h3>
               <span
                 class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
             <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous
-              répondrons rapidement.
+              <span data-i18n="faq.items.5.a">Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous
+              répondrons rapidement.</span>
             </div>
           </div>
 
@@ -828,8 +841,8 @@
 
     <!--la Section Projets -->
     <section id="projects" class="bg-rose-50 rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden">
-      <h2 class="text-center text-2xl font-semibold mb-2">Projets</h2>
-      <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12">
+      <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="projects.title">Projets</h2>
+      <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12" data-i18n="projects.subtitle">
         Découvrez quelques projets récents. Faites défiler pour en voir davantage.
       </p>
 
@@ -856,8 +869,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">Tshims AI</h4>
-                <p class="text-xs text-zinc-600">Solution IA pour l'analyse en temps réel. Interface simple et
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.0.title">Tshims AI</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.0.text">Solution IA pour l'analyse en temps réel. Interface simple et
                   intuitive.</p>
               </div>
               <span class="text-red-600">
@@ -875,8 +888,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">Dashboard Analytics</h4>
-                <p class="text-xs text-zinc-600">Tableau de bord de performance et reporting automatisé.</p>
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.1.title">Dashboard Analytics</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.1.text">Tableau de bord de performance et reporting automatisé.</p>
               </div>
               <span class="text-red-600">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
@@ -893,8 +906,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">ERP PME</h4>
-                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.2.title">ERP PME</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.2.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
               <span class="text-red-600">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
@@ -911,8 +924,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">ERP PME</h4>
-                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.3.title">ERP PME</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.3.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
               <span class="text-red-600">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
@@ -929,8 +942,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">ERP PME</h4>
-                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.4.title">ERP PME</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.4.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
               <span class="text-red-600">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
@@ -947,8 +960,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">ERP PME</h4>
-                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.5.title">ERP PME</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.5.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
               <span class="text-red-600">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
@@ -965,8 +978,8 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600">ERP PME</h4>
-                <p class="text-xs text-zinc-600">Suite de gestion intégrée: ventes, stocks et opérations.</p>
+                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.6.title">ERP PME</h4>
+                <p class="text-xs text-zinc-600" data-i18n="projects.slides.6.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
               <span class="text-red-600">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
@@ -994,43 +1007,44 @@
     <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-          <h2 class="text-2xl font-semibold mb-2">Discutons de votre projet</h2>
-          <p class="text-sm text-zinc-600 mb-8 max-w-xl">
+          <h2 class="text-2xl font-semibold mb-2" data-i18n="contact.title">Discutons de votre projet</h2>
+          <p class="text-sm text-zinc-600 mb-8 max-w-xl" data-i18n="contact.subtitle">
             Une idée, un projet ou une simple question ? Parlez‑nous‑en via le formulaire ci‑dessous.
             Notre équipe vous répond rapidement et vous accompagne avec clarté, écoute et expertise.
           </p>
 
           <form class="space-y-6" novalidate>
             <div>
-              <label for="name" class="block text-sm font-medium mb-2">Nom et Prenom</label>
-              <input id="name" name="name" type="text" placeholder="Votre nom complet"
+              <label for="name" class="block text-sm font-medium mb-2" data-i18n="contact.form.nameLabel">Nom et Prenom</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom complet" data-i18n-attr-placeholder="contact.form.namePlaceholder"
                 class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
                 required />
             </div>
 
             <div>
-              <label for="email" class="block text-sm font-medium mb-2">Email</label>
+              <label for="email" class="block text-sm font-medium mb-2" data-i18n="contact.form.emailLabel">Email</label>
               <input id="email" name="email" type="email" placeholder="votre@email.com"
+                data-i18n-attr-placeholder="contact.form.emailPlaceholder"
                 class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
                 required />
             </div>
 
             <div>
-              <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
-              <input id="subject" name="subject" type="text" placeholder="Sujet du message"
+              <label for="subject" class="block text-sm font-medium mb-2" data-i18n="contact.form.subjectLabel">Sujet</label>
+              <input id="subject" name="subject" type="text" placeholder="Sujet du message" data-i18n-attr-placeholder="contact.form.subjectPlaceholder"
                 class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" />
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-medium mb-2">Message</label>
-              <textarea id="message" name="message" rows="6" placeholder="Votre message"
+              <label for="message" class="block text-sm font-medium mb-2" data-i18n="contact.form.messageLabel">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Votre message" data-i18n-attr-placeholder="contact.form.messagePlaceholder"
                 class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"></textarea>
             </div>
 
             <div class="pt-2">
-              <button type="submit"
+              <button type="submit" data-i18n="contact.form.submit"
                 class="w-full text-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
-                Envoyer
+                  Envoyer
                 <i class="bi bi-send"></i>
               </button>
             </div>
@@ -1049,7 +1063,7 @@
                 <i class="bi bi-envelope"></i>
               </span>
               <div>
-                <h4 class="font-medium">Email</h4>
+                <h4 class="font-medium" data-i18n="contact.cards.email.title">Email</h4>
                 <p class="text-sm text-zinc-600">contact@coreasofts.com</p>
               </div>
             </div>
@@ -1059,7 +1073,7 @@
                 <i class="bi bi-telephone"></i>
               </span>
               <div>
-                <h4 class="font-medium">Contact</h4>
+                <h4 class="font-medium" data-i18n="contact.cards.phone.title">Contact</h4>
                 <p class="text-sm text-zinc-600">(+243) 828 858 300</p>
               </div>
             </div>
@@ -1069,7 +1083,7 @@
                 <i class="bi bi-geo-alt"></i>
               </span>
               <div>
-                <h4 class="font-medium">Adresse</h4>
+                <h4 class="font-medium" data-i18n="contact.cards.address.title">Adresse</h4>
                 <p class="text-sm text-zinc-600">RDC, Kinshasa, Gombe no 11</p>
               </div>
             </div>
@@ -1085,19 +1099,18 @@
   <footer class="mt-96">
     <div class="border-t border-zinc-200 py-10">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-        <div class="flex flex-col items-center">
+        <div class="flex items-center">
           <img src="./assets/corea-white-laptop-logo.JPG" alt="Coreasofts" class="w-32 h-32 border border-red-500">
           <div>
-            <p class="text-sm text-zinc-600">Des solutions intelligentes pour un avenir durable</p>
+            <p class="text-sm text-zinc-600" data-i18n="footer.tagline">Des solutions intelligentes pour un avenir durable</p>
           </div>
-        </div>
 
         <!--la Navigation et lien vers les reseaux sociaux                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -->
         <nav class="flex items-center justify-center gap-8 text-sm text-zinc-800">
-          <a href="#" class="hover:text-red-600">Accueil</a>
-          <a href="#" class="hover:text-red-600">A propos</a>
-          <a href="#" class="hover:text-red-600">Services</a>
-          <a href="#" class="hover:text-red-600">Temoignages</a>
+          <a href="#" class="hover:text-red-600" data-i18n="nav.home">Accueil</a>
+          <a href="#" class="hover:text-red-600" data-i18n="nav.about">A propos</a>
+          <a href="#" class="hover:text-red-600" data-i18n="nav.services">Services</a>
+          <a href="#" class="hover:text-red-600" data-i18n="nav.testimonials">Temoignages</a>
         </nav>
 
         <div class="flex items-center justify-center md:justify-end gap-6 text-2xl text-zinc-800">
@@ -1110,7 +1123,7 @@
     </div>
 
     <div class="border-t border-zinc-200 py-6">
-      <p class="text-center text-sm text-zinc-600">© Copyright Coreasofts</p>
+      <p class="text-center text-sm text-zinc-600" data-i18n="footer.copyright">&copy; Copyright Coreasofts</p>
     </div>
   </footer>
 </body>
