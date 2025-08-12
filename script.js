@@ -1,3 +1,6 @@
+
+
+
 // FAQ accordion
 const faqItems = document.querySelectorAll("[data-faq]");
 faqItems.forEach((item) => {
@@ -237,7 +240,7 @@ initProjectsCarousel();
 })();
 
 
-// i18n:  tranduction automatique
+// i18n:  tranduction automatique et sauvegarde avec le localStorage
 
 
 (function initI18n() {
@@ -298,7 +301,7 @@ initProjectsCarousel();
       window.__lastDict = dict;
       htmlEl.setAttribute("lang", lang);
       localStorage.setItem(STORAGE_KEY, lang);
-      if (langCurrentLabel) langCurrentLabel.textContent = lang.toUpperCase();
+      if (langCurrentLabel) langCurrentLabel.textContent = lang === "en" ? "🇬🇧" : "🇫🇷";
     } catch (e) {
       console.error(e);
     }
@@ -341,4 +344,40 @@ initProjectsCarousel();
   const initial = detectInitialLang();
   setLanguage(initial);
   setupMenuInteractions();
+})();
+
+// Header hide/show on scroll
+(function initHeaderScrollBehavior() {
+  const header = document.getElementById("siteHeader");
+  if (!header) return;
+  let lastY = window.pageYOffset || document.documentElement.scrollTop || 0;
+  let ticking = false;
+
+  function onScroll() {
+    const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    const delta = currentY - lastY;
+    const threshold = 4;
+    if (Math.abs(delta) < threshold) return;
+
+    if (delta > 0) {
+      // scrolling down -> hide
+      header.style.transform = "translateY(-100%)";
+    } else {
+      // scrolling up -> show
+      header.style.transform = "translateY(0)";
+    }
+    lastY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 })();

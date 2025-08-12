@@ -6,3 +6,22 @@
 /*animations au Scroll  */
 [data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 [data-animate].in-view { opacity: 1; transform: translateY(0); }
+
+/* Header nav underline from center */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #E30613;
+  transform: translateX(-50%);
+  transition: width 300ms ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}

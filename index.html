@@ -61,22 +61,22 @@
 </head>
 
 <body class="bg-white px-4 md:px-80 space-y-8 relative">
-  <header class="sticky top-0 z-50 bg-white">
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300 ease-in-out overflow-hidden">
     <div class="md:py-8">
       <div class="flex items-center justify-between h-16">
 
         <!-- Logo laptop coreasofts -->
-        <img src="./assets/corea-white-laptop-logo.JPG" alt="logo Coreasofts" class="hidden md:block w-32 h-auto">
+        <img src="./assets/logo.png" alt="logo Coreasofts" class="hidden md:block w-32 h-auto">
 
         <!-- logo mobile --> 
         <img src="./assets/corea-mobile-logo.png" alt="logo coreasofts" class="w-16 h-auto md:hidden">
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-10">
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium border-b-2 border-red-600 pb-1" data-i18n="nav.home">Accueil</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium" data-i18n="nav.about">À propos</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium" data-i18n="nav.services">Services</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 font-medium" data-i18n="nav.testimonials">Témoignages</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-gray-400 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.home">Accueil</a>
+          <a href="#" class="nav-link text-gray-500 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.about">À propos</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.services">Services</a>
+          <a href="#" class="nav-link text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.testimonials">Témoignages</a>
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
@@ -84,11 +84,10 @@
             <button id="langToggle" aria-haspopup="listbox" aria-expanded="false"
               class="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 px-3 py-2 rounded-md flex items-center gap-2">
               <span id="langCurrentLabel">🇫🇷</span>
-              <i class="bi bi-translate"></i>
             </button>
             <ul id="langMenu" class="hidden absolute right-0 mt-2 w-28 bg-white border border-zinc-200 rounded-md shadow-md">
               <li><button data-lang="fr" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇫🇷</button></li>
-              <li><button data-lang="en" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇱🇷</button></li>
+              <li><button data-lang="en" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇬🇧</button></li>
             </ul>
           </div>
           <button
