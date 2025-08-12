@@ -43,3 +43,10 @@
 [data-faq].faq-open .faq-content {
   opacity: 1;
 }
+
+/* Services: assurer une transition douce des couleurs */
+[data-service-card],
+[data-service-card] *,
+[data-service-icon] {
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}

@@ -26,6 +26,14 @@
       }
     });
   });
+
+  // Ouvrir la première question par défaut
+  const firstItem = faqItems[0];
+  if (firstItem) {
+    firstItem.classList.add("faq-open");
+    const firstContent = firstItem.querySelector(".faq-content");
+    if (firstContent) firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+  }
 })();
 
 // Témoignages - auto défilement infini
@@ -426,5 +434,66 @@ initProjectsCarousel();
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
+  });
+})();
+
+// Services: effet swap au survol/touch entre la carte principale et la carte survolée
+(function initServiceCardsHoverSwap() {
+  const cards = Array.from(document.querySelectorAll('[data-service-card]'));
+  if (!cards.length) return;
+  const master = cards[0];
+
+  function setActive(card) {
+    card.classList.add('bg-red-600', 'text-white');
+    card.classList.remove('bg-white', 'text-black');
+    // icône -> blanche
+    card.querySelectorAll('[data-service-icon]').forEach((icon) => {
+      icon.classList.add('text-white');
+      icon.classList.remove('text-red-600');
+    });
+    // paragraphes sombres -> blancs
+    card.querySelectorAll('.text-gray-700').forEach((el) => {
+      el.classList.add('text-white');
+      el.classList.remove('text-gray-700');
+    });
+  }
+
+  function setInactive(card) {
+    card.classList.add('bg-white', 'text-black');
+    card.classList.remove('bg-red-600', 'text-white');
+    // icône -> rouge
+    card.querySelectorAll('[data-service-icon]').forEach((icon) => {
+      icon.classList.add('text-red-600');
+      icon.classList.remove('text-white');
+    });
+    // paragraphes -> gris foncé
+    card.querySelectorAll('p').forEach((el) => {
+      if (!el.classList.contains('text-white')) {
+        el.classList.add('text-gray-700');
+      } else {
+        el.classList.remove('text-white');
+        el.classList.add('text-gray-700');
+      }
+    });
+  }
+
+  // État initial déjà correct dans le HTML: master actif, autres inactives
+  // Ajoute les interactions sur les cartes non principales
+  cards.slice(1).forEach((card) => {
+    function enter() {
+      setInactive(master);
+      setActive(card);
+    }
+    function leave() {
+      setInactive(card);
+      setActive(master);
+    }
+
+    card.addEventListener('mouseenter', enter);
+    card.addEventListener('mouseleave', leave);
+    // Mobile/touch
+    card.addEventListener('touchstart', enter, { passive: true });
+    card.addEventListener('touchend', leave, { passive: true });
+    card.addEventListener('touchcancel', leave, { passive: true });
   });
 })();
