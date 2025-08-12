@@ -7,7 +7,7 @@
 [data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 [data-animate].in-view { opacity: 1; transform: translateY(0); }
 
-/* Header nav underline from center */
+/* Header effet de surlignage au centre sur les nav links */
 .nav-link {
   position: relative;
 }
@@ -26,7 +26,7 @@
   width: 100%;
 }
 
-/* FAQ diagonal toggle rotation */
+/* FAQ Rotation des icones */
 [data-faq] .faq-toggle {
   transition: transform 700ms ease;
   transform: rotate(-5deg);
@@ -35,7 +35,7 @@
   transform: rotate(135deg);
 }
 
-/* FAQ content smooth open/close */
+/* FAQ effet d'animation a l'ouverture et fermeture */
 .faq-content {
   opacity: 0;
   transition: max-height 500ms ease, opacity 400ms ease;
