@@ -1,31 +1,34 @@
 
 
 
-// FAQ accordion
-const faqItems = document.querySelectorAll("[data-faq]");
-faqItems.forEach((item) => {
-  const iconWrapper = item.querySelector("span");
-  const icon = item.querySelector("i");
-  const content = item.querySelector("div.mt-3");
+// FAQ accordion (diagonal icon -> rotates and content opens smoothly)
+(function initFaqAccordion() {
+  const faqItems = document.querySelectorAll("[data-faq]");
+  if (!faqItems.length) return;
 
-  item.addEventListener("click", () => {
-    const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+  faqItems.forEach((item) => {
+    const toggle = item.querySelector(".faq-toggle");
+    const content = item.querySelector(".faq-content");
+    if (!toggle || !content) return;
 
-    faqItems.forEach((el) => {
-      const elContent = el.querySelector("div.mt-3");
-      const elIcon = el.querySelector("i");
-      elContent.style.maxHeight = null;
-      el.querySelector("span").style.transform = "rotate(0deg)";
-      elIcon.className = "bi bi-arrow-up-right";
-    });
-
-    if (!isOpen) {
-      content.style.maxHeight = content.scrollHeight + "px";
-      iconWrapper.style.transform = "rotate(0deg)";
-      icon.className = "bi bi-arrow-down";
+    function closeAll() {
+      faqItems.forEach((el) => {
+        const c = el.querySelector(".faq-content");
+        if (c) c.style.maxHeight = null;
+        el.classList.remove("faq-open");
+      });
     }
+
+    item.addEventListener("click", () => {
+      const isOpen = item.classList.contains("faq-open");
+      closeAll();
+      if (!isOpen) {
+        item.classList.add("faq-open");
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
   });
-});
+})();
 
 // Témoignages - auto défilement infini
 function animateCarousel(id, direction = "left", speed = 0.5) {

@@ -54,14 +54,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 </head>
 
-<body class="bg-white px-4 md:px-80 space-y-8 relative">
-  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease">
+<body class="bg-white space-y-8 relative">
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease md:px-80">
     <div class="md:py-8">
       <div class="flex items-center justify-between h-16">
 
@@ -128,7 +129,7 @@
   <main class="space-y-24">
 
     <!-- la Hero section -->
-    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet rounded-2xl" data-animate>
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet rounded-2xl md:mx-80" data-animate>
       <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
 
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
@@ -159,7 +160,7 @@
     </section>
 
     <!-- la Section À propos de Nous -->
-    <section class="bg-red-50 rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden" data-animate>
+    <section class="bg-red-50 rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-80" data-animate>
       <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full"></div>
       <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full"></div>
       <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full"></div>
@@ -231,7 +232,7 @@
 
     <!-- la section services -->
 
-    <section class="py-12 px-4 md:px-8 space-y-32 h-auto" data-animate>
+    <section class="py-12 px-4 md:px-8 space-y-32 h-auto md:mx-80" data-animate>
 
       <h2 class="text-sm text-red-600 font-medium mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
@@ -344,33 +345,26 @@
 
     </section>
 
-
-    <!-- la Section FAQ -->
-    <section class="bg-red-500 text-white py-20 relative overflow-hidden" data-animate>
-
-
-      <div class="container mx-auto px-6 lg:px-20 relative z-10">
+    <!-- faq section full-width bg -->
+    <section class="relative px-4 md:px-80 bg-red-600 text-white py-20" data-animate>
+      <div class="max-w-5xl mx-auto">
         <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="faq.title">FAQs</h2>
         <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12" data-i18n="faq.subtitle">
-          Voici les réponses aux questions les plus fréquentes sur nos services, notre fonctionnement et notre
-          accompagnement.
+          Voici les réponses aux questions les plus fréquentes sur nos services, notre fonctionnement et notre accompagnement.
         </p>
 
         <div class="space-y-4 md:max-w-3xl mx-auto">
-
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.0.q">Quels types de clients accompagnez-vous ?</h3>
-              <span
-                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
-                <i class="bi bi-arrow-down"></i>
+              <span class="faq-toggle w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white">
+                <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.0.a">
                 Nous travaillons avec des entreprises de toutes tailles, des start-ups aux grandes institutions, ainsi
-                qu'avec des entrepreneurs individuels.
-                Chaque projet est adapté à vos objectifs et à votre secteur.
+                qu'avec des entrepreneurs individuels. Chaque projet est adapté à vos objectifs et à votre secteur.
               </span>
             </div>
           </div>
@@ -378,26 +372,23 @@
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.1.q">Proposez-vous des services personnalisés</h3>
-              <span
-                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+              <span class="faq-toggle w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.1.a">Oui, nous proposons des solutions sur mesure en fonction de vos besoins spécifiques et de vos contraintes.</span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.2.q">Faut-il déjà avoir un cahier des charges pour vous
-                contacter ?</h3>
-              <span
-                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.2.q">Faut-il déjà avoir un cahier des charges pour vous contacter ?</h3>
+              <span class="faq-toggle w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.2.a">Non, nous pouvons vous aider à le formaliser ensemble dès le début du projet.</span>
             </div>
           </div>
@@ -405,26 +396,23 @@
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.3.q">Quels sont vos délais de réalisation ?</h3>
-              <span
-                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+              <span class="faq-toggle w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              <span data-i18n="faq.items.3.a">Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser
-              les temps de livraison.</span>
+            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+              <span data-i18n="faq.items.3.a">Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser les temps de livraison.</span>
             </div>
           </div>
 
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.4.q">Travaillez-vous uniquement en RDC ?</h3>
-              <span
-                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+              <span class="faq-toggle w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
+            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.4.a">Non, nous travaillons avec des clients partout dans le monde.</span>
             </div>
           </div>
@@ -432,23 +420,19 @@
           <div class="bg-white text-black rounded-2xl px-6 py-10 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.5.q">Comment démarrer un projet avec vous ?</h3>
-              <span
-                class="w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white transition-transform duration-300">
+              <span class="faq-toggle w-8 h-8 flex items-center justify-center rounded-full bg-red-600 text-white">
                 <i class="bi bi-arrow-up-right"></i>
               </span>
             </div>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden transition-all duration-500">
-              <span data-i18n="faq.items.5.a">Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous
-              répondrons rapidement.</span>
+            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+              <span data-i18n="faq.items.5.a">Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous répondrons rapidement.</span>
             </div>
           </div>
-
         </div>
       </div>
-
     </section>
 
-    <section class="relative w-full py-10 overflow-hidden" data-animate>
+    <section class="relative py-10 overflow-hidden md:mx-80" data-animate>
       <div
         class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white/90 via-white/80 via-white/70 via-white/60 via-white/50 via-white/40 to-transparent z-10">
       </div>
@@ -855,7 +839,7 @@
     </section>
 
     <!--la Section Projets -->
-    <section id="projects" class="bg-rose-50 rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden" data-animate>
+    <section id="projects" class="bg-rose-50 rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden md:mx-80" data-animate>
       <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="projects.title">Projets</h2>
       <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12" data-i18n="projects.subtitle">
         Découvrez quelques projets récents. Faites défiler pour en voir davantage.
@@ -1019,7 +1003,7 @@
 
 
     <!--la Section Contact -->
-    <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8" data-animate>
+    <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8 md:mx-80" data-animate>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
           <h2 class="text-2xl font-semibold mb-2" data-i18n="contact.title">Discutons de votre projet</h2>
@@ -1112,7 +1096,7 @@
 
 
   </main>
-  <footer class="mt-96">
+  <footer class="mt-96 md:mx-80">
     <div class="border-t border-zinc-200 py-10">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         <div class="flex items-center">
