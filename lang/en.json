@@ -1,0 +1,140 @@
+{
+  "head": {
+    "title": "Coreasofts",
+    "meta": {
+      "description": "Coreasofts supports African businesses and entrepreneurs in their digital transformation through innovative, sustainable and local solutions."
+    },
+    "og": {
+      "title": "Coreasofts - Turn your ideas into solutions",
+      "description": "Digital solutions tailored for Africa: web, mobile, strategy and tailored support."
+    },
+    "twitter": {
+      "title": "Coreasofts - Digital solutions in Africa",
+      "description": "Discover our services to boost your digital transformation."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "testimonials": "Testimonials"
+  },
+  "cta": {
+    "contact": "Contact us"
+  },
+  "hero": {
+    "title": "Turn your ideas into solutions.<br/>Innovate with <span class=\"text-red-600\">Coreasofts</span>.",
+    "subtitle": "Choose the expertise you need to bring your projects to life, digitize your activity or launch your start-up. <span class=\"text-red-500 font-medium\">Coreasofts</span> supports you with tailor‑made solutions.",
+    "cta": {
+      "services": "Our services",
+      "contact": "Contact us"
+    }
+  },
+  "about": {
+    "sectionLabel": "About us",
+    "vision": {
+      "title": "Our Vision",
+      "lead": "Become the leader in digital innovation in Africa.",
+      "text": "Coreasofts aims to <span class=\"text-red-600 font-medium\">transform</span> businesses sustainably, energize entrepreneurship and improve the daily lives of African citizens through <span class=\"text-red-600 font-medium\">smart technologies</span> that are accessible and impactful."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "lead": "Support those who build the Africa of tomorrow.",
+      "text": "We provide innovative services in strategy, <span class=\"text-red-600 font-medium\">digital enablement</span>, app development, event organization and mechanical engineering. <span class=\"text-red-600 font-medium\">Our commitment</span>: turning your ideas into <span class=\"text-red-600 font-medium\">concrete solutions</span>."
+    },
+    "values": {
+      "title": "Our Values",
+      "lead": "What guides each of our actions.",
+      "items": [
+        "<span class=\"text-red-600 font-medium\">Innovation</span>: push boundaries to create modern and relevant solutions",
+        "<span class=\"text-red-600 font-medium\">Commitment</span>: stand by our clients until success",
+        "<span class=\"text-red-600 font-medium\">Collaboration</span>: build together with trust and transparency",
+        "<span class=\"text-red-600 font-medium\">Excellence</span>: aim for maximum quality in every project"
+      ]
+    }
+  },
+  "services": {
+    "sectionLabel": "Our services",
+    "intro": {
+      "title": "What we do",
+      "text": "At Coreasofts, we combine innovation, expertise and commitment to address our clients' digital challenges. Our services cover every stage of digital transformation, from strategy to concrete implementation. We support you with solutions that are tailored, sustainable and designed for today's and tomorrow's Africa.",
+      "cta": "Learn more"
+    },
+    "cards": {
+      "strabus": {
+        "title": "Strabus - Business Strategy",
+        "text": "We help you structure, reposition or launch your business with a clear, realistic and goal‑aligned strategy. Strabus supports your key decisions to ensure growth and sustainability."
+      },
+      "acconum": {
+        "title": "Acconum - Digital Enablement",
+        "text": "From planning to execution, Acconum drives your transition to digital. We digitize your tools, processes and channels to improve efficiency and strengthen your impact in a connected world."
+      },
+      "devapp": {
+        "title": "Devapp - App Development",
+        "text": "Whether web or mobile, we develop robust, ergonomic and scalable applications perfectly adapted to your business needs and target audience."
+      },
+      "event": {
+        "title": "Corea-Event - Event Organization",
+        "text": "We design and organize professional events (workshops, forums, fairs) that showcase innovation, strengthen synergies and foster tomorrow's talents."
+      },
+      "meca": {
+        "title": "Corea-Meca - Mechanical Solutions",
+        "text": "From engineering to manufacturing, Corea-Meca designs technical and mechanical solutions adapted to African realities to meet the needs of industrial and productive sectors."
+      }
+    }
+  },
+  "faq": {
+    "title": "FAQs",
+    "subtitle": "Here are answers to the most frequent questions about our services, how we work and our support.",
+    "items": [
+      { "q": "What types of clients do you support?", "a": "We work with businesses of all sizes, from startups to large institutions, as well as individual entrepreneurs. Each project is tailored to your goals and sector." },
+      { "q": "Do you offer customized services?", "a": "Yes, we provide tailor‑made solutions based on your specific needs and constraints." },
+      { "q": "Do I need a specifications document to contact you?", "a": "No, we can help formalize it together from the start of the project." },
+      { "q": "What are your delivery timelines?", "a": "Timelines vary depending on project complexity, but we always work to optimize delivery times." },
+      { "q": "Do you only work in the DRC?", "a": "No, we work with clients worldwide." },
+      { "q": "How can I start a project with you?", "a": "You can contact us directly via our contact form or by email, and we will respond promptly." }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Discover some recent projects. Scroll to see more.",
+    "slides": [
+      { "title": "Tshims AI", "text": "AI solution for real‑time analysis. Simple and intuitive interface." },
+      { "title": "Dashboard Analytics", "text": "Performance dashboard and automated reporting." },
+      { "title": "SME ERP", "text": "Integrated management suite: sales, inventory and operations." },
+      { "title": "SME ERP", "text": "Integrated management suite: sales, inventory and operations." },
+      { "title": "SME ERP", "text": "Integrated management suite: sales, inventory and operations." },
+      { "title": "SME ERP", "text": "Integrated management suite: sales, inventory and operations." },
+      { "title": "SME ERP", "text": "Integrated management suite: sales, inventory and operations." }
+    ]
+  },
+  "contact": {
+    "title": "Let's discuss your project",
+    "subtitle": "An idea, a project or just a question? Tell us through the form below. Our team will respond quickly and support you with clarity, listening and expertise.",
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Message subject",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message",
+      "submit": "Send",
+      "status": {
+        "success": "Your message has been sent successfully. We will get back to you soon.",
+        "error": "An error occurred while sending your message. Please try again later."
+      }
+    },
+    "cards": {
+      "email": { "title": "Email" },
+      "phone": { "title": "Contact" },
+      "address": { "title": "Address" }
+    }
+  },
+  "footer": {
+    "tagline": "Smart solutions for a sustainable future",
+    "copyright": "© Copyright Coreasofts"
+  }
+}
+

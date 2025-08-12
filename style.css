@@ -2,3 +2,51 @@
     background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
     clip-path: polygon(0 25%, 100% 0, 100% 85%, 0 100%);
 }
+
+/*animations au Scroll  */
+[data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+[data-animate].in-view { opacity: 1; transform: translateY(0); }
+
+/* Header effet de surlignage au centre sur les nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #E30613;
+  transform: translateX(-50%);
+  transition: width 300ms ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* FAQ Rotation des icones */
+[data-faq] .faq-toggle {
+  transition: transform 700ms ease;
+  transform: rotate(-5deg);
+}
+[data-faq].faq-open .faq-toggle {
+  transform: rotate(135deg);
+}
+
+/* FAQ effet d'animation a l'ouverture et fermeture */
+.faq-content {
+  opacity: 0;
+  transition: max-height 500ms ease, opacity 400ms ease;
+}
+[data-faq].faq-open .faq-content {
+  opacity: 1;
+}
+
+/* Services: assurer une transition douce des couleurs */
+[data-service-card],
+[data-service-card] *,
+[data-service-icon] {
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
