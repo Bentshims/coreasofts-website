@@ -1,7 +1,5 @@
 
-
-
-// FAQ accordion (diagonal icon -> rotates and content opens smoothly)
+// FAQ rotation des icon
 (function initFaqAccordion() {
   const faqItems = document.querySelectorAll("[data-faq]");
   if (!faqItems.length) return;
@@ -343,13 +341,13 @@ initProjectsCarousel();
     });
   }
 
-  // Initialisation
+  // Initialisation de la langue
   const initial = detectInitialLang();
   setLanguage(initial);
   setupMenuInteractions();
-})();
+})(); 
 
-// Header hide/show on scroll
+// Header  effet au scroll
 (function initHeaderScrollBehavior() {
   const header = document.getElementById("siteHeader");
   if (!header) return;
@@ -367,14 +365,12 @@ initProjectsCarousel();
       header.style.transform = "translateY(0)";
       if (showTimeoutId) { clearTimeout(showTimeoutId); showTimeoutId = null; }
     } else if (delta > 0) {
-      // scrolling down -> hide and auto-show after delay
       header.style.transform = "translateY(-100%)";
       if (showTimeoutId) clearTimeout(showTimeoutId);
       showTimeoutId = setTimeout(() => {
         header.style.transform = "translateY(0)";
-      }, 1500);
+      }, 1000);
     } else {
-      // scrolling up -> show
       header.style.transform = "translateY(0)";
       if (showTimeoutId) { clearTimeout(showTimeoutId); showTimeoutId = null; }
     }
@@ -394,7 +390,7 @@ initProjectsCarousel();
   );
 })();
 
-// Mobile drawer menu
+// Menu mobile
 (function initMobileDrawer() {
   const btn = document.getElementById("mobileMenuBtn");
   const drawer = document.getElementById("mobileDrawer");
@@ -424,12 +420,10 @@ initProjectsCarousel();
   overlay.addEventListener("click", close);
   closeBtn && closeBtn.addEventListener("click", close);
 
-  // Close when clicking a link
   drawer.querySelectorAll("[data-mobile-nav]").forEach((el) => {
     el.addEventListener("click", close);
   });
 
-  // ESC to close
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });

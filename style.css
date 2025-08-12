@@ -29,7 +29,7 @@
 /* FAQ diagonal toggle rotation */
 [data-faq] .faq-toggle {
   transition: transform 700ms ease;
-  transform: rotate(15deg);
+  transform: rotate(-5deg);
 }
 [data-faq].faq-open .faq-toggle {
   transform: rotate(135deg);
