@@ -352,6 +352,7 @@ initProjectsCarousel();
   if (!header) return;
   let lastY = window.pageYOffset || document.documentElement.scrollTop || 0;
   let ticking = false;
+  let showTimeoutId = null;
 
   function onScroll() {
     const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
@@ -359,12 +360,20 @@ initProjectsCarousel();
     const threshold = 4;
     if (Math.abs(delta) < threshold) return;
 
-    if (delta > 0) {
-      // scrolling down -> hide
+    if (currentY <= 0) {
+      header.style.transform = "translateY(0)";
+      if (showTimeoutId) { clearTimeout(showTimeoutId); showTimeoutId = null; }
+    } else if (delta > 0) {
+      // scrolling down -> hide and auto-show after delay
       header.style.transform = "translateY(-100%)";
+      if (showTimeoutId) clearTimeout(showTimeoutId);
+      showTimeoutId = setTimeout(() => {
+        header.style.transform = "translateY(0)";
+      }, 1500);
     } else {
       // scrolling up -> show
       header.style.transform = "translateY(0)";
+      if (showTimeoutId) { clearTimeout(showTimeoutId); showTimeoutId = null; }
     }
     lastY = currentY;
     ticking = false;
@@ -380,4 +389,45 @@ initProjectsCarousel();
     },
     { passive: true }
   );
+})();
+
+// Mobile drawer menu
+(function initMobileDrawer() {
+  const btn = document.getElementById("mobileMenuBtn");
+  const drawer = document.getElementById("mobileDrawer");
+  const overlay = document.getElementById("mobileOverlay");
+  const closeBtn = document.getElementById("mobileCloseBtn");
+  if (!btn || !drawer || !overlay) return;
+
+  function open() {
+    drawer.classList.remove("-translate-x-full");
+    drawer.classList.add("translate-x-0");
+    overlay.classList.remove("pointer-events-none");
+    overlay.classList.add("opacity-100");
+    btn.setAttribute("aria-expanded", "true");
+    document.body.classList.add("overflow-hidden");
+  }
+
+  function close() {
+    drawer.classList.add("-translate-x-full");
+    drawer.classList.remove("translate-x-0");
+    overlay.classList.add("pointer-events-none");
+    overlay.classList.remove("opacity-100");
+    btn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  btn.addEventListener("click", open);
+  overlay.addEventListener("click", close);
+  closeBtn && closeBtn.addEventListener("click", close);
+
+  // Close when clicking a link
+  drawer.querySelectorAll("[data-mobile-nav]").forEach((el) => {
+    el.addEventListener("click", close);
+  });
+
+  // ESC to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
 })();
