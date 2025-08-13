@@ -48,5 +48,11 @@
 [data-service-card],
 [data-service-card] *,
 [data-service-icon] {
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  transition: color 500ms ease-in-out, background-color 500ms ease-in-out;
+}
+
+/* Titres des cartes services : changement de couleur immédiat */
+[data-service-card] h3,
+[data-service-card] h3 * {
+  transition:color 500ms ease-in-out !important;
 }
