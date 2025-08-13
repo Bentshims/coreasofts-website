@@ -444,8 +444,16 @@ initProjectsCarousel();
   const master = cards[0];
 
   function setActive(card) {
-    card.classList.add('bg-red-600', 'text-white');
-    card.classList.remove('bg-white', 'text-black');
+    card.classList.add('bg-red-600');
+    card.classList.remove('bg-white');
+    // neutraliser la couleur globale éventuelle
+    card.classList.remove('text-white');
+    // Titre -> blanc (immédiat)
+    const title = card.querySelector('h3');
+    if (title) {
+      title.classList.add('text-white');
+      title.classList.remove('text-black');
+    }
     // icône -> blanche
     card.querySelectorAll('[data-service-icon]').forEach((icon) => {
       icon.classList.add('text-white');
@@ -459,8 +467,16 @@ initProjectsCarousel();
   }
 
   function setInactive(card) {
-    card.classList.add('bg-white', 'text-black');
-    card.classList.remove('bg-red-600', 'text-white');
+    card.classList.add('bg-white');
+    card.classList.remove('bg-red-600');
+    // enlever une éventuelle couleur globale
+    card.classList.remove('text-white');
+    // Titre -> noir (immédiat)
+    const title = card.querySelector('h3');
+    if (title) {
+      title.classList.add('text-black');
+      title.classList.remove('text-white');
+    }
     // icône -> rouge
     card.querySelectorAll('[data-service-icon]').forEach((icon) => {
       icon.classList.add('text-red-600');
