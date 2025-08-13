@@ -148,11 +148,57 @@ initProjectsCarousel();
 
   const submitBtn = document.getElementById("submitBtn");
   const statusEl = document.getElementById("formStatus");
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalIcon = document.getElementById("modalIcon");
+  const modalMessage = document.getElementById("modalMessage");
+  const modalClose = document.getElementById("modalClose");
 
   const metaKey = document.querySelector('meta[name="emailjs-public-key"]');
   const PUBLIC_KEY = metaKey && metaKey.getAttribute("content") ? metaKey.getAttribute("content") : "";
   if (window.emailjs && typeof emailjs.init === "function" && PUBLIC_KEY) {
     emailjs.init({ publicKey: PUBLIC_KEY });
+  }
+
+  function showModal(message, isError) {
+    if (!modalOverlay || !modalMessage || !modalIcon) return;
+    modalMessage.textContent = message;
+    modalIcon.innerHTML = isError
+      ? '<i class="bi bi-x-circle-fill text-red-600"></i>'
+      : '<i class="bi bi-check-circle-fill text-green-600"></i>';
+      
+    modalOverlay.classList.remove("hidden");
+    modalOverlay.classList.add("flex");
+  }
+
+  function hideModal() {
+    if (!modalOverlay) return;
+    modalOverlay.classList.add("hidden");
+    modalOverlay.classList.remove("flex");
+  }
+
+  function setButtonLoading(isLoading) {
+    if (!submitBtn) return;
+    submitBtn.dataset.loading = isLoading ? "true" : "false";
+    submitBtn.disabled = !!isLoading;
+    submitBtn.classList.toggle("opacity-70", !!isLoading);
+    submitBtn.classList.toggle("cursor-not-allowed", !!isLoading);
+  }
+
+  function validateRequiredFields() {
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const subject = form.querySelector('#subject');
+    const message = form.querySelector('#message');
+    let valid = true;
+    [name, email, subject, message].forEach((el) => {
+      if (!el || !el.value || !el.value.trim()) {
+        valid = false;
+        el && el.classList.add('ring-2', 'ring-red-500');
+      } else {
+        el.classList.remove('ring-2', 'ring-red-500');
+      }
+    });
+    return valid;
   }
 
   async function handleSubmit(e) {
@@ -180,17 +226,27 @@ initProjectsCarousel();
     }
 
     try {
+      if (!validateRequiredFields()) {
+        const msg = t(
+          "contact.form.status.invalid",
+          currentLang === "en"
+            ? "Please fill in all required fields."
+            : "Veuillez remplir tous les champs obligatoires."
+        );
+        showModal(msg, true);
+        return;
+      }
+
       if (!window.emailjs) throw new Error("EmailJS not loaded");
 
-      submitBtn && (submitBtn.disabled = true);
-      submitBtn && submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+      setButtonLoading(true);
 
       const formData = new FormData(form);
       const templateParams = {
-        name: formData.get("name") || "",
-        email: formData.get("email") || "",
-        subject: formData.get("subject") || "",
-        message: formData.get("message") || "",
+        name: formData.get("name") ,
+        email: formData.get("email") ,
+        subject: formData.get("subject") ,
+        message: formData.get("message") ,
       };
 
       // IDs de corea
@@ -199,34 +255,31 @@ initProjectsCarousel();
 
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY ? { publicKey: PUBLIC_KEY } : undefined);
 
-      setStatus(
-        t(
-          "contact.form.status.success",
-          currentLang === "en"
-            ? "Your message has been sent successfully. We will get back to you soon."
-            : "Votre message a été envoyé avec succès. Nous vous reviendrons rapidement."
-        ),
-        false
+      const successMsg = t(
+        "contact.form.status.success",
+        currentLang === "en"
+          ? "Your message has been sent successfully. We will get back to you soon."
+          : "Votre message a été envoyé avec succès. Nous vous reviendrons rapidement."
       );
+      showModal(successMsg, false);
       form.reset();
     } catch (err) {
       console.error(err);
-      setStatus(
-        t(
-          "contact.form.status.error",
-          (document.documentElement.getAttribute("lang") || "fr") === "en"
-            ? "An error occurred while sending your message. Please try again later."
-            : "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard."
-        ),
-        true
+      const errorMsg = t(
+        "contact.form.status.error",
+        currentLang === "en"
+          ? "An error occurred while sending your message. Please try again later."
+          : "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard."
       );
+      showModal(errorMsg, true);
     } finally {
-      submitBtn && (submitBtn.disabled = false);
-      submitBtn && submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+      setButtonLoading(false);
     }
   }
 
   form.addEventListener("submit", handleSubmit);
+  modalClose && modalClose.addEventListener('click', hideModal);
+  modalOverlay && modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) hideModal(); });
 })();
 
 //animations au Scroll 
