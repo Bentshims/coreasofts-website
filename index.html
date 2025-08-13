@@ -370,7 +370,7 @@
       <div class="max-w-5xl mx-auto">
         <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="faq.title">FAQs</h2>
         <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12" data-i18n="faq.subtitle">
-          Voici les réponses aux questions les plus fréquentes sur nos services, notre fonctionnement et notre accompagnement.
+          Voici les réponses aux qudestions les plus fréquentes sur nos services, notre fonctionnement et notre accompagnement.
         </p>
 
         <div class="space-y-4 md:max-w-3xl mx-auto">
@@ -1010,10 +1010,10 @@
 
     <!--la Section Contact -->
     <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8 md:mx-80 mb-20" data-animate>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
-          <h2 class="text-2xl font-semibold mb-2" data-i18n="contact.title">Discutons de votre projet</h2>
-          <p class="text-sm text-zinc-600 mb-8 max-w-xl" data-i18n="contact.subtitle">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm text-zinc-500">
+          <h2 class="text-2xl font-semibold mb-2 " data-i18n="contact.title">Discutons de votre projet</h2>
+          <p class="text-sm text-zinc-400 mb-8 max-w-xl" data-i18n="contact.subtitle">
             Une idée, un projet ou une simple question ? Parlez‑nous‑en via le formulaire ci‑dessous.
             Notre équipe vous répond rapidement et vous accompagne avec clarté, écoute et expertise.
           </p>
@@ -1037,13 +1037,13 @@
             <div>
               <label for="subject" class="block text-sm font-medium mb-2" data-i18n="contact.form.subjectLabel">Sujet</label>
               <input id="subject" name="subject" type="text" placeholder="Sujet du message" data-i18n-attr-placeholder="contact.form.subjectPlaceholder"
-                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" />
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" required />
             </div>
 
             <div>
               <label for="message" class="block text-sm font-medium mb-2" data-i18n="contact.form.messageLabel">Message</label>
               <textarea id="message" name="message" rows="6" placeholder="Votre message" data-i18n-attr-placeholder="contact.form.messagePlaceholder"
-                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"></textarea>
+                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" required></textarea>
             </div>
 
             <div class="pt-2">
@@ -1057,16 +1057,16 @@
           </form>
         </div>
 
-        <div class="space-y-6 border border-red-500 h-full">
-          <div class="">
-            <img src="./assets/contact-image.png" alt="Client heureux utilisant son smartphone"
-              class="w-full h-full object-cover rounded-r-xl border border-red-500">
+        <div class="space-y-6 h-full">
+          <div class="h-[60%]">
+            <img src="./assets/contact.png" alt="Client heureux utilisant son smartphone"
+              class="w-full h-full object-cover rounded-xl">
           </div>
 
-          <div class="space-y-3 bg-white py-5 px-2 rounded-lg">
-            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
-              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
-                <i class="bi bi-envelope"></i>
+          <div class="h-[35%] space-y-3 bg-white py-4 px-3 rounded-lg border border-red-500 flex flex-col justify-center">
+            <div class="bg-zinc-100 h-full rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-envelope text-xl"></i>
               </span>
               <div>
                 <h4 class="font-medium" data-i18n="contact.cards.email.title">Email</h4>
@@ -1074,9 +1074,9 @@
               </div>
             </div>
 
-            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
-              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
-                <i class="bi bi-telephone"></i>
+            <div class="bg-zinc-100 h-full rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-telephone text-xl"></i>
               </span>
               <div>
                 <h4 class="font-medium" data-i18n="contact.cards.phone.title">Contact</h4>
@@ -1084,9 +1084,9 @@
               </div>
             </div>
 
-            <div class="bg-zinc-100 rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
-              <span class="w-10 h-10 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
-                <i class="bi bi-geo-alt"></i>
+            <div class="bg-zinc-100 h-full rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
+              <span class="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+                <i class="bi bi-geo-alt text-xl"></i>
               </span>
               <div>
                 <h4 class="font-medium" data-i18n="contact.cards.address.title">Adresse</h4>
