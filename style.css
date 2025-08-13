@@ -56,3 +56,8 @@
 [data-service-card] h3 * {
   transition:color 500ms ease-in-out !important;
 }
+
+/* le bg de la secttion FAQS */
+.wave-bg {
+  clip-path: polygon(52% 3%, 81% 1%, 100% 1%, 100% 86%, 80% 86%, 51% 88%, 25% 90%, 0 94%, 0 12%, 26% 7%);
+}
