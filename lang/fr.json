@@ -23,8 +23,8 @@
     "contact": "Nous contacter"
   },
   "hero": {
-    "title": "Transformez vos idées en solutions.<br/>Innovez avec <span class=\"text-red-600\">Coreasofts</span>.",
-    "subtitle": "Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre activité ou lancer votre start-up. <span class=\"text-red-500 font-medium\">Coreasofts</span> vous accompagne avec des solutions sur mesure.",
+    "title": "Transformez vos idées en solutions. Innovez avec Coreasofts.",
+    "subtitle": "Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre activité ou lancer votre start-up. <span class=\"text-primary font-medium\">Coreasofts</span> vous accompagne avec des solutions sur mesure.",
     "cta": {
       "services": "Nos services",
       "contact": "Nous contacter"

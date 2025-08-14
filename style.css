@@ -1,10 +1,19 @@
+[data-loading="true"] .btn-label { opacity: 0; }
+[data-loading="true"] .btn-spinner { display: flex; }
+
+/* les bg de la secttion FAQS */
 .curved-bg {
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    /* background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); */
     clip-path: polygon(0 25%, 100% 0, 100% 85%, 0 100%);
 }
 
+.curved-bg-mobile{
+  /* background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); */
+  clip-path: polygon(21% 3%, 50% 1%, 100% 0, 100% 96%, 54% 97%, 29% 98%, 0 100%, 0 5%);
+}
+
 /*animations au Scroll  */
-[data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+[data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .10s ease, transform .10s ease; }
 [data-animate].in-view { opacity: 1; transform: translateY(0); }
 
 /* Header effet de surlignage au centre sur les nav links */
@@ -55,9 +64,4 @@
 [data-service-card] h3,
 [data-service-card] h3 * {
   transition:color 500ms ease-in-out !important;
-}
-
-/* le bg de la secttion FAQS */
-.wave-bg {
-  clip-path: polygon(52% 3%, 81% 1%, 100% 1%, 100% 86%, 80% 86%, 51% 88%, 25% 90%, 0 94%, 0 12%, 26% 7%);
 }

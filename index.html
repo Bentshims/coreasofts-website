@@ -29,7 +29,7 @@
   <meta name="twitter:description" data-i18n-attr-content="head.twitter.description" content="Découvrez nos services pour booster votre transformation digitale." />
   <meta name="twitter:image" content="https://coreasofts.com/assets/corea-white-laptop-logo.JPG" />
 
-  <link rel="icon" href="./assets/corea-mobile-logo.png" type="image/x-icon" />
+  <link rel="icon" href="./assets/corea-mobile-logo.png" type="image/x-icon" sizes="48×48""/>
   <link rel="canonical" href="https://coreasofts.com/" />
 
 
@@ -39,7 +39,8 @@
       theme: {
         extend: {
           colors: {
-            primary: "#E30613",
+            primary: "#E6112F",
+            grayCard: "#E6E6E6",
             dark: "#333333",
             light: "#F5F5F5"
           },
@@ -60,16 +61,14 @@
 
 </head>
 
-<body class="bg-white space-y-8 relative">
-  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease md:px-80">
+<body class="bg-white relative">
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease pl-2 pr-4 md:px-80">
     <div class="md:py-4">
       <div class="flex items-center justify-between h-16">
 
         <!-- Logo laptop coreasofts -->
-        <img src="./assets/logo.png" alt="logo Coreasofts" class="hidden md:block w-32 h-auto">
+        <img src="./assets/logo.png" alt="logo Coreasofts" class="w-28 md:w-32 h-auto">
 
-        <!-- logo mobile --> 
-        <img src="./assets/corea-mobile-logo.png" alt="logo coreasofts" class="w-16 h-auto md:hidden">
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-10">
@@ -91,14 +90,14 @@
             </ul>
           </div>
           <button
-            class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
+            class="bg-primary hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
             Nous contacter
           </button>
         </div>
 
         <!-- Menu mobile -->
         <div class="md:hidden">
-          <button id="mobileMenuBtn" aria-controls="mobileDrawer" aria-expanded="false" class="text-gray-600 hover:text-gray-900">
+          <button id="mobileMenuBtn" aria-label="menu burger" aria-controls="mobileDrawer" aria-expanded="false" class="hover:text-gray-900">
             <i class="bi bi-list text-4xl font-bold"></i>
           </button>
         </div>
@@ -107,49 +106,49 @@
   </header>
 
   <!-- Mobile Drawer + Overlay -->
-  <div id="mobileOverlay" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-[50]"></div>
-  <aside id="mobileDrawer" class="fixed inset-y-0 left-0 w-72 max-w-[85%] bg-white/80 backdrop-blur-md shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out z-[60] md:hidden">
-    <div class="p-4 flex items-center justify-between border-b border-zinc-200">
-      <img src="./assets/logo.png" alt="Coreasofts" class="h-8 w-auto">
-      <button id="mobileCloseBtn" aria-label="Fermer le menu" class="text-zinc-700 hover:text-zinc-900">
-        <i class="bi bi-x-lg text-2xl"></i>
+  <div id="mobileOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm pointer-events-none opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-[50]"></div>
+  <aside id="mobileDrawer" class="fixed inset-y-0 left-0 w-72 max-w-[85%] bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-[60] md:hidden">
+    <div class="p-4 flex items-center justify-between">
+      <img src="./assets/logo.png" alt="Coreasofts" class="w-20 h-auto">
+      <button id="mobileCloseBtn" aria-label="Fermer le menu" class="text-zinc-700 hover:text-zinc-900 rounded-full p-2 w-8 h-8 flex items-center justify-center">
+        <i class="bi bi-arrow-up-right-circle-fill text-3xl text-primary"></i>
       </button>
     </div>
     <nav class="p-4 space-y-3">
-      <a href="#" data-mobile-nav data-i18n="nav.home" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-red-600 transition-colors">Accueil</a>
-      <a href="#" data-mobile-nav data-i18n="nav.about" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-red-600 transition-colors">À propos</a>
-      <a href="#" data-mobile-nav data-i18n="nav.services" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-red-600 transition-colors">Services</a>
-      <a href="#" data-mobile-nav data-i18n="nav.testimonials" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-red-600 transition-colors">Témoignages</a>
+      <a href="#" data-mobile-nav data-i18n="nav.home" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-primary transition-colors">Accueil</a>
+      <a href="#" data-mobile-nav data-i18n="nav.about" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-primary transition-colors">À propos</a>
+      <a href="#" data-mobile-nav data-i18n="nav.services" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-primary transition-colors">Services</a>
+      <a href="#" data-mobile-nav data-i18n="nav.testimonials" class="block px-2 py-2 rounded-md text-zinc-800 hover:bg-red-50 hover:text-primary transition-colors">Témoignages</a>
     </nav>
     <div class="px-4 py-3">
-      <button class="w-full bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-md transition-colors" data-i18n="cta.contact">Nous contacter</button>
+      <button class="w-full bg-primary hover:bg-red-600 text-white font-medium px-4 py-2 rounded-md transition-colors" data-i18n="cta.contact">Nous contacter</button>
     </div>
   </aside>
-  <main class="space-y-24 mb-8">
+  <main class="space-y-12 md:space-y-24 my-2 md:my-8">
 
     <!-- la Hero section -->
-    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet rounded-2xl md:mx-80" data-animate>
-      <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-80" data-animate>
+      <div class="absolute inset-0 bg-black/60 md:rounded-2xl"></div>
 
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
         <div class="max-w-2xl">
-          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
-            Transformez vos idées en solutions. </br>
-            Innovez avec <span class="text-red-600">Coreasofts</span>.
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
+            Transformez vos idées en solutions.
+            Innovez avec Coreasofts.
           </h1>
 
           <p class="text-gray-300 mb-12 leading-relaxed" data-i18n-html="hero.subtitle">
             Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre
-            activité ou lancer votre start-up. <span class="text-red-500 font-medium">Coreasofts</span> vous accompagne
+            activité ou lancer votre start-up. <span class="text-primary font-medium">Coreasofts</span> vous accompagne
             avec des solutions
             sur mesure.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
+            <button class="bg-white text-primary font-medium px-6 py-2 rounded-xl md:rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
               Nos services
             </button>
-            <button class="bg-red-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
+            <button class="bg-primary text-white font-medium px-6 py-2 rounded-xl md:rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
               Nous contacter
             </button>
           </div>
@@ -159,14 +158,14 @@
     </section>
 
     <!-- la Section À propos de Nous -->
-    <section class="bg-red-50 rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-80" data-animate>
-      <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full"></div>
-      <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full"></div>
-      <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full"></div>
+    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-80" data-animate>
+      <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full z-[-1]"></div>
+      <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full z-[-1]"></div>
+      <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full z-[-1]"></div>
 
-      <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -left-20 -bottom-24 rounded-full"></div>
-      <div class="w-96 h-96 border  border-red-200 absolute -left-12 -bottom-12 rounded-full"></div>
-      <div class="w-64 h-64 border  border-red-200 absolute left-4 bottom-4 rounded-full"></div>
+      <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -left-20 -bottom-24 rounded-full z-[-1]"></div>
+      <div class="w-96 h-96 border  border-red-200 absolute -left-12 -bottom-12 rounded-full z-[-1]"></div>
+      <div class="w-64 h-64 border  border-red-200 absolute left-4 bottom-4 rounded-full z-[-1]"></div>
 
 
 
@@ -175,51 +174,51 @@
         <div></div>
       </div>
       <div class="h-full">
-        <h2 class="text-sm text-red-600 font-medium px-2 absolute top-14" data-i18n="about.sectionLabel">À propos de Nous</h2>
+        <h2 class="text-sm text-primary font-medium px-2 absolute top-14" data-i18n="about.sectionLabel">À propos de Nous</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-lg p-6 shadow-sm translate-y-0">
+          <div class="bg-white rounded-lg p-6 shadow-sm md:translate-y-0">
             <h3 class="text-xl font-semibold mb-4" data-i18n="about.vision.title">Notre Vision</h3>
             <p class="mb-2 font-medium" data-i18n="about.vision.lead">Devenir le leader de l'innovation digitale en Afrique.</p>
             <p class="text-md text-zinc-600" data-i18n-html="about.vision.text">
               Coreasofts aspire à
-              <span class="text-red-600 font-medium">transformer</span> durablement les
-              <span class="text-red-600 font-medium">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le
+              <span class="text-primary font-medium">transformer</span> durablement les
+              <span class="text-primary font-medium">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le
               quotidien des citoyens africains grâce à des
-              <span class="text-red-600 font-medium">technologies intelligentes</span>, accessibles et impactantes.
+              <span class="text-primary font-medium">technologies intelligentes</span>, accessibles et impactantes.
             </p>
           </div>
 
-          <div class="bg-white rounded-lg p-6 shadow-sm translate-y-16">
+          <div class="bg-white rounded-lg p-6 shadow-sm md:translate-y-16">
             <h3 class="text-xl font-semibold mb-4" data-i18n="about.mission.title">Notre Mission</h3>
             <p class="mb-2 font-medium" data-i18n="about.mission.lead">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
             <p class="text-md text-zinc-600" data-i18n-html="about.mission.text">
               Nous offrons des services innovants en stratégie,
-              <span class="text-red-600 font-medium">accompagnement numérique</span>, développement d'applications,
+              <span class="text-primary font-medium">accompagnement numérique</span>, développement d'applications,
               organisation d'événements et ingénierie mécanique.
-              <span class="text-red-600 font-medium">Notre engagement</span> : transformer vos idées en
-              <span class="text-red-600 font-medium">solutions concrètes</span>.
+              <span class="text-primary font-medium">Notre engagement</span> : transformer vos idées en
+              <span class="text-primary font-medium">solutions concrètes</span>.
             </p>
           </div>
 
-          <div class="bg-white rounded-lg p-6 shadow-sm translate-y-32">
+          <div class="bg-white rounded-lg p-6 shadow-sm md:translate-y-32">
             <h3 class="text-xl font-semibold mb-4" data-i18n="about.values.title">Nos Valeurs</h3>
             <p class="mb-4 font-medium" data-i18n="about.values.lead">Ce qui guide chacune de nos actions.</p>
             <ul class="space-y-2 text-md text-zinc-600">
               <li data-i18n-html="about.values.items.0">
-                <span class="text-red-600 font-medium">Innovation</span> : repousser les limites pour créer des
+                <span class="text-primary font-medium">Innovation</span> : repousser les limites pour créer des
                 solutions modernes et pertinentes
               </li>
               <li data-i18n-html="about.values.items.1">
-                <span class="text-red-600 font-medium">Engagement</span> : avancer aux côtés de nos clients jusqu'à la
+                <span class="text-primary font-medium">Engagement</span> : avancer aux côtés de nos clients jusqu'à la
                 réussite
               </li>
               <li data-i18n-html="about.values.items.2">
-                <span class="text-red-600 font-medium">Collaboration</span> : bâtir ensemble avec confiance et
+                <span class="text-primary font-medium">Collaboration</span> : bâtir ensemble avec confiance et
                 transparence
               </li>
               <li data-i18n-html="about.values.items.3">
-                <span class="text-red-600 font-medium">Excellence</span> : viser la qualité maximale dans chaque projet
+                <span class="text-primary font-medium">Excellence</span> : viser la qualité maximale dans chaque projet
               </li>
             </ul>
           </div>
@@ -231,16 +230,16 @@
   
     <!-- la section services -->
 
-    <section class="py-12 px-4 md:px-8 space-y-32 h-auto md:mx-80" data-animate>
+    <section class="py-12 px-4 md:px-8 space-y-20 md:space-y-32 h-auto md:mx-80" data-animate>
 
-      <h2 class="text-sm text-red-600 font-medium mb-8" data-i18n="services.sectionLabel">Nos services</h2>
+      <h2 class="text-sm text-primary font-medium md:mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
       <div class="md:flex gap-x-12 md:h-96">
-        <div class="md:w-1/2 flex flex-col justify-between">
-          <h2 class="font-semibold text-xl text-center mt-16" data-i18n="services.intro.title">
+        <div class="md:w-1/2 flex flex-col justify-between space-y-8">
+          <h2 class="font-semibold text-xl md:text-center md:mt-16" data-i18n="services.intro.title">
             Ce que nous faisons
           </h2>
-          <p class="text-zinc-600 leading-relaxed mb-6" data-i18n="services.intro.text">
+          <p class="text-zinc-600 leading-relaxed" data-i18n="services.intro.text">
             Chez Coreasofts, nous allions innovation, expertise et engagement pour répondre aux défis numériques de nos
             clients.
             Nos services couvrent chaque étape de la transformation digitale, de la stratégie à la mise en œuvre
@@ -250,7 +249,7 @@
           </p>
           <div>
             <button
-              class="bg-red-600 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+              class="bg-primary hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
               <span data-i18n="services.intro.cta">En savoir plus</span>
             </button>
           </div>
@@ -267,16 +266,16 @@
         <div class="grid md:grid-cols-2 gap-x-32 gap-y-16 relative">
 
           <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-            <div class="w-96 h-96 border border-red-500 rounded-full opacity-20"></div>
+            <div class="w-96 h-96 border border-primary rounded-full opacity-20"></div>
           </div>
           <div class="absolute inset-2 flex justify-center items-center pointer-events-none">
-            <div class="w-64 h-64 border border-red-500 rounded-full opacity-20"></div>
+            <div class="w-64 h-64 border border-primary rounded-full opacity-20"></div>
           </div>
           <div class="absolute inset-4 flex justify-center items-center pointer-events-none">
-            <div class="w-40 h-40 border border-red-500 rounded-full opacity-20"></div>
+            <div class="w-40 h-40 border border-primary rounded-full opacity-20"></div>
           </div>
 
-          <div data-service-card class="bg-red-600 text-white p-10 rounded-lg relative z-10 border border-red-600 transition-colors duration-300 ease-in-out">
+          <div data-service-card class="bg-primary text-white p-10 rounded-lg relative z-10 border border-red-600 transition-colors duration-300 ease-in-out">
             <div class="mb-3 flex items-center justify-between">
               <h3 class="font-semibold text-lg " data-i18n="services.cards.strabus.title">
                 Strabus - Stratégie Business
@@ -298,7 +297,7 @@
                 Acconum - Accompagnement Numérique
               </h3>
               <div>
-                <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-4xl text-red-600 transition-colors duration-300 ease-in-out"></i>
+                <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-4xl text-primary transition-colors duration-300 ease-in-out"></i>
               </div>
             </div>
             <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.acconum.text">
@@ -314,7 +313,7 @@
               Devapp - Développement d'applications
             </h3>
             <div>
-              <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl transition-colors duration-300 ease-in-out"></i>
+              <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-primary text-4xl transition-colors duration-300 ease-in-out"></i>
             </div>
            </div>
             <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.devapp.text">
@@ -330,7 +329,7 @@
               Corea-Event - Organisation d'événements
             </h3>
             <div>
-              <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl transition-colors duration-300 ease-in-out"></i>
+              <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-primary text-4xl transition-colors duration-300 ease-in-out"></i>
             </div>
            </div>
             <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.event.text">
@@ -343,14 +342,14 @@
 
 
         </div>
-        <div class="flex items-center justify-center px-80">
+        <div class="flex items-center justify-center md:px-80">
           <div data-service-card class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600 transition-colors duration-300 ease-in-out">
             <div class="mb-3 flex items-center justify-between">
               <h3 class="font-semibold text-lg " data-i18n="services.cards.meca.title">
                 Corea-Meca - Solutions Mécaniques
               </h3>
               <div>
-                <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl transition-colors duration-300 ease-in-out"></i>
+                <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-primary text-4xl transition-colors duration-300 ease-in-out"></i>
               </div>
             </div>
             <p class="text-sm text-gray-700 leading-relaxed" data-i18n="services.cards.meca.text">
@@ -366,22 +365,22 @@
 
     <!-- section faq -->
      
-    <section class="relative px-4 md:px-80 bg-red-600 text-white wave-bg min-h-screen" data-animate>
-      <div class="max-w-5xl mx-auto pt-40 pb-80">
+    <section class="relative bg-primary curved-bg-mobile px-4 md:px-80 text-white bg-primary md:wave-bg min-h-screen" data-animate>
+      <div class="max-w-5xl mx-auto py-28 md:pb-80">
         <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="faq.title">FAQs</h2>
         <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12" data-i18n="faq.subtitle">
           Voici les réponses aux qudestions les plus fréquentes sur nos services, notre fonctionnement et notre accompagnement.
         </p>
 
         <div class="space-y-4 md:max-w-3xl mx-auto">
-          <div class="bg-white text-black rounded-2xl px-6 py-4 cursor-pointer transition-all" data-faq>
+          <div class="bg-white text-black rounded-2xl px-3 md:px-6 py-2 md:py-4 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.0.q">Quels types de clients accompagnez-vous ?</h3>
-              <span class="faq-toggle flex items-center justify-center">
-                <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+              <h3 class="font-semibold text-lg md:text-xl text-primary" data-i18n="faq.items.0.q">Quels types de clients accompagnez-vous ?</h3>
+              <span class="faq-toggle flex items-center justify-center m-1">
+                <i class="bi bi-arrow-up-right-circle-fill text-primary text-4xl "></i>
               </span>
             </div>
-            <div class="faq-content mt-3 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+            <div class="faq-content mt-2 md:mt-3 text-sm text-zinc-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.0.a">
                 Nous travaillons avec des entreprises de toutes tailles, des start-ups aux grandes institutions, ainsi
                 qu'avec des entrepreneurs individuels. Chaque projet est adapté à vos objectifs et à votre secteur.
@@ -389,62 +388,62 @@
             </div>
           </div>
 
-          <div class="bg-white text-black rounded-2xl px-6 py-4 cursor-pointer transition-all" data-faq>
+          <div class="bg-white text-black rounded-2xl px-3 md:px-6 py-2 md:py-4 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.1.q">Proposez-vous des services personnalisés</h3>
-              <span class="faq-toggle flex items-center justify-center">
-                <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+              <h3 class="font-semibold text-lg md:text-xl text-primary" data-i18n="faq.items.1.q">Proposez-vous des services personnalisés</h3>
+              <span class="faq-toggle flex items-center justify-center m-1">
+                <i class="bi bi-arrow-up-right-circle-fill text-primary text-4xl "></i>
               </span>
             </div>
-            <div class="faq-content mt-4 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+            <div class="faq-content mt-2 md:mt-4 text-sm text-zinc-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.1.a">Oui, nous proposons des solutions sur mesure en fonction de vos besoins spécifiques et de vos contraintes.</span>
             </div>
           </div>
 
-          <div class="bg-white text-black rounded-2xl px-6 py-4 cursor-pointer transition-all" data-faq>
+          <div class="bg-white text-black rounded-2xl px-3 md:px-6 py-2 md:py-4 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.2.q">Faut-il déjà avoir un cahier des charges pour vous contacter ?</h3>
-              <span class="faq-toggle flex items-center justify-center">
-                <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+              <h3 class="font-semibold text-lg md:text-xl text-primary" data-i18n="faq.items.2.q">Faut-il déjà avoir un cahier des charges pour vous contacter ?</h3>
+              <span class="faq-toggle flex items-center justify-center m-1">
+                <i class="bi bi-arrow-up-right-circle-fill text-primary text-4xl "></i>
               </span>
             </div>
-            <div class="faq-content mt-4 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+            <div class="faq-content mt-2 md:mt-4 text-sm text-zinc-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.2.a">Non, nous pouvons vous aider à le formaliser ensemble dès le début du projet.</span>
             </div>
           </div>
 
-          <div class="bg-white text-black rounded-2xl px-6 py-4 cursor-pointer transition-all" data-faq>
+          <div class="bg-white text-black rounded-2xl px-3 md:px-6 py-2 md:py-4 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.3.q">Quels sont vos délais de réalisation ?</h3>
-              <span class="faq-toggle flex items-center justify-center">
-                <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+              <h3 class="font-semibold text-lg md:text-xl text-primary" data-i18n="faq.items.3.q">Quels sont vos délais de réalisation ?</h3>
+              <span class="faq-toggle flex items-center justify-center m-1">
+                <i class="bi bi-arrow-up-right-circle-fill text-primary text-4xl "></i>
               </span>
             </div>
-            <div class="faq-content mt-4 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+            <div class="faq-content mt-2 md:mt-4 text-sm text-zinc-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.3.a">Les délais varient en fonction de la complexité du projet, mais nous travaillons toujours pour optimiser les temps de livraison.</span>
             </div>
           </div>
 
-          <div class="bg-white text-black rounded-2xl px-6 py-4 cursor-pointer transition-all" data-faq>
+          <div class="bg-white text-black rounded-2xl px-3 md:px-6 py-2 md:py-4 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.4.q">Travaillez-vous uniquement en RDC ?</h3>
-              <span class="faq-toggle flex items-center justify-center">
-                <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+              <h3 class="font-semibold text-lg md:text-xl text-primary" data-i18n="faq.items.4.q">Travaillez-vous uniquement en RDC ?</h3>
+              <span class="faq-toggle flex items-center justify-center m-1">
+                <i class="bi bi-arrow-up-right-circle-fill text-primary text-4xl "></i>
               </span>
             </div>
-            <div class="faq-content mt-4 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+            <div class="faq-content mt-2 md:mt-4 text-sm text-zinc-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.4.a">Non, nous travaillons avec des clients partout dans le monde.</span>
             </div>
           </div>
 
-          <div class="bg-white text-black rounded-2xl px-6 py-4 cursor-pointer transition-all" data-faq>
+          <div class="bg-white text-black rounded-2xl px-3 md:px-6 py-2 md:py-4 cursor-pointer transition-all" data-faq>
             <div class="flex justify-between items-center">
-              <h3 class="font-semibold text-xl text-red-600" data-i18n="faq.items.5.q">Comment démarrer un projet avec vous ?</h3>
-              <span class="faq-toggle flex items-center justify-center">
-                <i class="bi bi-arrow-up-right-circle-fill text-red-600 text-4xl"></i>
+              <h3 class="font-semibold text-lg md:text-xl text-primary" data-i18n="faq.items.5.q">Comment démarrer un projet avec vous ?</h3>
+              <span class="faq-toggle flex items-center justify-center m-1">
+                <i class="bi bi-arrow-up-right-circle-fill text-primary text-4xl "></i>
               </span>
             </div>
-            <div class="faq-content mt-4 text-sm text-gray-700 leading-relaxed max-h-0 overflow-hidden">
+            <div class="faq-content mt-2 md:mt-4 text-sm text-zinc-700 leading-relaxed max-h-0 overflow-hidden">
               <span data-i18n="faq.items.5.a">Vous pouvez nous contacter directement via notre formulaire de contact ou par email, et nous vous répondrons rapidement.</span>
             </div>
           </div>
@@ -465,7 +464,7 @@
       <div class="space-y-6">
         <div class="flex gap-4 overflow-hidden" id="carousel1">
           <div class="flex gap-4 min-w-max">
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -478,7 +477,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -491,7 +490,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -504,7 +503,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -517,7 +516,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -530,7 +529,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -543,7 +542,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -556,7 +555,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -569,7 +568,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -582,7 +581,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -598,7 +597,7 @@
           </div>
           <div class="flex gap-4 min-w-max">
             <!-- duplicate the 10 items for seamless loop -->
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -611,7 +610,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -624,7 +623,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -637,7 +636,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -650,7 +649,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -663,7 +662,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -676,7 +675,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -689,7 +688,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -702,7 +701,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -715,7 +714,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3">
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3">
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
@@ -734,29 +733,29 @@
         <div class="flex gap-4 overflow-hidden" id="carousel2">
           <div class="flex gap-4 min-w-max">
             <!-- same 10 testimonials as carousel1 -->
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Leur application interne de gestion du personnel nous a permis de gagner du temps et de mieux suivre nos équipes. Coreasofts a été un véritable partenaire dans ce projet.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Alice T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Alice T.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable RH, GlobalTech RDC</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Leur application interne de gestion du personnel nous a permis de gagner du temps et de mieux suivre nos équipes. Coreasofts a été un véritable partenaire dans ce projet.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Alice T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Alice T.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable RH, GlobalTech RDC</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
           </div>
           <div class="flex gap-4 min-w-max">
             <!-- duplicate the same 10 testimonials for seamless loop -->
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Leur application interne de gestion du personnel nous a permis de gagner du temps et de mieux suivre nos équipes. Coreasofts a été un véritable partenaire dans ce projet.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Alice T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Alice T.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable RH, GlobalTech RDC</p></div></div></div>
-            <div class="bg-[#E6E6E6] rounded-xl p-6 w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Leur application interne de gestion du personnel nous a permis de gagner du temps et de mieux suivre nos équipes. Coreasofts a été un véritable partenaire dans ce projet.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Alice T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Alice T.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable RH, GlobalTech RDC</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
           </div>
         </div>
       </div>
@@ -764,7 +763,7 @@
     </section>
 
     <!--la Section Projets -->
-    <section id="projects" class="bg-rose-50 rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden md:mx-80" data-animate>
+    <section id="projects" class="bg-rose-50 md:rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden md:mx-80" data-animate>
       <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="projects.title">Projets</h2>
       <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12" data-i18n="projects.subtitle">
         Découvrez quelques projets récents. Faites défiler pour en voir davantage.
@@ -778,9 +777,9 @@
           class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-rose-50 to-transparent z-10">
         </div>
 
-        <button id="projectsPrev"
-          class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-20  items-center justify-center">
-          <i class="bi bi-arrow-left-circle-fill text-red-600 text-5xl"></i>
+        <button id="projectsPrev" aria-label="preview du projet"
+          class="flex absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 z-20  items-center justify-center">
+          <i class="bi bi-arrow-left-circle-fill text-primary text-4xl md:text-5xl"></i>
 
         </button>
 
@@ -794,11 +793,11 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.0.title">Tshims AI</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.0.title">Tshims AI</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.0.text">Solution IA pour l'analyse en temps réel. Interface simple et
                   intuitive.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
@@ -813,10 +812,10 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.1.title">Dashboard Analytics</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.1.title">Dashboard Analytics</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.1.text">Tableau de bord de performance et reporting automatisé.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
@@ -831,10 +830,10 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.2.title">ERP PME</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.2.title">ERP PME</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.2.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
@@ -849,10 +848,10 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.3.title">ERP PME</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.3.title">ERP PME</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.3.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
@@ -867,10 +866,10 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.4.title">ERP PME</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.4.title">ERP PME</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.4.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
@@ -885,10 +884,10 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.5.title">ERP PME</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.5.title">ERP PME</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.5.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
@@ -903,26 +902,26 @@
             <div
               class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-red-600" data-i18n="projects.slides.6.title">ERP PME</h4>
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.6.title">ERP PME</h4>
                 <p class="text-xs text-zinc-600" data-i18n="projects.slides.6.text">Suite de gestion intégrée: ventes, stocks et opérations.</p>
               </div>
-              <span class="text-red-600">
+              <span class="text-primary">
                 <i class="bi bi-arrow-up-right-circle-fill text-3xl"></i>
               </span>
             </div>
           </article>
         </div>
 
-        <button id="projectsNext"
-          class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 items-center justify-center">
-          <i class="bi bi-arrow-right-circle-fill text-red-600 text-5xl"></i>
+        <button id="projectsNext" aria-label="projet suivant"
+          class="flex absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 z-20 items-center justify-center">
+          <i class="bi bi-arrow-right-circle-fill text-primary text-4xl md:text-5xl"></i>
 
         </button>
       </div>
 
       <div class="mt-10 flex items-center justify-center gap-3">
         <div class="h-2 w-28 bg-red-200 rounded-full overflow-hidden">
-          <div id="projectsProgressFill" class="h-full w-1/3 bg-red-600 rounded-full transition-all duration-300"></div>
+          <div id="projectsProgressFill" class="h-full w-1/3 bg-primary rounded-full transition-all duration-300"></div>
         </div>
         <span class="w-3 h-3 rounded-full bg-red-300"></span>
       </div>
@@ -930,8 +929,8 @@
 
 
     <!--la Section Contact -->
-    <section id="contact" class="bg-zinc-100 rounded-3xl p-4 md:p-8 md:mx-80 mb-20 text-zinc-400" data-animate>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+    <section id="contact" class="bg-zinc-100 md:rounded-3xl px-4 py-20  md:p-8 md:mx-80 mb-20 text-zinc-400" data-animate>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6 ">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm text-zinc-500">
           <h2 class="text-2xl font-semibold mb-2 " data-i18n="contact.title">Discutons de votre projet</h2>
           <p class="text-sm  mb-8 max-w-xl" data-i18n="contact.subtitle">
@@ -941,37 +940,42 @@
 
           <form id="contactForm" class="space-y-6" novalidate>
             <div class="text-sm">
-              <label for="name" class="block font-medium mb-2" data-i18n="contact.form.nameLabel">Nom et Prenom</label>
+              <label for="name" class="block font-medium mb-2" ><span data-i18n="contact.form.nameLabel">Nom et Prenom </span> <span class="text-primary">*</span></label>
               <input id="name" name="name" type="text" placeholder="Votre nom complet" data-i18n-attr-placeholder="contact.form.namePlaceholder"
-                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
+                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3"
                 required />
             </div>
 
             <div class="text-sm">
-              <label for="email" class="block font-medium mb-2" data-i18n="contact.form.emailLabel">Email</label>
+              <label for="email" class="block font-medium mb-2" > <span data-i18n="contact.form.emailLabel">Email</span> <span class="text-primary">*</span></label>
               <input id="email" name="email" type="email" placeholder="votre@email.com"
                 data-i18n-attr-placeholder="contact.form.emailPlaceholder"
-                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3"
+                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3"
                 required />
             </div>
 
             <div class="text-sm">
-              <label for="subject" class="block font-medium mb-2" data-i18n="contact.form.subjectLabel">Sujet</label>
+              <label for="subject" class="block font-medium mb-2"><span data-i18n="contact.form.subjectLabel">Sujet</span> <span class="text-primary">*</span></label>
               <input id="subject" name="subject" type="text" placeholder="Sujet du message" data-i18n-attr-placeholder="contact.form.subjectPlaceholder"
-                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" required />
+                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3" required />
             </div>
 
             <div class="text-sm">
-              <label for="message" class="block font-medium mb-2" data-i18n="contact.form.messageLabel">Message</label>
+              <label for="message" class="block font-medium mb-2"><span data-i18n="contact.form.messageLabel">Message</span> <span class="text-primary">*</span></label>
               <textarea id="message" name="message" rows="6" placeholder="Votre message" data-i18n-attr-placeholder="contact.form.messagePlaceholder"
-                class="w-full rounded-xl bg-zinc-100 focus:bg-white border-0 focus:ring-2 focus:ring-red-500 px-4 py-3" required></textarea>
+                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3" required></textarea>
             </div>
 
             <div class="pt-2">
               <button id="submitBtn" type="submit" 
-                class="w-full text-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">
-                  <span data-i18n="contact.form.submit"> Envoyer </span> 
-                <i class="bi bi-send"></i>
+                class="relative w-full flex items-center justify-center gap-2 bg-primary hover:bg-red-600 text-white font-medium px-6 py-3 rounded-xl transition-colors">
+                <span class="btn-label flex items-center gap-2">
+                  <span data-i18n="contact.form.submit">Envoyer</span>
+                  <i class="bi bi-send"></i>
+                </span>
+                <span class="btn-spinner hidden absolute inset-0 flex items-center justify-center">
+                  <span class="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                </span>
               </button>
               <p id="formStatus" class="mt-3 text-sm hidden"></p>
             </div>
@@ -986,31 +990,31 @@
 
           <div class="space-y-3 bg-white py-4 px-3 rounded-xl flex flex-col justify-center">
             <div class="bg-zinc-100 h-full rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
-              <span class="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+              <span class="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shrink-0">
                 <i class="bi bi-envelope text-xl"></i>
               </span>
               <div>
-                <h4 class="font-medium text-zinc-500" data-i18n="contact.cards.email.title">Email</h4>
+                <h4 class="font-medium text-primary" data-i18n="contact.cards.email.title">Email</h4>
                 <p class="text-sm ">contact@coreasofts.com</p>
               </div>
             </div>
 
             <div class="bg-zinc-100 h-full rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
-              <span class="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+              <span class="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shrink-0">
                 <i class="bi bi-telephone text-xl"></i>
               </span>
               <div>
-                <h4 class="font-medium text-zinc-500" data-i18n="contact.cards.phone.title">Contact</h4>
+                <h4 class="font-medium text-primary" data-i18n="contact.cards.phone.title">Contact</h4>
                 <p class="text-sm">(+243) 828 858 300</p>
               </div>
             </div>
 
             <div class="bg-zinc-100 h-full rounded-2xl p-4 md:p-3 flex items-start gap-4 shadow-sm">
-              <span class="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center shrink-0">
+              <span class="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shrink-0">
                 <i class="bi bi-geo-alt text-xl"></i>
               </span>
               <div>
-                <h4 class="font-medium text-zinc-500" data-i18n="contact.cards.address.title">Adresse</h4>
+                <h4 class="font-medium text-primary" data-i18n="contact.cards.address.title">Adresse</h4>
                 <p class="text-sm">RDC, Kinshasa, Gombe no 11/ Lubumbashi, Les battants no 9.</p>
               </div>
             </div>
@@ -1020,7 +1024,7 @@
     </section>
 
 </main>
-  <footer class="text-zinc-500 md:mx-80">
+  <footer class=" md:mx-80">
     <div class="border-t border-zinc-200 py-4 mt-32">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center ">
         <div class="relative flex flex-col items-center w-56">
@@ -1029,17 +1033,17 @@
         </div>
 
         <nav class="flex items-center justify-center gap-6 text-sm">
-          <a href="#" class="hover:text-red-600" data-i18n="nav.home">Accueil</a>
-          <a href="#" class="hover:text-red-600" data-i18n="nav.about">A propos</a>
-          <a href="#" class="hover:text-red-600" data-i18n="nav.services">Services</a>
-          <a href="#" class="hover:text-red-600" data-i18n="nav.testimonials">Temoignages</a>
+          <a href="#" class="hover:text-primary" data-i18n="nav.home">Accueil</a>
+          <a href="#" class="hover:text-primary" data-i18n="nav.about">A propos</a>
+          <a href="#" class="hover:text-primary" data-i18n="nav.services">Services</a>
+          <a href="#" class="hover:text-primary" data-i18n="nav.testimonials">Temoignages</a>
         </nav>
 
         <div class="flex items-center justify-center md:justify-end gap-5 text-xl text-zinc-600">
-          <a href="#" aria-label="X" class="hover:text-red-600"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" aria-label="Facebook" class="hover:text-red-600"><i class="bi bi-facebook"></i></a>
-          <a href="#" aria-label="LinkedIn" class="hover:text-red-600"><i class="bi bi-linkedin"></i></a>
-          <a href="#" aria-label="Instagram" class="hover:text-red-600"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="X" class="hover:text-primary"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-primary"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn" class="hover:text-primary"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-primary"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
     </div>
@@ -1048,6 +1052,17 @@
       <p class="text-center text-sm" data-i18n="footer.copyright">&copy; Copyright Coreasofts</p>
     </div>
   </footer>
+  
+  <!-- Modal de statut du formulaire -->
+  <div id="modalOverlay" class="hidden fixed inset-0 bg-black/70 backdrop-sm z-[9999] items-center justify-center p-4 min-h-screen">
+    <div id="modalBox" class="bg-white rounded-xl py-6 px-3 w-full max-w-md text-center relative h-48">
+      <div id="modalIcon" class="text-xl mb-3 absolute right-4 top-4"></div>
+      <p id="modalMessage" class="text-sm text-zinc-700 mt-10"></p>
+      <fieldset class="mt-6">
+        <button id="modalClose" class="bg-red-primary hover:bg-red-700 text-white px-4 py-2 rounded-md w-full">OK</button>
+      </fieldset>
+    </div>
+  </div>
 </body>
 
 </html>
