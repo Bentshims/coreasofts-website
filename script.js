@@ -497,7 +497,7 @@ initProjectsCarousel();
   const master = cards[0];
 
   function setActive(card) {
-    card.classList.add('bg-red-600');
+    card.classList.add('bg-primary');
     card.classList.remove('bg-white');
     // neutraliser la couleur globale éventuelle
     card.classList.remove('text-white');
@@ -510,7 +510,7 @@ initProjectsCarousel();
     // icône -> blanche
     card.querySelectorAll('[data-service-icon]').forEach((icon) => {
       icon.classList.add('text-white');
-      icon.classList.remove('text-red-600');
+      icon.classList.remove('text-primary');
     });
     // paragraphes sombres -> blancs
     card.querySelectorAll('.text-gray-700').forEach((el) => {
@@ -521,7 +521,7 @@ initProjectsCarousel();
 
   function setInactive(card) {
     card.classList.add('bg-white');
-    card.classList.remove('bg-red-600');
+    card.classList.remove('bg-primary');
     // enlever une éventuelle couleur globale
     card.classList.remove('text-white');
     // Titre -> noir (immédiat)
@@ -532,7 +532,7 @@ initProjectsCarousel();
     }
     // icône -> rouge
     card.querySelectorAll('[data-service-icon]').forEach((icon) => {
-      icon.classList.add('text-red-600');
+      icon.classList.add('text-primary');
       icon.classList.remove('text-white');
     });
     // paragraphes -> gris foncé
