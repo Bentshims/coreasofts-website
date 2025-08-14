@@ -61,15 +61,13 @@
 </head>
 
 <body class="bg-white relative">
-  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease md:px-80">
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease px-2 md:px-80">
     <div class="md:py-4">
       <div class="flex items-center justify-between h-16">
 
         <!-- Logo laptop coreasofts -->
-        <img src="./assets/logo.png" alt="logo Coreasofts" class="hidden md:block w-32 h-auto">
+        <img src="./assets/logo.png" alt="logo Coreasofts" class="w-20 md:w-32 h-auto">
 
-        <!-- logo mobile --> 
-        <img src="./assets/corea-mobile-logo.png" alt="logo coreasofts" class="w-16 h-auto md:hidden">
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-10">
@@ -91,14 +89,14 @@
             </ul>
           </div>
           <button
-            class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
+            class="bg-red-600 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
             Nous contacter
           </button>
         </div>
 
         <!-- Menu mobile -->
         <div class="md:hidden">
-          <button id="mobileMenuBtn" aria-controls="mobileDrawer" aria-expanded="false" class="text-gray-600 hover:text-gray-900">
+          <button id="mobileMenuBtn" aria-label="menu burger" aria-controls="mobileDrawer" aria-expanded="false" class="hover:text-gray-900">
             <i class="bi bi-list text-4xl font-bold"></i>
           </button>
         </div>
@@ -125,17 +123,17 @@
       <button class="w-full bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-md transition-colors" data-i18n="cta.contact">Nous contacter</button>
     </div>
   </aside>
-  <main class="space-y-24 my-8">
+  <main class="space-y-12 md:space-y-24 md:my-8">
 
     <!-- la Hero section -->
-    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet rounded-2xl md:mx-80" data-animate>
-      <div class="absolute inset-0 bg-black/60 rounded-2xl"></div>
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-80" data-animate>
+      <div class="absolute inset-0 bg-black/60 md:rounded-2xl"></div>
 
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
         <div class="max-w-2xl">
-          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
-            Transformez vos idées en solutions. </br>
-            Innovez avec <span class="text-red-600">Coreasofts</span>.
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
+            Transformez vos idées en solutions.
+            Innovez avec <span class="text-red-500">Coreasofts</span>.
           </h1>
 
           <p class="text-gray-300 mb-12 leading-relaxed" data-i18n-html="hero.subtitle">
@@ -146,10 +144,10 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
+            <button class="bg-white text-red-600 font-medium px-6 py-2 rounded-xl md:rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
               Nos services
             </button>
-            <button class="bg-red-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
+            <button class="bg-red-600 text-white font-medium px-6 py-2 rounded-xl md:rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
               Nous contacter
             </button>
           </div>
@@ -778,7 +776,7 @@
           class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-rose-50 to-transparent z-10">
         </div>
 
-        <button id="projectsPrev"
+        <button id="projectsPrev" aria-label="preview du projet"
           class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-20  items-center justify-center">
           <i class="bi bi-arrow-left-circle-fill text-red-600 text-5xl"></i>
 
@@ -913,7 +911,7 @@
           </article>
         </div>
 
-        <button id="projectsNext"
+        <button id="projectsNext" aria-label="projet suivant"
           class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 items-center justify-center">
           <i class="bi bi-arrow-right-circle-fill text-red-600 text-5xl"></i>
 
