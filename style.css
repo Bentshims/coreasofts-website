@@ -6,6 +6,12 @@
     clip-path: polygon(0 25%, 100% 0, 100% 85%, 0 100%);
 }
 
+.curved-bg-mobile{
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  /* clip-path: polygon(22% 3%, 50% 2%, 100% 0, 100% 95%, 57% 97%, 29% 98%, 0 100%, 0 6%); */
+  clip-path: polygon(21% 3%, 51% 2%, 100% 0, 100% 96%, 54% 96%, 29% 97%, 0 100%, 0 5%);
+}
+
 /*animations au Scroll  */
 [data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 [data-animate].in-view { opacity: 1; transform: translateY(0); }
