@@ -77,29 +77,29 @@
           <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.services">Services</a>
           <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.testimonials">Témoignages</a>
         </nav>
-
-        <div class="hidden md:flex items-center gap-3">
-          <div class="relative">
-            <button id="langToggle" aria-haspopup="listbox" aria-expanded="false"
-              class="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 px-3 py-2 rounded-md flex items-center gap-2">
-              <span id="langCurrentLabel">🇫🇷</span>
+        <div class="flex gap-x-4">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <button id="langToggle" aria-haspopup="listbox" aria-expanded="false"
+                class="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 px-3 py-1 md:py-2 rounded-md flex items-center gap-2">
+                <span id="langCurrentLabel">🇫🇷</span>
+              </button>
+              <ul id="langMenu" class="hidden absolute right-0 mt-2 w-28 bg-white border border-zinc-200 rounded-md shadow-md">
+                <li><button data-lang="fr" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇫🇷 Francais</button></li>
+                <li><button data-lang="en" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇬🇧 English</button></li>
+              </ul>
+            </div>
+            <button
+              class="hidden md:inline-block bg-primary hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
+              Nous contacter
             </button>
-            <ul id="langMenu" class="hidden absolute right-0 mt-2 w-28 bg-white border border-zinc-200 rounded-md shadow-md">
-              <li><button data-lang="fr" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇫🇷 Francais</button></li>
-              <li><button data-lang="en" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇬🇧 English</button></li>
-            </ul>
           </div>
-          <button
-            class="bg-primary hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
-            Nous contacter
-          </button>
-        </div>
-
-        <!-- Menu mobile -->
-        <div class="md:hidden">
-          <button id="mobileMenuBtn" aria-label="menu burger" aria-controls="mobileDrawer" aria-expanded="false" class="hover:text-gray-900">
-            <i class="bi bi-list text-4xl font-bold"></i>
-          </button>
+          <!-- Menu mobile -->
+          <div class="md:hidden">
+            <button id="mobileMenuBtn" aria-label="menu burger" aria-controls="mobileDrawer" aria-expanded="false" class="hover:text-gray-900">
+              <i class="bi bi-list text-4xl font-bold"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -145,10 +145,10 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-white text-primary font-medium px-6 py-2 rounded-xl md:rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
+            <button class="bg-white text-primary font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
               Nos services
             </button>
-            <button class="bg-primary text-white font-medium px-6 py-2 rounded-xl md:rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
+            <button class="bg-primary text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
               Nous contacter
             </button>
           </div>
@@ -1025,14 +1025,15 @@
 
 </main>
   <footer class=" md:mx-80">
-    <div class="border-t border-zinc-200 py-4 mt-32">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center ">
-        <div class="relative flex flex-col items-center w-56">
-          <img src="./assets/logo.png" alt="Coreasofts" class="w-32 h-auto">
-          <p class="text-[12px] abolute left-0 bottom-4 text-center" data-i18n="footer.tagline">Des solutions intelligentes pour un avenir durable</p>
+    <div class="border-t border-zinc-200 py-4 mt-32 relative">
+    <p class="text-[10px] md:hidden text-center absolute -top-5 w-full" data-i18n="footer.tagline">Des solutions intelligentes pour un avenir durable</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 md:gap-8 items-center justify-end">
+        <div class="relative flex flex-col md:items-center w-auto md:w-56 md:pl-0">
+          <img src="./assets/logo.png" alt="Coreasofts" class="w-24 h-auto">
+          <p class="hidden md:text-[12px] text-center" data-i18n="footer.tagline">Des solutions intelligentes pour un avenir durable</p>
         </div>
 
-        <nav class="flex items-center justify-center gap-6 text-sm">
+        <nav class="hidden md:flex items-center justify-center gap-6 text-sm">
           <a href="#" class="hover:text-primary" data-i18n="nav.home">Accueil</a>
           <a href="#" class="hover:text-primary" data-i18n="nav.about">A propos</a>
           <a href="#" class="hover:text-primary" data-i18n="nav.services">Services</a>
@@ -1048,18 +1049,18 @@
       </div>
     </div>
 
-    <div class="border-t border-zinc-200 py-6 md:px-80">
-      <p class="text-center text-sm" data-i18n="footer.copyright">&copy; Copyright Coreasofts</p>
+    <div class="border-t border-zinc-200 py-2 md:py-6 md:px-80">
+      <p class="text-center text-sm text-zinc-500" data-i18n="footer.copyright">&copy; Copyright Coreasofts</p>
     </div>
   </footer>
   
   <!-- Modal de statut du formulaire -->
-  <div id="modalOverlay" class="hidden fixed inset-0 bg-black/70 backdrop-sm z-[9999] items-center justify-center p-4 min-h-screen">
+  <div id="modalOverlay" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] items-center justify-center p-4 min-h-screen">
     <div id="modalBox" class="bg-white rounded-xl py-6 px-3 w-full max-w-md text-center relative h-48">
       <div id="modalIcon" class="text-xl mb-3 absolute right-4 top-4"></div>
       <p id="modalMessage" class="text-sm text-zinc-700 mt-10"></p>
       <fieldset class="mt-6">
-        <button id="modalClose" class="bg-red-primary hover:bg-red-700 text-white px-4 py-2 rounded-md w-full">OK</button>
+        <button id="modalClose" class="bg-primary hover:bg-red-700 text-white px-4 py-2 rounded-md w-full">OK</button>
       </fieldset>
     </div>
   </div>
