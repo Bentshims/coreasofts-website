@@ -13,8 +13,17 @@
 }
 
 /*animations au Scroll  */
-[data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .10s ease, transform .10s ease; }
+[data-animate] { opacity: 0; transform: translateY(32px); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
 [data-animate].in-view { opacity: 1; transform: translateY(0); }
+
+[data-animate="fade-up"] { opacity: 0; transform: translateY(48px); transition: opacity .9s cubic-bezier(.4,0,.2,1), transform .9s cubic-bezier(.4,0,.2,1); }
+[data-animate="fade-up"].in-view { opacity: 1; transform: translateY(0); }
+
+[data-animate="fade-right"] { opacity: 0; transform: translateX(-48px); transition: opacity .9s cubic-bezier(.4,0,.2,1), transform .9s cubic-bezier(.4,0,.2,1); }
+[data-animate="fade-right"].in-view { opacity: 1; transform: translateX(0); }
+
+[data-animate="zoom-in"] { opacity: 0; transform: scale(.85); transition: opacity .9s cubic-bezier(.4,0,.2,1), transform .9s cubic-bezier(.4,0,.2,1); }
+[data-animate="zoom-in"].in-view { opacity: 1; transform: scale(1); }
 
 /* Header effet de surlignage au centre sur les nav links */
 .nav-link {

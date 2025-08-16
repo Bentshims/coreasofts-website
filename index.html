@@ -49,7 +49,9 @@
             title: ["Montserrat", "sans-serif"]
           },
           screens: {
+            'xmd': {'min': '1024px', 'max': '1279px'},
             'sxl': {'min': '1280px', 'max': '1535px'},
+            
           },
         }
       }
@@ -65,7 +67,7 @@
 </head>
 
 <body class="bg-white relative">
-  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease pl-2 pr-4 md:mx-4 sxl:px-28 lg:mx-0 lg:px-80">
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease pl-2 pr-4 md:px-4 sxl:px-28 lg:mx-0 lg:px-[15%] xmd:px-[5%]">
     <div class="md:py-4">
       <div class="flex items-center justify-between h-16">
 
@@ -130,7 +132,7 @@
   <main class="space-y-12 md:space-y-24 my-2 md:my-8">
 
     <!-- la Hero section -->
-    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-4 sxl:mx-28 lg:mx-80" data-animate>
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
       <div class="absolute inset-0 bg-black/60 md:rounded-2xl"></div>
 
       <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 sxl:py-40 lg:py-44">
@@ -161,7 +163,7 @@
     </section>
 
     <!-- la Section À propos de Nous -->
-    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-4 sxl:mx-28 lg:mx-80" data-animate>
+    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
       <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full z-[-1]"></div>
       <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full z-[-1]"></div>
       <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full z-[-1]"></div>
@@ -233,7 +235,7 @@
   
     <!-- la section services -->
 
-    <section class="py-12 px-4 sxl:px-2 md:px-8 space-y-20 md:space-y-32 h-auto md:mx-4 sxl:mx-28 lg:mx-80" data-animate>
+    <section class="py-12 px-4 sxl:px-2 md:px-8 space-y-20 md:space-y-32 h-auto md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
 
       <h2 class="text-sm text-primary font-medium md:mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
@@ -368,7 +370,7 @@
 
     <!-- section faq -->
      
-    <section class="relative bg-primary curved-bg-mobile px-4 md:px-80 text-white bg-primary md:wave-bg min-h-screen" data-animate>
+    <section class="relative bg-primary curved-bg-mobile px-4 md:px-80 xmd:px-[5%] text-white bg-primary md:wave-bg min-h-screen" data-animate>
       <div class="max-w-5xl mx-auto py-28 md:pb-80">
         <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="faq.title">FAQs</h2>
         <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12" data-i18n="faq.subtitle">
@@ -456,7 +458,7 @@
 
     <!-- la section Temoignages -->
 
-    <section class="relative py-10 overflow-hidden sxl:mx-28 lg:mx-80" data-animate>
+    <section class="relative py-10 overflow-hidden sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
       <div
         class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white/90 via-white/80 via-white/70 via-white/60 via-white/50 via-white/40 to-transparent z-10">
       </div>
@@ -766,7 +768,7 @@
     </section>
 
     <!--la Section Projets -->
-    <section id="projects" class="bg-rose-50 md:rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden sxl:mx-28 lg:mx-80" data-animate>
+    <section id="projects" class="bg-rose-50 md:rounded-3xl py-16 md:py-24 px-4 md:px-8 relative overflow-hidden sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
       <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="projects.title">Projets</h2>
       <p class="text-center text-sm text-zinc-600 max-w-3xl mx-auto mb-12" data-i18n="projects.subtitle">
         Découvrez quelques projets récents. Faites défiler pour en voir davantage.
@@ -932,7 +934,7 @@
 
 
     <!--la Section Contact -->
-    <section id="contact" class="bg-zinc-100 md:rounded-3xl px-4 py-20  md:p-8 sxl:mx-28 lg:mx-80 mb-20 text-zinc-400" data-animate>
+    <section id="contact" class="bg-zinc-100 md:rounded-3xl px-4 py-20  md:p-8 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%] mb-20 text-zinc-400" data-animate>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6 ">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm text-zinc-500">
           <h2 class="text-2xl font-semibold mb-2 " data-i18n="contact.title">Discutons de votre projet</h2>
@@ -1027,7 +1029,7 @@
     </section>
 
 </main>
-  <footer class="sxl:mx-28 lg:mx-80">
+  <footer class="sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]">
     <div class="border-t border-zinc-200 py-4 mt-32 relative">
     <p class="text-[10px] md:hidden text-center absolute -top-5 w-full text-zinc-700" data-i18n="footer.tagline">Des solutions intelligentes pour un avenir durable</p>
       <div class="grid grid-cols-2 md:grid-cols-3 md:gap-8 items-center justify-end">
