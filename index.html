@@ -13,7 +13,7 @@
   <meta name="author" content="Coreasofts" />
   <meta http-equiv="Content-Language" content="fr" />
   <meta name="emailjs-public-key" content="0ILWIJa8A7jc6KnkO" />
-  <meta name="theme-color" content="#E30613" />
+  <meta name="theme-color" content="#E6112F" />
 
   <!-- Open Graph pour le partage réseaux sociaux -->
   <meta property="og:title" data-i18n-attr-content="head.og.title" content="Coreasofts - Transformez vos idées en solutions" />
@@ -47,7 +47,10 @@
           fontFamily: {
             sans: ["Open Sans", "sans-serif"],
             title: ["Montserrat", "sans-serif"]
-          }
+          },
+          screens: {
+            'sxl': {'min': '1280px', 'max': '1535px'},
+          },
         }
       }
     };
@@ -62,7 +65,7 @@
 </head>
 
 <body class="bg-white relative">
-  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease pl-2 pr-4 md:mx-4 lg:px-80">
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease pl-2 pr-4 md:mx-4 sxl:px-28 lg:mx-0 lg:px-80">
     <div class="md:py-4">
       <div class="flex items-center justify-between h-16">
 
@@ -107,7 +110,7 @@
 
   <!-- Mobile Drawer + Overlay -->
   <div id="mobileOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm pointer-events-none opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-[50]"></div>
-  <aside id="mobileDrawer" class="fixed inset-y-0 left-0 w-72 max-w-[85%] bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-[60] md:hidden">
+  <aside id="mobileDrawer" class="fixed inset-y-0 left-0 w-72 max-w-[80%] md:max-w-[70%]  bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-[60] md:hidden">
     <div class="p-4 flex items-center justify-between">
       <img src="./assets/logo.png" alt="Coreasofts" class="w-20 h-auto">
       <button id="mobileCloseBtn" aria-label="Fermer le menu" class="text-zinc-700 hover:text-zinc-900 rounded-full p-2 w-8 h-8 flex items-center justify-center">
@@ -127,10 +130,10 @@
   <main class="space-y-12 md:space-y-24 my-2 md:my-8">
 
     <!-- la Hero section -->
-    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-4 lg:mx-80" data-animate>
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-4 sxl:mx-28 lg:mx-80" data-animate>
       <div class="absolute inset-0 bg-black/60 md:rounded-2xl"></div>
 
-      <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 lg:py-32">
+      <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 sxl:28 lg:py-32">
         <div class="max-w-2xl">
           <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
             Transformez vos idées en solutions.
@@ -158,7 +161,7 @@
     </section>
 
     <!-- la Section À propos de Nous -->
-    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-4 lg:mx-80" data-animate>
+    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-4 sxl:mx-28 lg:mx-80" data-animate>
       <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full z-[-1]"></div>
       <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full z-[-1]"></div>
       <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full z-[-1]"></div>
@@ -230,12 +233,12 @@
   
     <!-- la section services -->
 
-    <section class="py-12 px-4 md:px-8 space-y-20 md:space-y-32 h-auto md:mx-4 lg:mx-80" data-animate>
+    <section class="py-12 px-4 sxl:px-2 md:px-8 space-y-20 md:space-y-32 h-auto md:mx-4 sxl:mx-28 lg:mx-80 border border-red-500" data-animate>
 
       <h2 class="text-sm text-primary font-medium md:mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
       <div class="md:flex gap-x-12 md:h-96">
-        <div class="md:w-1/2 flex flex-col justify-between space-y-8">
+        <div class="lg:w-1/2 flex flex-col justify-between space-y-8">
           <h2 class="font-semibold text-xl md:text-center md:mt-16" data-i18n="services.intro.title">
             Ce que nous faisons
           </h2>
@@ -255,7 +258,7 @@
           </div>
         </div>
 
-        <div class="md:w-1/2 h-auto relative">
+        <div class="lg:w-1/2 h-auto relative">
           <img src="./assets/services-image.png" alt="Développeur"
             class="rounded-lg w-full h-full absolute z-10 inset-0">
           <div class="w-full h-full bg-red-100 absolute -bottom-6 -right-6 rounded-lg"></div>
@@ -280,7 +283,7 @@
               <h3 class="font-semibold text-lg " data-i18n="services.cards.strabus.title">
                 Strabus - Stratégie Business
               </h3>
-              <div>
+              <div class="m-1">
                 <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-4xl transition-colors duration-300 ease-in-out"></i>
               </div>
             </div>
@@ -296,7 +299,7 @@
               <h3 class="font-semibold text-lg " data-i18n="services.cards.acconum.title">
                 Acconum - Accompagnement Numérique
               </h3>
-              <div>
+              <div class="m-1">
                 <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-4xl text-primary transition-colors duration-300 ease-in-out"></i>
               </div>
             </div>
@@ -312,7 +315,7 @@
             <h3 class="font-semibold text-lg mb-3" data-i18n="services.cards.devapp.title">
               Devapp - Développement d'applications
             </h3>
-            <div>
+            <div class="m-1">
               <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-primary text-4xl transition-colors duration-300 ease-in-out"></i>
             </div>
            </div>
@@ -328,7 +331,7 @@
             <h3 class="font-semibold text-lg mb-3 " data-i18n="services.cards.event.title">
               Corea-Event - Organisation d'événements
             </h3>
-            <div>
+            <div class="m-1">
               <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-primary text-4xl transition-colors duration-300 ease-in-out"></i>
             </div>
            </div>
@@ -342,13 +345,13 @@
 
 
         </div>
-        <div class="flex items-center justify-center md:px-80">
+        <div class="flex items-center justify-center sxl:px-72 xl:px-80">
           <div data-service-card class="bg-white text-black p-10 rounded-lg relative z-10 border border-red-600 transition-colors duration-300 ease-in-out">
             <div class="mb-3 flex items-center justify-between">
               <h3 class="font-semibold text-lg " data-i18n="services.cards.meca.title">
                 Corea-Meca - Solutions Mécaniques
               </h3>
-              <div>
+              <div class="m-1">
                 <i data-service-icon class="bi bi-arrow-up-right-circle-fill text-primary text-4xl transition-colors duration-300 ease-in-out"></i>
               </div>
             </div>
