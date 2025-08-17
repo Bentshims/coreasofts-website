@@ -94,10 +94,12 @@
                 <li><button data-lang="en" class="w-full text-left px-2 py-2 hover:bg-zinc-50">🇬🇧 English</button></li>
               </ul>
             </div>
-            <button
-              class="hidden md:inline-block bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300" data-i18n="cta.contact">
-              Nous contacter
-            </button>
+            <a href="#contact" aria-label="bouton de redirection vers le formulaire de contact">
+              <button
+                class="hidden md:inline-block bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300" data-i18n="cta.contact">
+                  Nous contacter
+              </button>
+            </a>
           </div>
           <!-- Menu mobile -->
           <div class="md:hidden">
@@ -150,12 +152,16 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4" data-animate="zoom-up">
-            <button class="bg-white text-primary font-medium px-6 py-2  transition-all duration-300 ease hover:bg-white/70" data-i18n="hero.cta.services">
-              Nos services
-            </button>
-            <button class="bg-primary text-white font-medium px-6 py-2  transition-all duration-300 ease hover:bg-red-400" data-i18n="hero.cta.contact">
-              Nous contacter
-            </button>
+            <a href="#services" aria-label="bouton de redirection vers la section services">
+              <button class="bg-white text-primary font-medium px-6 py-2  transition-all duration-300 ease hover:bg-white/70" data-i18n="hero.cta.services">
+                Nos services
+              </button>
+            </a>
+            <a href="#contact" aria-label="bouton de redirection vers la section contact">
+              <button class="bg-primary text-white font-medium px-6 py-2  transition-all duration-300 ease hover:bg-red-400" data-i18n="hero.cta.contact">
+                Nous contacter
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -178,14 +184,14 @@
         <div></div>
         <div></div>
       </div>
-      <div class="h-full">
+      <div class="h-full" data-animate="fade-up">
         <h2 class="text-sm text-primary font-medium px-2 absolute top-14" data-i18n="about.sectionLabel">À propos de Nous</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-lg p-6 shadow-sm md:translate-y-0">
-            <h3 class="text-xl font-semibold mb-4" data-i18n="about.vision.title">Notre Vision</h3>
-            <p class="mb-2 font-medium" data-i18n="about.vision.lead">Devenir le leader de l'innovation digitale en Afrique.</p>
-            <p class="text-md text-zinc-600" data-i18n-html="about.vision.text">
+          <div  class="bg-white rounded-lg p-6 transition duration-500 ease shadow-md shadow-red-200 hover:shadow-red-200  hover:shadow-lg md:translate-y-0" >
+            <h3 class="text-lg font-medium mb-4" data-i18n="about.vision.title">Notre Vision</h3>
+            <p class="mb-2 font-normal" data-i18n="about.vision.lead">Devenir le leader de l'innovation digitale en Afrique.</p>
+            <p class="text-sm text-zinc-600" data-i18n-html="about.vision.text">
               Coreasofts aspire à
               <span class="text-primary font-medium">transformer</span> durablement les
               <span class="text-primary font-medium">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le
@@ -194,10 +200,10 @@
             </p>
           </div>
 
-          <div class="bg-white rounded-lg p-6 shadow-sm md:translate-y-16">
-            <h3 class="text-xl font-semibold mb-4" data-i18n="about.mission.title">Notre Mission</h3>
-            <p class="mb-2 font-medium" data-i18n="about.mission.lead">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
-            <p class="text-md text-zinc-600" data-i18n-html="about.mission.text">
+          <div class="bg-white rounded-lg p-6 transition duration-500 ease shadow-md shadow-red-200 hover:shadow-red-200 hover:shadow-lg md:translate-y-16" >
+            <h3 class="text-lg font-medium mb-4" data-i18n="about.mission.title">Notre Mission</h3>
+            <p class="mb-2 font-normal" data-i18n="about.mission.lead">Accompagner ceux qui bâtissent l'Afrique de demain.</p>
+            <p class="text-sm text-zinc-600" data-i18n-html="about.mission.text">
               Nous offrons des services innovants en stratégie,
               <span class="text-primary font-medium">accompagnement numérique</span>, développement d'applications,
               organisation d'événements et ingénierie mécanique.
@@ -206,10 +212,10 @@
             </p>
           </div>
 
-          <div class="bg-white rounded-lg p-6 shadow-sm md:translate-y-32">
-            <h3 class="text-xl font-semibold mb-4" data-i18n="about.values.title">Nos Valeurs</h3>
-            <p class="mb-4 font-medium" data-i18n="about.values.lead">Ce qui guide chacune de nos actions.</p>
-            <ul class="space-y-2 text-md text-zinc-600">
+          <div  class="bg-white rounded-lg p-6 transition duration-500 ease shadow-md shadow-red-200 hover:shadow-red-200 hover:shadow-lg md:translate-y-32" >
+            <h3 class="text-lg font-medium mb-4" data-i18n="about.values.title">Nos Valeurs</h3>
+            <p class="mb-4 font-normal" data-i18n="about.values.lead">Ce qui guide chacune de nos actions.</p>
+            <ul class="space-y-2 text-sm text-zinc-600">
               <li data-i18n-html="about.values.items.0">
                 <span class="text-primary font-medium">Innovation</span> : repousser les limites pour créer des
                 solutions modernes et pertinentes
@@ -235,7 +241,7 @@
   
     <!-- la section services -->
 
-    <section class="py-12 px-4 sxl:px-2 md:px-8 space-y-20 md:space-y-32 h-auto md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
+    <section id="services" class="py-12 px-4 sxl:px-2 md:px-8 space-y-20 md:space-y-44 h-auto md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
 
       <h2 class="text-sm text-primary font-medium md:mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
@@ -947,7 +953,7 @@
             <div class="text-sm">
               <label for="name" class="block font-medium mb-2" ><span data-i18n="contact.form.nameLabel">Nom et Prenom </span> <span class="text-primary">*</span></label>
               <input id="name" name="name" type="text" placeholder="Votre nom complet" data-i18n-attr-placeholder="contact.form.namePlaceholder"
-                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3"
+                class="w-full  bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3"
                 required />
             </div>
 
@@ -955,20 +961,20 @@
               <label for="email" class="block font-medium mb-2" > <span data-i18n="contact.form.emailLabel">Email</span> <span class="text-primary">*</span></label>
               <input id="email" name="email" type="email" placeholder="votre@email.com"
                 data-i18n-attr-placeholder="contact.form.emailPlaceholder"
-                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3"
+                class="w-full  bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3"
                 required />
             </div>
 
             <div class="text-sm">
               <label for="subject" class="block font-medium mb-2"><span data-i18n="contact.form.subjectLabel">Sujet</span> <span class="text-primary">*</span></label>
               <input id="subject" name="subject" type="text" placeholder="Sujet du message" data-i18n-attr-placeholder="contact.form.subjectPlaceholder"
-                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3" required />
+                class="w-full  bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3" required />
             </div>
 
             <div class="text-sm">
               <label for="message" class="block font-medium mb-2"><span data-i18n="contact.form.messageLabel">Message</span> <span class="text-primary">*</span></label>
               <textarea id="message" name="message" rows="6" placeholder="Votre message" data-i18n-attr-placeholder="contact.form.messagePlaceholder"
-                class="w-full rounded-xl bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3" required></textarea>
+                class="w-full  bg-zinc-100 outline-none focus:bg-white border-0 focus:ring-2 focus:ring-primary px-4 py-3" required></textarea>
             </div>
 
             <div class="pt-2">
@@ -990,7 +996,7 @@
         <div class="space-y-6 h-full grid grid-cols-1">
           <div class="">
             <img src="./assets/contact.png" alt="Client heureux utilisant son smartphone"
-              class="w-full h-full object-cover rounded-xl">
+              class="w-full h-full object-cover rounded-xl transition duration-500 ease transform hover:scale-105">
           </div>
 
           <div class="space-y-3 bg-white py-4 px-3 rounded-xl flex flex-col justify-center">
