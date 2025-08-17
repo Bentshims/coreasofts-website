@@ -66,11 +66,50 @@
 [data-service-card],
 [data-service-card] *,
 [data-service-icon] {
-  transition: color 500ms ease-in-out, background-color 500ms ease-in-out;
+  transition: color 300ms cubic-bezier(.4,0,.2,1), background-color 300ms cubic-bezier(.4,0,.2,1), border-color 300ms cubic-bezier(.4,0,.2,1), box-shadow 300ms cubic-bezier(.4,0,.2,1), transform 300ms cubic-bezier(.4,0,.2,1);
+  -webkit-transition: color 300ms cubic-bezier(.4,0,.2,1), background-color 300ms cubic-bezier(.4,0,.2,1), border-color 300ms cubic-bezier(.4,0,.2,1), box-shadow 300ms cubic-bezier(.4,0,.2,1), -webkit-transform 300ms cubic-bezier(.4,0,.2,1);
+  will-change: color, background-color, border-color, box-shadow, transform;
 }
 
 /* Titres des cartes services : changement de couleur immédiat */
 [data-service-card] h3,
 [data-service-card] h3 * {
   transition:color 500ms ease-in-out !important;
+}
+
+/* Animation zoom/dézoom pour le background de la Hero section */
+.hero-bg-zoom {
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-zoom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1);
+  animation: heroZoomAnim 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes heroZoomAnim {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.12); }
+}
+
+/* Pour que le contenu reste au-dessus */
+.hero-bg-zoom > * {
+  position: relative;
+  z-index: 2;
+}
+
+html, body, input, textarea, button, select {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+}
+
+button, .btn, [type="button"], [type="submit"], .button {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
 }

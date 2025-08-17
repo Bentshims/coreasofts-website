@@ -420,18 +420,20 @@ initProjectsCarousel();
     const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
     const delta = currentY - lastY;
     const threshold = 4;
-    if (Math.abs(delta) < threshold) return;
-
+    if (Math.abs(delta) < threshold) {
+      lastY = currentY;
+      ticking = false;
+      return;
+    }
     if (currentY <= 0) {
       header.style.transform = "translateY(0)";
       if (showTimeoutId) { clearTimeout(showTimeoutId); showTimeoutId = null; }
     } else if (delta > 0) {
+      // Scroll down: hide header
       header.style.transform = "translateY(-100%)";
       if (showTimeoutId) clearTimeout(showTimeoutId);
-      showTimeoutId = setTimeout(() => {
-        header.style.transform = "translateY(0)";
-      }, 1000);
     } else {
+      // Scroll up: show header
       header.style.transform = "translateY(0)";
       if (showTimeoutId) { clearTimeout(showTimeoutId); showTimeoutId = null; }
     }
@@ -490,7 +492,7 @@ initProjectsCarousel();
   });
 })();
 
-// Services: effet swap au survol/touch entre la carte principale et la carte survolée
+//Section Services: effet swap au survol/touch entre la carte principale et la carte survolée
 (function initServiceCardsHoverSwap() {
   const cards = Array.from(document.querySelectorAll('[data-service-card]'));
   if (!cards.length) return;
@@ -499,20 +501,16 @@ initProjectsCarousel();
   function setActive(card) {
     card.classList.add('bg-primary');
     card.classList.remove('bg-white');
-    // neutraliser la couleur globale éventuelle
     card.classList.remove('text-white');
-    // Titre -> blanc (immédiat)
     const title = card.querySelector('h3');
     if (title) {
       title.classList.add('text-white');
       title.classList.remove('text-black');
     }
-    // icône -> blanche
     card.querySelectorAll('[data-service-icon]').forEach((icon) => {
       icon.classList.add('text-white');
       icon.classList.remove('text-primary');
     });
-    // paragraphes sombres -> blancs
     card.querySelectorAll('.text-gray-700').forEach((el) => {
       el.classList.add('text-white');
       el.classList.remove('text-gray-700');
@@ -522,20 +520,16 @@ initProjectsCarousel();
   function setInactive(card) {
     card.classList.add('bg-white');
     card.classList.remove('bg-primary');
-    // enlever une éventuelle couleur globale
     card.classList.remove('text-white');
-    // Titre -> noir (immédiat)
     const title = card.querySelector('h3');
     if (title) {
       title.classList.add('text-black');
       title.classList.remove('text-white');
     }
-    // icône -> rouge
     card.querySelectorAll('[data-service-icon]').forEach((icon) => {
       icon.classList.add('text-primary');
       icon.classList.remove('text-white');
     });
-    // paragraphes -> gris foncé
     card.querySelectorAll('p').forEach((el) => {
       if (!el.classList.contains('text-white')) {
         el.classList.add('text-gray-700');
@@ -546,8 +540,7 @@ initProjectsCarousel();
     });
   }
 
-  // État initial déjà correct dans le HTML: master actif, autres inactives
-  // Ajoute les interactions sur les cartes non principales
+  // Utiliser pointer events pour compatibilité maximale
   cards.slice(1).forEach((card) => {
     function enter() {
       setInactive(master);
@@ -557,10 +550,11 @@ initProjectsCarousel();
       setInactive(card);
       setActive(master);
     }
-
+    card.addEventListener('pointerenter', enter);
+    card.addEventListener('pointerleave', leave);
+    // Fallback pour anciens navigateurs
     card.addEventListener('mouseenter', enter);
     card.addEventListener('mouseleave', leave);
-    // Mobile/touch
     card.addEventListener('touchstart', enter, { passive: true });
     card.addEventListener('touchend', leave, { passive: true });
     card.addEventListener('touchcancel', leave, { passive: true });

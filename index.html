@@ -45,8 +45,8 @@
             light: "#F5F5F5"
           },
           fontFamily: {
-            sans: ["Open Sans", "sans-serif"],
-            title: ["Montserrat", "sans-serif"]
+            sans: ["Poppins", "sans-serif"],
+            title: ["Poppins", "sans-serif"]
           },
           screens: {
             'xmd': {'min': '1024px', 'max': '1279px'},
@@ -58,7 +58,7 @@
     };
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
@@ -66,7 +66,7 @@
 
 </head>
 
-<body class="bg-white relative">
+<body class="bg-white relative font-sans">
   <header id="siteHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 ease pl-2 pr-4 md:px-4 sxl:px-28 lg:mx-0 lg:px-[15%] xmd:px-[5%]">
     <div class="md:py-4">
       <div class="flex items-center justify-between h-16">
@@ -77,25 +77,25 @@
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-10">
-          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.home">Accueil</a>
-          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.about">À propos</a>
-          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.services">Services</a>
-          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-medium transition-all duration-300 ease-in-out" data-i18n="nav.testimonials">Témoignages</a>
+          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-light transition-all duration-300 ease-in-out" data-i18n="nav.home">Accueil</a>
+          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-light transition-all duration-300 ease-in-out" data-i18n="nav.about">À propos</a>
+          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-light transition-all duration-300 ease-in-out" data-i18n="nav.services">Services</a>
+          <a href="#" class="nav-link text-gray-800 hover:text-gray-500 font-light transition-all duration-300 ease-in-out" data-i18n="nav.testimonials">Témoignages</a>
         </nav>
         <div class="flex gap-x-4">
           <div class="flex items-center gap-3">
             <div class="relative">
               <button id="langToggle" aria-haspopup="listbox" aria-expanded="false"
-                class="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 px-3 py-1 md:py-2 rounded-md flex items-center gap-2">
+                class="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 px-3 py-1 md:py-2  flex items-center gap-2">
                 <span id="langCurrentLabel">🇫🇷</span>
               </button>
-              <ul id="langMenu" class="hidden absolute right-0 mt-2 w-28 bg-white border border-zinc-200 rounded-md shadow-md">
-                <li><button data-lang="fr" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇫🇷 Francais</button></li>
-                <li><button data-lang="en" class="w-full text-left px-3 py-2 hover:bg-zinc-50">🇬🇧 English</button></li>
+              <ul id="langMenu" class="hidden absolute right-0 mt-2 w-28 bg-white border border-zinc-200  shadow-md">
+                <li><button data-lang="fr" class="w-full text-left px-2 py-2 hover:bg-zinc-50">🇫🇷 Francais</button></li>
+                <li><button data-lang="en" class="w-full text-left px-2 py-2 hover:bg-zinc-50">🇬🇧 English</button></li>
               </ul>
             </div>
             <button
-              class="hidden md:inline-block bg-primary hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="cta.contact">
+              class="hidden md:inline-block bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300" data-i18n="cta.contact">
               Nous contacter
             </button>
           </div>
@@ -129,31 +129,31 @@
       <button class="w-full bg-primary hover:bg-red-600 text-white font-medium px-4 py-2 rounded-md transition-colors" data-i18n="cta.contact">Nous contacter</button>
     </div>
   </aside>
-  <main class="space-y-12 md:space-y-24 my-2 md:my-8">
+  <main class="space-y-12 md:space-y-24 my-2 md:my-0">
 
     <!-- la Hero section -->
-    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet md:rounded-2xl md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
-      <div class="absolute inset-0 bg-black/60 md:rounded-2xl"></div>
+    <section class="relative bg-[url(./assets/hero-section-bg.png)] bg-cover bg-center bg-no-reapet sxl:px-28 lg:px-[15%] xmd:px-[5%] lg:min-h-[30rem] hero-bg-zoom" data-animate>
+      <div class="absolute inset-0 bg-black/60"></div>
 
-      <div class="relative z-20 max-w-7xl mx-auto px-4 md:px-8 py-24 sxl:py-40 lg:py-44">
+      <div class="relative z-20  mx-auto px-4 md:px-8 py-24 sxl:py-40 lg:py-44">
         <div class="max-w-2xl">
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-8" data-i18n-html="hero.title">
+          <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-normal mb-8" data-i18n-html="hero.title" data-animate="fade-right">
             Transformez vos idées en solutions.
             Innovez avec Coreasofts.
           </h1>
 
-          <p class="text-gray-300 mb-12 leading-relaxed" data-i18n-html="hero.subtitle">
+          <p class="text-gray-300 mb-12 leading-relaxed" data-i18n-html="hero.subtitle" data-animate="fade-right">
             Choisissez l'expertise qu'il vous faut pour concrétiser vos projets, digitaliser votre
             activité ou lancer votre start-up. <span class="text-primary font-medium">Coreasofts</span> vous accompagne
             avec des solutions
             sur mesure.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-white text-primary font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.services">
+          <div class="flex flex-col sm:flex-row gap-4" data-animate="zoom-up">
+            <button class="bg-white text-primary font-medium px-6 py-2  transition-all duration-300 ease hover:bg-white/70" data-i18n="hero.cta.services">
               Nos services
             </button>
-            <button class="bg-primary text-white font-medium px-6 py-2 rounded-md transition-colors duration-200" data-i18n="hero.cta.contact">
+            <button class="bg-primary text-white font-medium px-6 py-2  transition-all duration-300 ease hover:bg-red-400" data-i18n="hero.cta.contact">
               Nous contacter
             </button>
           </div>
@@ -163,7 +163,7 @@
     </section>
 
     <!-- la Section À propos de Nous -->
-    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate>
+    <section class="bg-red-50 md:rounded-2xl px-4 pt-32 pb-56 relative overflow-hidden md:mx-4 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%]" data-animate="fade-up">
       <div class="w-[32rem] h-[32rem] border  border-red-200 absolute -right-28 -top-28 rounded-full z-[-1]"></div>
       <div class="w-96 h-96 border  border-red-200 absolute -right-14 -top-14 rounded-full z-[-1]"></div>
       <div class="w-64 h-64 border  border-red-200 absolute right-4 top-4 rounded-full z-[-1]"></div>
@@ -254,7 +254,7 @@
           </p>
           <div>
             <button
-              class="bg-primary hover:bg-red-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200">
+              class="bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300">
               <span data-i18n="services.intro.cta">En savoir plus</span>
             </button>
           </div>
@@ -473,7 +473,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d'e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -486,7 +486,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -499,7 +499,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">"Nous avons organisé un forum sur l'innovation en partenariat avec Coreasofts. Leur gestion de l'événement était impeccable, avec une vraie attention aux détails techniques et logistiques."</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -512,7 +512,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j'ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m'a aidé à structurer mon projet et à lancer ma première application mobile.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -525,7 +525,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l'écoute et leur professionnalisme ont fait la différence.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -538,7 +538,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d'utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -551,7 +551,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -564,7 +564,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">"Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique."</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -590,7 +590,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m'a accompagné de A à Z et m'a même conseillé sur ma stratégie digitale.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -606,7 +606,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d'e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -619,7 +619,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -632,7 +632,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">"Nous avons organisé un forum sur l'innovation en partenariat avec Coreasofts. Leur gestion de l'événement était impeccable, avec une vraie attention aux détails techniques et logistiques."</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -645,7 +645,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j'ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m'a aidé à structurer mon projet et à lancer ma première application mobile.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -658,7 +658,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l'écoute et leur professionnalisme ont fait la différence.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -671,7 +671,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d'utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -684,7 +684,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -697,7 +697,7 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">"Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique."</p>
               <div class="flex items-center gap-x-2">
                 <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
@@ -723,9 +723,9 @@
               <div>
                 <img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" >
               </div>
-              <p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p>
+              <p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m'a accompagné de A à Z et m'a même conseillé sur ma stratégie digitale.</p>
               <div class="flex items-center gap-x-2">
-                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover">
                 <div class="">
                   <h4>Michel K.</h4>
                   <p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p>
@@ -738,29 +738,29 @@
         <div class="flex gap-4 overflow-hidden" id="carousel2">
           <div class="flex gap-4 min-w-max">
             <!-- same 10 testimonials as carousel1 -->
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d'e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">"Nous avons organisé un forum sur l'innovation en partenariat avec Coreasofts. Leur gestion de l'événement était impeccable, avec une vraie attention aux détails techniques et logistiques."</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j'ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m'a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l'écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d'utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">"Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique."</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
             <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Leur application interne de gestion du personnel nous a permis de gagner du temps et de mieux suivre nos équipes. Coreasofts a été un véritable partenaire dans ce projet.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Alice T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Alice T.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable RH, GlobalTech RDC</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m'a accompagné de A à Z et m'a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
           </div>
           <div class="flex gap-4 min-w-max">
             <!-- duplicate the same 10 testimonials for seamless loop -->
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d’e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Nous avons organisé un forum sur l’innovation en partenariat avec Coreasofts. Leur gestion de l’événement était impeccable, avec une vraie attention aux détails techniques et logistiques.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j’ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m’a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l’écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d’utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d’un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">“Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique.”</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a compris notre vision dès le premier échange. Leur équipe nous a accompagné avec professionnalisme pour lancer notre plateforme d'e-learning. Résultat : un produit stable, rapide et 100 % adapté à nos utilisateurs.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Sandra K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Sandra K.</h4><p class="text-zinc-500 font-light text-[12px]">Fondatrice de AfriLearn</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'une refonte complète de notre infrastructure numérique. Grâce à Coreasofts, nous avons pu moderniser nos outils internes et gagner en efficacité opérationnelle.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Yves M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Yves M.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable IT chez KinTech Group</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">"Nous avons organisé un forum sur l'innovation en partenariat avec Coreasofts. Leur gestion de l'événement était impeccable, avec une vraie attention aux détails techniques et logistiques."</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Chantal B." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Chantal B.</h4><p class="text-zinc-500 font-light text-[12px]">Coordinatrice de projets, ONG Impact Afrique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">En tant que jeune entrepreneur, j'ai trouvé chez Coreasofts un accompagnement concret et motivant. Leur équipe m'a aidé à structurer mon projet et à lancer ma première application mobile.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Aimé T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Aimé T.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur & CEO de StartGrow RDC</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su proposer des solutions techniques adaptées aux réalités du secteur public. Leur rigueur, leur sens de l'écoute et leur professionnalisme ont fait la différence.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Florence N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Florence N.</h4><p class="text-zinc-500 font-light text-[12px]">Directrice des systèmes d'information, Ministère du Numérique</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Coreasofts a su transformer notre idée en une plateforme e-commerce performante et simple d'utilisation. Leur équipe technique est réactive et force de proposition à chaque étape.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1543872084-c7bd3822856b?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Patrick L." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Patrick L.</h4><p class="text-zinc-500 font-light text-[12px]">Fondateur de MarketConnect Africa</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Nous avions besoin d'un site clair et accessible pour nos campagnes de sensibilisation. Coreasofts a parfaitement compris nos attentes et livré un site fluide, responsive et bien référencé.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Clarisse M." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Clarisse M.</h4><p class="text-zinc-500 font-light text-[12px]">Chargée de communication, ONG Santé+</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">"Grâce à Coreasofts, nous avons pu intégrer des solutions digitales qui ont considérablement amélioré la gestion de nos projets urbains. Leur approche est à la fois innovante et pragmatique."</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Joël N." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Joël N.</h4><p class="text-zinc-500 font-light text-[12px]">Directeur général, SmartCity Solutions</p></div></div></div>
             <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Leur application interne de gestion du personnel nous a permis de gagner du temps et de mieux suivre nos équipes. Coreasofts a été un véritable partenaire dans ce projet.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Alice T." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Alice T.</h4><p class="text-zinc-500 font-light text-[12px]">Responsable RH, GlobalTech RDC</p></div></div></div>
-            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m’a accompagné de A à Z et m’a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
+            <div class="bg-grayCard rounded-xl p-4 md:p-6 w-80 md:w-96 space-y-3"><div><img src="./assets/quote.svg" alt="quote" class="w-6 h-auto" ></div><p class="text-zinc-500 text-[12px] font-light pl-4">Je ne pensais pas pouvoir lancer mon site sans connaissances techniques. Coreasofts m'a accompagné de A à Z et m'a même conseillé sur ma stratégie digitale.</p><div class="flex items-center gap-x-2"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&auto=format&fit=crop&crop=faces" alt="Michel K." class="w-12 h-12 rounded-full object-cover"><div class=""><h4>Michel K.</h4><p class="text-zinc-500 font-light text-[12px]">Entrepreneur indépendant</p></div></div></div>
           </div>
         </div>
       </div>
@@ -973,7 +973,7 @@
 
             <div class="pt-2">
               <button id="submitBtn" type="submit" 
-                class="relative w-full flex items-center justify-center gap-2 bg-primary hover:bg-red-600 text-white font-medium px-6 py-3 rounded-xl transition-colors">
+                class="relative w-full flex items-center justify-center gap-2 bg-primary hover:bg-red-400 text-white font-medium px-6 py-3 transition-all duration-300 ease">
                 <span class="btn-label flex items-center gap-2">
                   <span data-i18n="contact.form.submit">Envoyer</span>
                   <i class="bi bi-send"></i>
