@@ -184,21 +184,122 @@ initProjectsCarousel();
     submitBtn.classList.toggle("cursor-not-allowed", !!isLoading);
   }
 
-  function validateRequiredFields() {
-    const name = form.querySelector('#name');
-    const email = form.querySelector('#email');
-    const subject = form.querySelector('#subject');
-    const message = form.querySelector('#message');
-    let valid = true;
-    [name, email, subject, message].forEach((el) => {
-      if (!el || !el.value || !el.value.trim()) {
-        valid = false;
-        el && el.classList.add('ring-2', 'ring-red-500');
-      } else {
-        el.classList.remove('ring-2', 'ring-red-500');
+  // Validation en temps réel
+  function initRealTimeValidation() {
+    const fields = {
+      name: {
+        element: form.querySelector('#name'),
+        validate: (value) => {
+          if (!value || !value.trim()) return 'Le nom est requis';
+          if (value.trim().length < 2) return 'Le nom doit contenir au moins 2 caractères';
+          if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(value.trim())) return 'Le nom ne doit contenir que des lettres';
+          return null;
+        }
+      },
+      email: {
+        element: form.querySelector('#email'),
+        validate: (value) => {
+          if (!value || !value.trim()) return 'L\'email est requis';
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value.trim())) return 'Veuillez entrer un email valide';
+          return null;
+        }
+      },
+      subject: {
+        element: form.querySelector('#subject'),
+        validate: (value) => {
+          if (!value || !value.trim()) return 'Le sujet est requis';
+          if (value.trim().length < 5) return 'Le sujet doit contenir au moins 5 caractères';
+          if (value.trim().length > 100) return 'Le sujet ne doit pas dépasser 100 caractères';
+          return null;
+        }
+      },
+      message: {
+        element: form.querySelector('#message'),
+        validate: (value) => {
+          if (!value || !value.trim()) return 'Le message est requis';
+          if (value.trim().length < 10) return 'Le message doit contenir au moins 10 caractères';
+          if (value.trim().length > 1000) return 'Le message ne doit pas dépasser 1000 caractères';
+          return null;
+        }
       }
+    };
+
+    // Fonction pour afficher/masquer les messages d'erreur
+    function showFieldError(fieldName, message) {
+      const field = fields[fieldName];
+      if (!field || !field.element) return;
+
+      // Supprimer l'ancien message d'erreur s'il existe
+      const existingError = field.element.parentNode.querySelector('.field-error');
+      if (existingError) existingError.remove();
+
+      // Ajouter le nouveau message d'erreur
+      if (message) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'field-error text-red-500 text-xs mt-1';
+        errorDiv.textContent = message;
+        field.element.parentNode.appendChild(errorDiv);
+        field.element.classList.add('ring-2', 'ring-red-500');
+        field.element.classList.remove('ring-2', 'ring-green-500');
+      } else {
+        field.element.classList.remove('ring-2', 'ring-red-500');
+        field.element.classList.add('ring-2', 'ring-green-500');
+      }
+    }
+
+    // Fonction pour valider un champ
+    function validateField(fieldName) {
+      const field = fields[fieldName];
+      if (!field || !field.element) return;
+
+      const value = field.element.value;
+      const error = field.validate(value);
+      showFieldError(fieldName, error);
+      return !error;
+    }
+
+    // Ajouter les événements de validation en temps réel
+    Object.keys(fields).forEach(fieldName => {
+      const field = fields[fieldName];
+      if (!field || !field.element) return;
+
+      // Validation lors de la saisie
+      field.element.addEventListener('input', () => {
+        validateField(fieldName);
+      });
+
+      // Validation lors de la perte de focus
+      field.element.addEventListener('blur', () => {
+        validateField(fieldName);
+      });
+
+      // Validation lors du focus (supprimer l'erreur si le champ est vide)
+      field.element.addEventListener('focus', () => {
+        if (!field.element.value.trim()) {
+          showFieldError(fieldName, null);
+          field.element.classList.remove('ring-2', 'ring-red-500', 'ring-green-500');
+        }
+      });
     });
-    return valid;
+
+    // Retourner la fonction de validation globale
+    return function validateAllFields() {
+      let allValid = true;
+      Object.keys(fields).forEach(fieldName => {
+        if (!validateField(fieldName)) {
+          allValid = false;
+        }
+      });
+      return allValid;
+    };
+  }
+
+  // Initialiser la validation en temps réel
+  const validateAllFields = initRealTimeValidation();
+
+  function validateRequiredFields() {
+    return validateAllFields();
   }
 
   async function handleSubmit(e) {
@@ -559,4 +660,97 @@ initProjectsCarousel();
     card.addEventListener('touchend', leave, { passive: true });
     card.addEventListener('touchcancel', leave, { passive: true });
   });
+})();
+
+// Navigation smooth scroll pour tous les boutons
+(function initSmoothScrollNavigation() {
+  // Fonction pour faire défiler vers une section
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
+  // Fonction pour gérer les clics sur les liens de navigation
+  function handleNavigationClick(e) {
+    const href = e.target.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const sectionId = href.substring(1);
+      scrollToSection(sectionId);
+    }
+  }
+
+  // Sélectionner tous les liens qui pointent vers des sections
+  const navigationLinks = document.querySelectorAll('a[href^="#"]');
+  navigationLinks.forEach(link => {
+    link.addEventListener('click', handleNavigationClick);
+  });
+
+  // Gérer spécifiquement les boutons "Nous contacter"
+  const contactButtons = document.querySelectorAll('button, a');
+  contactButtons.forEach(button => {
+    const text = button.textContent?.toLowerCase() || '';
+    if (text.includes('nous contacter') || text.includes('contact')) {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('contact');
+      });
+    }
+  });
+
+  // Gérer spécifiquement les boutons "En savoir plus"
+  const learnMoreButtons = document.querySelectorAll('a, button, span');
+  learnMoreButtons.forEach(element => {
+    const text = element.textContent?.toLowerCase() || '';
+    if (text.includes('en savoir plus')) {
+      element.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Déterminer vers quelle section faire défiler selon le contexte
+        const parentSection = element.closest('section');
+        if (parentSection && parentSection.id === 'services') {
+          // Si on est dans la section services, faire défiler vers les cartes de services
+          const servicesCards = document.querySelector('#services .grid');
+          if (servicesCards) {
+            servicesCards.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        } else {
+          // Par défaut, faire défiler vers la section services
+          scrollToSection('services');
+        }
+      });
+    }
+  });
+
+  // Gérer spécifiquement les boutons "Nos services"
+  const servicesButtons = document.querySelectorAll('a, button');
+  servicesButtons.forEach(button => {
+    const text = button.textContent?.toLowerCase() || '';
+    if (text.includes('nos services') || text.includes('services')) {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('services');
+      });
+    }
+  });
+
+  // Ajouter un offset pour compenser le header fixe
+  function addScrollOffset() {
+    const header = document.getElementById('siteHeader');
+    if (header) {
+      const headerHeight = header.offsetHeight;
+      document.documentElement.style.scrollPaddingTop = `${headerHeight}px`;
+    }
+  }
+
+  // Appeler la fonction au chargement et au redimensionnement
+  addScrollOffset();
+  window.addEventListener('resize', addScrollOffset);
 })();

@@ -35,7 +35,7 @@
     "vision": {
       "title": "Notre Vision",
       "lead": "Devenir le leader de l'innovation digitale en Afrique.",
-      "text": "Coreasofts aspire à <span class=\"text-red-600 font-medium\">transformer</span> durablement les <span class=\"text-red-600 font-medium\">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le quotidien des citoyens africains grâce à des <span class=\"text-red-600 font-medium\">technologies intelligentes</span>, accessibles et impactantes."
+      "text": "Coreasofts aspire à <span class=\"text-primary font-medium\">transformer</span> durablement les <span class=\"text-red-600 font-medium\">entreprises</span>, dynamiser l'entrepreneuriat et améliorer le quotidien des citoyens africains grâce à des <span class=\"text-red-600 font-medium\">technologies intelligentes</span>, accessibles et impactantes."
     },
     "mission": {
       "title": "Notre Mission",
@@ -99,7 +99,7 @@
     "title": "Projets",
     "subtitle": "Découvrez quelques projets récents. Faites défiler pour en voir davantage.",
     "slides": [
-      { "title": "Tshims AI", "text": "Solution IA pour l'analyse en temps réel. Interface simple et intuitive." },
+      { "title": "NOVA DIGITAL TECNHOLOGY", "text": "Solution web pour d'un site corporatif pour NOVA DIGITAL TECNHOLOGY avec une Interface simple et intuitive." },
       { "title": "Dashboard Analytics", "text": "Tableau de bord de performance et reporting automatisé." },
       { "title": "ERP PME", "text": "Suite de gestion intégrée: ventes, stocks et opérations." },
       { "title": "ERP PME", "text": "Suite de gestion intégrée: ventes, stocks et opérations." },

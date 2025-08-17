@@ -94,12 +94,10 @@
                 <li><button data-lang="en" class="w-full text-left px-2 py-2 hover:bg-zinc-50">🇬🇧 English</button></li>
               </ul>
             </div>
-            <a href="#contact" aria-label="bouton de redirection vers le formulaire de contact">
-              <button
-                class="hidden md:inline-block bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300" data-i18n="cta.contact">
-                  Nous contacter
-              </button>
-            </a>
+            <button
+            class="hidden md:inline-block bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300" data-i18n="cta.contact">
+              Nous contacter
+          </button>
           </div>
           <!-- Menu mobile -->
           <div class="md:hidden">
@@ -152,16 +150,14 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4" data-animate="zoom-up">
-            <a href="#services" aria-label="bouton de redirection vers la section services">
-              <button class="bg-white text-primary font-medium px-6 py-2  transition-all duration-300 ease hover:bg-white/70" data-i18n="hero.cta.services">
-                Nos services
-              </button>
-            </a>
-            <a href="#contact" aria-label="bouton de redirection vers la section contact">
-              <button class="bg-primary text-white font-medium px-6 py-2  transition-all duration-300 ease hover:bg-red-400" data-i18n="hero.cta.contact">
-                Nous contacter
-              </button>
-            </a>
+         
+            <button class="bg-white text-primary font-medium px-6 py-2  transition-all duration-300 ease hover:bg-white/70" data-i18n="hero.cta.services">
+              Nos services
+            </button>
+         
+            <button class="bg-primary text-white font-medium px-6 py-2  transition-all duration-300 ease hover:bg-red-400" data-i18n="hero.cta.contact">
+              Nous contacter
+            </button>
           </div>
         </div>
       </div>
@@ -246,7 +242,7 @@
       <h2 class="text-sm text-primary font-medium md:mb-8" data-i18n="services.sectionLabel">Nos services</h2>
 
       <div class="md:flex gap-x-12 md:h-96">
-        <div class="lg:w-1/2 flex flex-col justify-between space-y-8">
+        <div class="lg:w-1/2 flex flex-col justify-between space-y-8" data-animate="fade-right">
           <h2 class="font-semibold text-xl md:text-center md:mt-16" data-i18n="services.intro.title">
             Ce que nous faisons
           </h2>
@@ -258,7 +254,7 @@
             Nous vous accompagnons avec des solutions adaptées, durables et pensées pour l'Afrique d'aujourd'hui et de
             demain.
           </p>
-          <div>
+          <div data-animate="fade-up">
             <button
               class="bg-primary hover:bg-red-400 text-white font-medium px-6 py-2 transition-all ease duration-300">
               <span data-i18n="services.intro.cta">En savoir plus</span>
@@ -798,14 +794,14 @@
           <!-- Slide 1 -->
           <article data-project-slide
             class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
-            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
-              alt="Application mobile en cours de test" class="w-full h-72 md:h-80 object-cover">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+              alt="Site web corporatif moderne" class="w-full h-72 md:h-80 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div
-              class="absolute bottom-4 left-4 right-4 bg-white/50 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
+              class="absolute bottom-4 left-4 right-4 bg-white/40 backdrop-blur-sm rounded-xl p-4 flex items-start justify-between">
               <div>
-                <h4 class="font-semibold text-primary" data-i18n="projects.slides.0.title">Tshims AI</h4>
-                <p class="text-xs text-zinc-600" data-i18n="projects.slides.0.text">Solution IA pour l'analyse en temps réel. Interface simple et
+                <h4 class="font-semibold text-primary" data-i18n="projects.slides.0.title">NOVA DIGITAL TECNHOLOGY</h4>
+                <p class="text-[12px] text-zinc-600" data-i18n="projects.slides.0.text">Solution web pour d'un site corporatif pour NOVA DIGITAL TECNHOLOGY avec une Interface simple et
                   intuitive.</p>
               </div>
               <span class="text-primary">
@@ -835,7 +831,7 @@
           <!-- Slide 3 -->
           <article data-project-slide
             class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
-            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="Interface de gestion ERP"
               class="w-full h-72 md:h-80 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div
@@ -853,7 +849,7 @@
           <!-- Slide 4 -->
           <article data-project-slide
             class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
-            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop" alt="Application de gestion d'entreprise"
               class="w-full h-72 md:h-80 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div
@@ -871,7 +867,7 @@
           <!-- Slide 5 -->
           <article data-project-slide
             class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
-            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600&auto=format&fit=crop" alt="Application mobile de gestion"
               class="w-full h-72 md:h-80 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div
@@ -889,7 +885,7 @@
           <!-- Slide 6 -->
           <article data-project-slide
             class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
-            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="Graphiques et données d'entreprise"
               class="w-full h-72 md:h-80 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div
@@ -907,7 +903,7 @@
           <!-- Slide 7 -->
           <article data-project-slide
             class="relative rounded-2xl overflow-hidden min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[32%] snap-start">
-            <img src="./assets/project1.png" alt="Ordinateur portable avec graphiques"
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop" alt="Interface utilisateur moderne"
               class="w-full h-72 md:h-80 object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div
@@ -938,6 +934,43 @@
       </div>
     </section>
 
+
+    <!-- la Section CTA -->
+    <section class="bg-gradient-to-r from-primary to-red-600 text-white py-20 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%] mb-20" data-animate>
+      <div class="text-center max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="cta.title">Prêt à transformer votre entreprise ?</h2>
+        <p class=" mb-8 opacity-90" data-i18n="cta.subtitle">
+          Découvrez comment nos solutions digitales peuvent propulser votre entreprise vers le succès. 
+          Contactez-nous dès aujourd'hui pour un accompagnement personnalisé.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#contact" 
+             class="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 transition-all duration-300 transform hover:scale-105 shadow-lg"
+             data-i18n="cta.primaryButton">
+            Démarrer votre projet
+          </a>
+          <a href="#services" 
+             class="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 transition-all duration-300 transform hover:scale-105"
+             data-i18n="cta.secondaryButton">
+            Découvrir nos services
+          </a>
+        </div>
+        <div class="mt-8 flex justify-center items-center gap-8 text-sm opacity-80">
+          <div class="flex items-center gap-2">
+            <i class="bi bi-check-circle-fill "></i>
+            <span data-i18n="cta.features.consultation">Consultation gratuite</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="bi bi-check-circle-fill "></i>
+            <span data-i18n="cta.features.support">Support 24/7</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="bi bi-check-circle-fill "></i>
+            <span data-i18n="cta.features.guarantee">Garantie satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--la Section Contact -->
     <section id="contact" class="bg-zinc-100 md:rounded-3xl px-4 py-20  md:p-8 sxl:mx-28 lg:mx-[15%] xmd:mx-[5%] mb-20 text-zinc-400" data-animate>
