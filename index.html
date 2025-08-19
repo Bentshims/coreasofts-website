@@ -373,7 +373,7 @@
     <!-- section faq -->
      
     <section class="relative bg-primary curved-bg-mobile px-4 md:px-80 xmd:px-[5%] text-white bg-primary md:wave-bg min-h-screen" data-animate>
-      <div class="max-w-5xl mx-auto py-28 md:pb-80">
+      <div class="max-w-5xl mx-auto py-28 md:pb-44">
         <h2 class="text-center text-2xl font-semibold mb-2" data-i18n="faq.title">FAQs</h2>
         <p class="text-center text-sm text-red-100 max-w-2xl mx-auto mb-12" data-i18n="faq.subtitle">
           Voici les réponses aux qudestions les plus fréquentes sur nos services, notre fonctionnement et notre accompagnement.
@@ -1108,6 +1108,26 @@
       </fieldset>
     </div>
   </div>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a
+    href="https://wa.me/243828858300"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Discuter sur WhatsApp"
+    class="fixed bottom-5 right-4 md:bottom-10 md:right-6 z-[80] group"
+  >
+    <span class="absolute inset-0 -m-2 rounded-full bg-green-500/20 animate-ping group-hover:animate-none"></span>
+    <span class="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-green-500 text-white shadow-xl shadow-green-400/40 transition-transform duration-200 ease-out group-hover:scale-110">
+      <i class="bi bi-whatsapp text-3xl md:text-4xl"></i>
+    </span>
+    <span class="pointer-events-none absolute right-full top-1/2 -translate-y-1/2 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+      <span role="tooltip" class="relative bg-red-400 text-white text-xs md:text-sm py-1.5 px-2.5 rounded shadow-lg whitespace-nowrap">
+        Discuter sur WhatsApp
+        <span class="absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 bg-zinc-900 rotate-45"></span>
+      </span>
+    </span>
+  </a>
 </body>
 
 </html>
